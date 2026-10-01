@@ -1,45 +1,42 @@
-# Portuguese (Brazil) translations for the COS Config Center package.
-# Traduções em português brasileiro para o pacote COS Config Center.
-# Copyright (C) 2026 CapivaraOS Project
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the COS Config Center package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
 "POT-Creation-Date: 2026-10-01 15:22-0300\n"
-"PO-Revision-Date: 2026-07-26 20:00-0300\n"
-"Last-Translator: CapivaraOS Project <capivaraos-"
-"bot@users.noreply.github.com>\n"
-"Language-Team: Portuguese (Brazil)\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/org.capivaraos.Config.desktop.in:2
 #: data/org.capivaraos.Config.metainfo.xml.in:8
 msgid "COS Config Center"
-msgstr "COS Config Center"
+msgstr ""
 
 #: data/org.capivaraos.Config.desktop.in:3
 msgid "System Configuration"
-msgstr "Configuração do Sistema"
+msgstr ""
 
 #: data/org.capivaraos.Config.desktop.in:4
 msgid "Set up and tune your Linux system without the terminal"
-msgstr "Configure e ajuste seu sistema Linux sem precisar do terminal"
+msgstr ""
 
 #: data/org.capivaraos.Config.desktop.in:10
 msgid "settings;configuration;system;info;specs;hardware;tweaks;capivaraos;capivara;"
 msgstr ""
-"configurações;configuração;ajustes;sistema;informações;especificações;hardwa"
-"re;capivaraos;capivara;"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:9
 msgid "Get to know and tune your Linux system"
-msgstr "Conheça e ajuste seu sistema Linux"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:12
 msgid ""
@@ -49,166 +46,157 @@ msgid ""
 "more, has a live dashboard of system activity, and lets you export a good-"
 "looking card to share your specs."
 msgstr ""
-"O COS Config Center é a central de configuração do projeto CapivaraOS: um "
-"lugar amigável para conhecer seu sistema e ajustá-lo sem digitar comandos. "
-"Ele mostra sua distribuição, kernel, área de trabalho, CPU, GPU, memória e "
-"mais, tem um painel ao vivo da atividade do sistema e permite exportar um "
-"cartão bonito para compartilhar suas especificações."
 
 #: data/org.capivaraos.Config.metainfo.xml.in:19
 msgid ""
 "It runs on any Linux desktop and is a gift from the CapivaraOS project, a "
 "friendly Linux distribution with a capybara at its heart."
 msgstr ""
-"Ele roda em qualquer desktop Linux e é um presente do projeto CapivaraOS, "
-"uma distribuição Linux amigável com uma capivara no coração."
 
 #: data/org.capivaraos.Config.metainfo.xml.in:29
 msgid "System information at a glance"
-msgstr "Informações do sistema num relance"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:33
 msgid "Live dashboard with real-time gauges and charts"
-msgstr "Painel ao vivo com medidores e gráficos em tempo real"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:37
 msgid "Export a shareable specs card"
-msgstr "Exporte um cartão de especificações para compartilhar"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:41
 msgid "A gift from the CapivaraOS project"
-msgstr "Um presente do projeto CapivaraOS"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:52
 msgid "settings"
-msgstr "configurações"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:53
 msgid "configuration"
-msgstr "configuração"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:54
 msgid "system"
-msgstr "sistema"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:55
 msgid "specs"
-msgstr "especificações"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:56
 msgid "hardware"
-msgstr "hardware"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:64
 msgid "CapivaraOS Project"
-msgstr "Projeto CapivaraOS"
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
-msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
+msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:82
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
-"Primeira prévia pública: visão de informações do sistema e cartão de "
-"especificações para compartilhar."
 
 #: src/cos_config/sysinfo.py:143
 msgid "OS"
-msgstr "SO"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:144
 msgid "Host"
-msgstr "Host"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:145
 msgid "Kernel"
-msgstr "Kernel"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:146
 msgid "Architecture"
-msgstr "Arquitetura"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:147
 msgid "Desktop"
-msgstr "Área de trabalho"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:148
 msgid "Shell"
-msgstr "Shell"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:149
 msgid "CPU"
-msgstr "CPU"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:149
 #, python-brace-format
 msgid "{model} ({cores} cores)"
-msgstr "{model} ({cores} núcleos)"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:150
 msgid "GPU"
-msgstr "GPU"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:151 src/cos_config/live.py:67
 msgid "Memory"
-msgstr "Memória"
+msgstr ""
 
 #: src/cos_config/sysinfo.py:152
 msgid "Uptime"
-msgstr "Tempo ligado"
+msgstr ""
 
 #: src/cos_config/card.py:72
 msgid "System snapshot"
-msgstr "Retrato do sistema"
+msgstr ""
 
 #: src/cos_config/window.py:38
 msgid "Pin to desktop"
-msgstr "Fixar na área de trabalho"
+msgstr ""
 
 #: src/cos_config/window.py:39
 msgid "About COS Config Center"
-msgstr "Sobre o COS Config Center"
+msgstr ""
 
 #: src/cos_config/window.py:40
 msgid "Quit"
-msgstr "Sair"
+msgstr ""
 
 #: src/cos_config/window.py:49
 msgid "System"
-msgstr "Sistema"
+msgstr ""
 
 #: src/cos_config/window.py:52
 msgid "Live"
-msgstr "Ao vivo"
+msgstr ""
 
 #: src/cos_config/window.py:55
 msgid "Share"
-msgstr "Compartilhar"
+msgstr ""
 
 #: src/cos_config/window.py:83
 msgid "System information"
-msgstr "Informações do sistema"
+msgstr ""
 
 #: src/cos_config/window.py:84
 msgid "A snapshot of this machine"
-msgstr "Um retrato desta máquina"
+msgstr ""
 
 #: src/cos_config/window.py:110
 msgid "Save card…"
-msgstr "Salvar cartão…"
+msgstr ""
 
 #: src/cos_config/window.py:126
 msgid "Save specs card"
-msgstr "Salvar cartão de especificações"
+msgstr ""
 
 #: src/cos_config/window.py:138
 msgid "Card saved"
-msgstr "Cartão salvo"
+msgstr ""
 
 #: src/cos_config/window.py:143
 msgid "Runs everywhere. Feels like home on CapivaraOS."
-msgstr "Roda em qualquer lugar. Em casa no CapivaraOS."
+msgstr ""
 
 #: src/cos_config/window.py:145
 msgid ""
@@ -216,84 +204,79 @@ msgid ""
 "distribution with a capybara at its heart.\n"
 "Like it? Give the whole system a try."
 msgstr ""
-"O COS Config Center é um presente do projeto CapivaraOS — uma distribuição "
-"Linux amigável com uma capivara no coração.\n"
-"Gostou? Experimente o sistema inteiro."
 
 #: src/cos_config/window.py:163
 msgid "Try CapivaraOS"
-msgstr "Experimente o CapivaraOS"
+msgstr ""
 
 #: src/cos_config/window.py:167
 msgid "Visit capivaraos.org"
-msgstr "Visite capivaraos.org"
+msgstr ""
 
 #: src/cos_config/live.py:61
 msgid "Processor"
-msgstr "Processador"
+msgstr ""
 
 #. Row B — per-core bars.
 #: src/cos_config/live.py:78
 msgid "Per-core usage"
-msgstr "Uso por núcleo"
+msgstr ""
 
 #: src/cos_config/live.py:86
 msgid "Network"
-msgstr "Rede"
+msgstr ""
 
 #: src/cos_config/live.py:96
 msgid "Disk I/O"
-msgstr "E/S de disco"
+msgstr ""
 
 #. Row D — load average.
 #: src/cos_config/live.py:111
 msgid "Load average"
-msgstr "Carga média"
+msgstr ""
 
 #: src/cos_config/live.py:127
 #, python-brace-format
 msgid "{cores} cores · load {load:.2f}"
-msgstr "{cores} núcleos · carga {load:.2f}"
+msgstr ""
 
 #: src/cos_config/live.py:135
 #, python-brace-format
 msgid "swap {pct:.0f}%"
-msgstr "swap {pct:.0f}%"
+msgstr ""
 
 #: src/cos_config/live.py:137
 #, python-brace-format
 msgid "{used:.1f} / {total:.1f} GiB"
-msgstr "{used:.1f} / {total:.1f} GiB"
+msgstr ""
 
 #: src/cos_config/live.py:145 src/cos_config/widget_window.py:140
 #, python-brace-format
 msgid "Download {rate}"
-msgstr "Recebido {rate}"
+msgstr ""
 
 #: src/cos_config/live.py:147 src/cos_config/widget_window.py:142
 #, python-brace-format
 msgid "Upload {rate}"
-msgstr "Enviado {rate}"
+msgstr ""
 
 #: src/cos_config/live.py:152
 #, python-brace-format
 msgid "Read {rate}"
-msgstr "Leitura {rate}"
+msgstr ""
 
 #: src/cos_config/live.py:154
 #, python-brace-format
 msgid "Write {rate}"
-msgstr "Escrita {rate}"
+msgstr ""
 
 #: src/cos_config/live.py:160
 #, python-brace-format
 msgid "1 min {a:.2f}   ·   5 min {b:.2f}   ·   15 min {c:.2f}"
-msgstr "1 min {a:.2f}   ·   5 min {b:.2f}   ·   15 min {c:.2f}"
+msgstr ""
 
 #: src/cos_config/main.py:49
 msgid ""
 "Opened as a floating widget — this desktop can't pin it to the background. "
 "Use the titlebar menu to keep it on top."
 msgstr ""
-"Aberto como janela flutuante — este ambiente não consegue fixá-la ao fundo. "
-"Use o menu da barra de título para mantê-la sempre visível."

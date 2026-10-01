@@ -9,7 +9,7 @@ from gi.repository import Adw, Gio, Gtk  # noqa: E402
 from . import const  # noqa: E402
 from .i18n import _  # noqa: E402
 from .widget_window import CompactWidget  # noqa: E402
-from .window import CapivaraFetchWindow  # noqa: E402
+from .window import CosConfigWindow  # noqa: E402
 
 
 class Application(Adw.Application):
@@ -26,7 +26,7 @@ class Application(Adw.Application):
 
     def do_activate(self):
         if self._main is None:
-            self._main = CapivaraFetchWindow(application=self)
+            self._main = CosConfigWindow(application=self)
         self._main.present()
 
     def _add_action(self, name, callback, accels=None):

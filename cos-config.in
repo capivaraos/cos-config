@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(1, "@PYTHON_DIR@")
 
-from capivara_fetch.main import main
+from cos_config.main import main
 
 if __name__ == "__main__":
     sys.exit(main())

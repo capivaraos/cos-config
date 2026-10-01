@@ -1,19 +1,19 @@
-"""Application-wide constants for Capivara Fetch.
+"""Application-wide constants for COS Config Center.
 
-Change APP_NAME / APP_ID here if the branding name is ever revisited
-(e.g. "Snap" collides with Canonical Snap packages, hence "Fetch").
+Change APP_NAME / APP_ID here if the branding name is ever revisited.
+(Formerly "Capivara Fetch"; renamed when it grew into a config center.)
 """
 
 import os
 
-APP_ID = "org.capivaraos.Fetch"
-APP_NAME = "Capivara Fetch"
-VERSION = "0.1.0"
+APP_ID = "org.capivaraos.Config"
+APP_NAME = "COS Config Center"
+VERSION = "0.2.0"
 
 # Where the "Try CapivaraOS" funnel points.
 WEBSITE_URL = "https://capivaraos.org"
 DOWNLOAD_URL = "https://sourceforge.net/projects/capivaraos/files/"
-ISSUE_URL = "https://github.com/capivaraos/capivara-fetch/issues"
+ISSUE_URL = "https://github.com/capivaraos/cos-config/issues"
 
 # CapivaraOS brand palette (used to render the shareable card).
 BRAND_NAVY = (0.086, 0.137, 0.239)      # #16233d — deep navy background
@@ -38,16 +38,18 @@ def _first_existing(*paths):
 
 
 def brand_head_png():
-    """Best-effort path to the capybara logo PNG used on the card and the
+    """Best-effort path to the "cos config" logo PNG used on the card and the
     CapivaraOS page — the same artwork as the app icon.
 
-    Falls back across the installed data dir and the in-repo data/ copies.
+    Falls back across the installed data dirs (Flatpak and native) and the
+    in-repo data/ copies.
     """
     here = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.abspath(os.path.join(here, "..", ".."))
     return _first_existing(
-        os.path.join(os.sep, "app", "share", APP_ID, "capybara-head.png"),
-        os.path.join(repo_root, "data", "capybara-head.png"),
-        os.path.join(repo_root, "data", "icons", "512x512", "apps", APP_ID + ".png"),
-        os.path.join(repo_root, "data", "icons", "256x256", "apps", APP_ID + ".png"),
+        os.path.join(os.sep, "app", "share", APP_ID, "brand-logo.png"),
+        os.path.join(os.sep, "usr", "share", APP_ID, "brand-logo.png"),
+        os.path.join(repo_root, "data", "brand-logo.png"),
+        os.path.join(repo_root, "data", "icons", "hicolor", "512x512", "apps", APP_ID + ".png"),
+        os.path.join(repo_root, "data", "icons", "hicolor", "256x256", "apps", APP_ID + ".png"),
     )
