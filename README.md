@@ -1,17 +1,18 @@
-# Capivara Fetch
+# COS Config Center
 
-A small, friendly **system-information viewer** for any Linux desktop — and a
-brand ambassador for [CapivaraOS](https://capivaraos.org).
+**COS Config Center** (formerly *Capivara Fetch*) is the configuration center of
+the [CapivaraOS](https://capivaraos.org) project for any Linux desktop: a
+friendly place to get to know your system and tune it without typing commands.
 
-It shows your distro, kernel, desktop, CPU, GPU, memory and uptime in a clean
-GTK4 / libadwaita window, exports a good-looking **card** you can share, and
-has a **Live** dashboard with real-time gauges and charts (CPU incl. per-core,
-memory, network and disk I/O, load average). It can also be **pinned to the
-desktop** as a compact widget where the compositor supports it (KDE, Xfce,
-wlroots). Every shared card carries the CapivaraOS branding — that's the point. 🐹
+Today it shows your distro, kernel, desktop, CPU, GPU, memory and uptime in a
+clean GTK4 / libadwaita window, exports a good-looking **card** you can share,
+and has a **Live** dashboard with real-time gauges and charts (CPU incl.
+per-core, memory, network and disk I/O, load average). It can also be **pinned
+to the desktop** as a compact widget where the compositor supports it (KDE,
+Xfce, wlroots). More configuration modules are on the way.
 
-> Built with GTK4 + libadwaita (Python). English-first; `pt_BR` translation
-> planned. Ships preinstalled on upcoming CapivaraOS releases.
+> Built with GTK4 + libadwaita (Python). English source with a `pt_BR`
+> translation. Ships preinstalled on upcoming CapivaraOS releases.
 
 ## Run from source (development)
 
@@ -29,43 +30,43 @@ Requirements: `python3-gobject`, `gtk4`, `libadwaita`, `python3-cairo`
 ```bash
 meson setup builddir
 meson install -C builddir
-capivara-fetch
+cos-config
 ```
 
 ## Build as Flatpak
 
 ```bash
 flatpak-builder --user --install --force-clean \
-    build-dir build-aux/flatpak/org.capivaraos.Fetch.yml
-flatpak run org.capivaraos.Fetch
+    build-dir build-aux/flatpak/org.capivaraos.Config.yml
+flatpak run org.capivaraos.Config
 ```
 
 ## Project layout
 
 | Path | What |
 |------|------|
-| `src/capivara_fetch/sysinfo.py` | Collects system facts (best-effort, never crashes) |
-| `src/capivara_fetch/card.py` | Renders the shareable Cairo card |
-| `src/capivara_fetch/metrics.py` | Live `/proc` sampler (CPU, mem, net, disk, load) |
-| `src/capivara_fetch/widgets.py` | Cairo gauge / sparkline / per-core bar widgets |
-| `src/capivara_fetch/live.py` | The Live dashboard page (1s refresh) |
-| `src/capivara_fetch/widget_window.py` | Compact "pin to desktop" widget (layer-shell + fallback) |
-| `src/capivara_fetch/window.py` | libadwaita UI: System / Live / Share / CapivaraOS pages |
-| `src/capivara_fetch/main.py` | `Adw.Application` entry point |
-| `data/` | `.desktop`, AppStream metainfo, icon, bundled capybara head |
+| `src/cos_config/sysinfo.py` | Collects system facts (best-effort, never crashes) |
+| `src/cos_config/card.py` | Renders the shareable Cairo card |
+| `src/cos_config/metrics.py` | Live `/proc` sampler (CPU, mem, net, disk, load) |
+| `src/cos_config/widgets.py` | Cairo gauge / sparkline / per-core bar widgets |
+| `src/cos_config/live.py` | The Live dashboard page (1s refresh) |
+| `src/cos_config/widget_window.py` | Compact "pin to desktop" widget (layer-shell + fallback) |
+| `src/cos_config/window.py` | libadwaita UI: System / Live / Share / CapivaraOS pages |
+| `src/cos_config/main.py` | `Adw.Application` entry point |
+| `data/` | `.desktop`, AppStream metainfo, icons, bundled logo |
 | `build-aux/flatpak/` | Flathub manifest (bundles gtk4-layer-shell) |
 
 ## Status / TODO
 
 - [x] System info page + shareable card
 - [x] Correct host distro detection inside the Flatpak sandbox
-- [x] Capybara branding on the card and the CapivaraOS page
+- [x] Branding on the card and the CapivaraOS page
 - [x] Toast overlay for "card saved" feedback
 - [x] Live dashboard (gauges, per-core bars, network/disk/load sparklines)
 - [x] "Pin to desktop" compact widget (layer-shell where supported, fallback elsewhere)
 - [x] GPU probe works inside the Flatpak sandbox (GNOME runtime ships `lspci`)
 - [x] Store screenshots in the AppStream metainfo
-- [x] Capybara app icon (single logo, shared with the in-app card/branding)
+- [x] Renamed to COS Config Center, with the "cos config" logo as icon and in-app art
 - [x] gettext with a `pt_BR` translation (English-first source)
 - [x] Translate the `.desktop`/metainfo strings too (merged from po via ITS)
 - [ ] Verify the pinned-widget mode visually on a KDE/Xfce (Marsh/Pup) session
@@ -73,5 +74,5 @@ flatpak run org.capivaraos.Fetch
 
 ## License
 
-App code: **GPL-3.0-or-later**. CapivaraOS brand assets (the capybara logo)
+App code: **GPL-3.0-or-later**. CapivaraOS brand assets (the "cos config" logo)
 remain © 2026 CapivaraOS Project under their own brand license.

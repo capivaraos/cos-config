@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2026 CapivaraOS Project -->
 <component type="desktop-application">
-  <id>org.capivaraos.Fetch</id>
+  <id>org.capivaraos.Config</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>Capivara Fetch</name>
-  <summary>See your system specs and share a friendly card</summary>
+  <name>COS Config Center</name>
+  <summary>Get to know and tune your Linux system</summary>
 
   <description>
     <p>
-      Capivara Fetch is a small, friendly system-information viewer. It shows
-      your distribution, kernel, desktop, CPU, GPU, memory and more in a clean
-      window — and lets you export a good-looking card to share your specs.
+      COS Config Center is the configuration center of the CapivaraOS project:
+      a friendly place to get to know your system and tune it without typing
+      commands. It shows your distribution, kernel, desktop, CPU, GPU, memory
+      and more, has a live dashboard of system activity, and lets you export a
+      good-looking card to share your specs.
     </p>
     <p>
       It runs on any Linux desktop and is a gift from the CapivaraOS project,
@@ -20,43 +22,43 @@
     </p>
   </description>
 
-  <launchable type="desktop-id">org.capivaraos.Fetch.desktop</launchable>
+  <launchable type="desktop-id">org.capivaraos.Config.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">
       <caption>System information at a glance</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/capivara-fetch/main/data/screenshots/system.png</image>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/system.png</image>
     </screenshot>
     <screenshot>
       <caption>Live dashboard with real-time gauges and charts</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/capivara-fetch/main/data/screenshots/live.png</image>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/live.png</image>
     </screenshot>
     <screenshot>
       <caption>Export a shareable specs card</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/capivara-fetch/main/data/screenshots/share.png</image>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/share.png</image>
     </screenshot>
     <screenshot>
       <caption>A gift from the CapivaraOS project</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/capivara-fetch/main/data/screenshots/capivaraos.png</image>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/capivaraos.png</image>
     </screenshot>
   </screenshots>
 
   <categories>
-    <category>Utility</category>
+    <category>Settings</category>
     <category>System</category>
   </categories>
 
   <keywords>
+    <keyword>settings</keyword>
+    <keyword>configuration</keyword>
     <keyword>system</keyword>
     <keyword>specs</keyword>
     <keyword>hardware</keyword>
-    <keyword>neofetch</keyword>
-    <keyword>capybara</keyword>
   </keywords>
 
   <url type="homepage">https://capivaraos.org</url>
-  <url type="bugtracker">https://github.com/capivaraos/capivara-fetch/issues</url>
-  <url type="vcs-browser">https://github.com/capivaraos/capivara-fetch</url>
+  <url type="bugtracker">https://github.com/capivaraos/cos-config/issues</url>
+  <url type="vcs-browser">https://github.com/capivaraos/cos-config</url>
 
   <developer id="org.capivaraos">
     <name>CapivaraOS Project</name>
@@ -70,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.2.0" date="2026-10-01">
+      <description>
+        <p>Capivara Fetch is now COS Config Center, with a new name and logo.</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-07-24">
       <description>
         <p>First public preview: system info view and shareable specs card.</p>

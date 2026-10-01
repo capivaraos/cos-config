@@ -39,7 +39,7 @@ def _load_layer_shell():
 class CompactWidget(Gtk.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.set_title("Capivara Fetch")
+        self.set_title(const.APP_NAME)
         self.set_resizable(False)
         self.add_css_class("capivara-widget")
 
@@ -62,7 +62,7 @@ class CompactWidget(Gtk.ApplicationWindow):
     def _setup_layer_shell(self):
         ls = self._ls
         ls.init_for_window(self)
-        ls.set_namespace(self, "capivara-fetch-widget")
+        ls.set_namespace(self, "cos-config-widget")
         ls.set_layer(self, ls.Layer.BOTTOM)  # behind normal windows
         ls.set_anchor(self, ls.Edge.TOP, True)
         ls.set_anchor(self, ls.Edge.RIGHT, True)
@@ -85,7 +85,7 @@ class CompactWidget(Gtk.ApplicationWindow):
         if self._ls is not None:
             strip = Gtk.Box(spacing=6)
             title = Gtk.Label(xalign=0, hexpand=True)
-            title.set_markup("<b>Capivara Fetch</b>")
+            title.set_markup(f"<b>{const.APP_NAME}</b>")
             title.add_css_class("caption")
             close = Gtk.Button(icon_name="window-close-symbolic")
             close.add_css_class("flat")

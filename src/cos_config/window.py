@@ -19,7 +19,7 @@ def _surface_to_texture(surface):
     )
 
 
-class CapivaraFetchWindow(Adw.ApplicationWindow):
+class CosConfigWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.set_title(const.APP_NAME)
@@ -36,7 +36,7 @@ class CapivaraFetchWindow(Adw.ApplicationWindow):
 
         menu = Gio.Menu()
         menu.append(_("Pin to desktop"), "app.pin")
-        menu.append(_("About Capivara Fetch"), "app.about")
+        menu.append(_("About COS Config Center"), "app.about")
         menu.append(_("Quit"), "app.quit")
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)
@@ -124,7 +124,7 @@ class CapivaraFetchWindow(Adw.ApplicationWindow):
     def _on_save(self, _btn):
         dialog = Gtk.FileDialog(
             title=_("Save specs card"),
-            initial_name="capivara-fetch.png",
+            initial_name="cos-config.png",
         )
         dialog.save(self, None, self._on_save_done)
 
@@ -142,7 +142,7 @@ class CapivaraFetchWindow(Adw.ApplicationWindow):
         status = Adw.StatusPage(
             title=_("Runs everywhere. Feels like home on CapivaraOS."),
             description=_(
-                "Capivara Fetch is a small gift from the CapivaraOS project — "
+                "COS Config Center is a gift from the CapivaraOS project — "
                 "a friendly Linux distribution with a capybara at its heart.\n"
                 "Like it? Give the whole system a try."
             ),

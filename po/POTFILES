@@ -1,8 +1,8 @@
-data/org.capivaraos.Fetch.desktop.in
-data/org.capivaraos.Fetch.metainfo.xml.in
-src/capivara_fetch/sysinfo.py
-src/capivara_fetch/card.py
-src/capivara_fetch/window.py
-src/capivara_fetch/live.py
-src/capivara_fetch/widget_window.py
-src/capivara_fetch/main.py
+data/org.capivaraos.Config.desktop.in
+data/org.capivaraos.Config.metainfo.xml.in
+src/cos_config/sysinfo.py
+src/cos_config/card.py
+src/cos_config/window.py
+src/cos_config/live.py
+src/cos_config/widget_window.py
+src/cos_config/main.py

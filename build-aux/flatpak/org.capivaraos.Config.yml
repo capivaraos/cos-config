@@ -6,14 +6,14 @@
 #
 # This is the exact manifest submitted to Flathub (reproducible git source).
 # For local testing against your working tree, temporarily swap the
-# capivara-fetch `git` source for:  {type: dir, path: ../..}
+# cos-config `git` source for:  {type: dir, path: ../..}
 #   flatpak-builder --user --install --force-clean build-dir \
-#       build-aux/flatpak/org.capivaraos.Fetch.yml
-id: org.capivaraos.Fetch
+#       build-aux/flatpak/org.capivaraos.Config.yml
+id: org.capivaraos.Config
 runtime: org.gnome.Platform
 runtime-version: '50'
 sdk: org.gnome.Sdk
-command: capivara-fetch
+command: cos-config
 
 finish-args:
   - --share=ipc
@@ -39,10 +39,10 @@ modules:
         tag: v1.3.0
         commit: 1c963c51514581c41b9bdae08cdf69171265cdda
 
-  - name: capivara-fetch
+  - name: cos-config
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/capivaraos/capivara-fetch.git
-        tag: v0.1.0
-        commit: cece51c1798703f7036a3a7a07159c2661866548
+        url: https://github.com/capivaraos/cos-config.git
+        # Pin the release commit here once the v0.2.0 tag is pushed.
+        tag: v0.2.0

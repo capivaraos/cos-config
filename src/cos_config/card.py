@@ -40,7 +40,7 @@ def render(rows):
     ctx.set_source(grad)
     ctx.fill()
 
-    # Header: capybara head + title, vertically centered in the header band.
+    # Header: logo + title, vertically centered in the header band.
     logo_drawn_w = 0
     target = 108
     head = const.brand_head_png()
