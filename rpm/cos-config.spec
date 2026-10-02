@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.6.0
+Version:        0.7.0
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.0-1
+- New module: disks at startup (fstab entries with nofail, checked with
+  findmnt --verify, mounted right away and rolled back on failure)
+
 * Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.6.0-1
 - New module: language and formats (system + GNOME/KDE user settings,
   separate regional formats, Fedora language packs)
