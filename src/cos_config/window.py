@@ -147,7 +147,7 @@ class CosConfigWindow(Adw.ApplicationWindow):
     # ---- About / Try CapivaraOS page ------------------------------------
     def _build_about_page(self):
         status = Adw.StatusPage(
-            title=_("Runs everywhere. Feels like home on CapivaraOS."),
+            title=_("Runs everywhere. Feels like home on CapivaraOS"),
             description=_(
                 "COS Config Center is a gift from the CapivaraOS project — "
                 "a friendly Linux distribution with a capybara at its heart.\n"

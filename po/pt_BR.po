@@ -209,8 +209,8 @@ msgid "Card saved"
 msgstr "Cartão salvo"
 
 #: src/cos_config/window.py:150
-msgid "Runs everywhere. Feels like home on CapivaraOS."
-msgstr "Roda em qualquer lugar. Em casa no CapivaraOS."
+msgid "Runs everywhere. Feels like home on CapivaraOS"
+msgstr "Roda em qualquer lugar. Em casa no CapivaraOS"
 
 #: src/cos_config/window.py:152
 msgid ""
