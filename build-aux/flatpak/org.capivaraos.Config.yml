@@ -37,7 +37,7 @@ modules:
       - type: git
         url: https://github.com/wmww/gtk4-layer-shell.git
         tag: v1.3.0
-        commit: 1c963c51514581c41b9bdae08cdf69171265cdda
+        commit: 8fabe2326a06ce13492034b7eef8de9897bd6bd1
 
   - name: cos-config
     buildsystem: meson
@@ -46,5 +46,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/capivaraos/cos-config.git
-        tag: v0.3.0
-        commit: 2ebf6f36ebde54e52c19e43b151b95296b82abb3
+        tag: v0.4.0
+        commit: 8fabe2326a06ce13492034b7eef8de9897bd6bd1
