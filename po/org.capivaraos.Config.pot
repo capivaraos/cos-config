@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 11:12-0300\n"
+"POT-Creation-Date: 2026-10-02 14:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,27 +95,33 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid ""
+"New language and formats module: choose the system language and, separately, "
+"how dates, numbers and money are shown, and install the language pack."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:92
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:92
+#: data/org.capivaraos.Config.metainfo.xml.in:97
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:97
+#: data/org.capivaraos.Config.metainfo.xml.in:102
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -367,25 +373,26 @@ msgstr ""
 msgid "Users and services"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:105
+#: src/cos_config/modules/__init__.py:110
 msgid "The change was not applied"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:106
+#: src/cos_config/modules/__init__.py:111
 msgid "Close"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:119
+#: src/cos_config/modules/__init__.py:124
 msgid "Equivalent commands"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:121
+#: src/cos_config/modules/__init__.py:126
 msgid "Cancel"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:122 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:127 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
+#: src/cos_config/modules/language.py:132
 msgid "Apply"
 msgstr ""
 
@@ -694,4 +701,109 @@ msgstr ""
 
 #: src/cos_config/modules/keyboard.py:200
 msgid "Keyboard settings updated"
+msgstr ""
+
+#: src/cos_config/modules/language.py:26
+msgid "Language and formats"
+msgstr ""
+
+#: src/cos_config/modules/language.py:30
+msgid "System language, and dates and currency your way"
+msgstr ""
+
+#: src/cos_config/modules/language.py:34
+msgid "language"
+msgstr ""
+
+#: src/cos_config/modules/language.py:34
+msgid "date"
+msgstr ""
+
+#: src/cos_config/modules/language.py:34
+msgid "currency"
+msgstr ""
+
+#: src/cos_config/modules/language.py:34
+msgid "region"
+msgstr ""
+
+#: src/cos_config/modules/language.py:34
+msgid "spell check"
+msgstr ""
+
+#: src/cos_config/modules/language.py:45
+msgid "Brazil"
+msgstr ""
+
+#: src/cos_config/modules/language.py:46
+msgid "United States"
+msgstr ""
+
+#: src/cos_config/modules/language.py:47
+msgid "Portugal"
+msgstr ""
+
+#: src/cos_config/modules/language.py:48
+msgid "Spain"
+msgstr ""
+
+#: src/cos_config/modules/language.py:78
+msgid "Loading…"
+msgstr ""
+
+#: src/cos_config/modules/language.py:78
+msgid "Reading the current settings."
+msgstr ""
+
+#: src/cos_config/modules/language.py:104
+msgid "Language"
+msgstr ""
+
+#: src/cos_config/modules/language.py:104
+msgid "The language of menus and apps."
+msgstr ""
+
+#: src/cos_config/modules/language.py:110
+msgid "Formats"
+msgstr ""
+
+#: src/cos_config/modules/language.py:110
+msgid "How dates, numbers and money are shown."
+msgstr ""
+
+#: src/cos_config/modules/language.py:118
+msgid "Language pack"
+msgstr ""
+
+#: src/cos_config/modules/language.py:119
+#: src/cos_config/modules/language.py:176
+msgid "Spell checking, fonts and translations for the chosen language"
+msgstr ""
+
+#: src/cos_config/modules/language.py:127
+msgid "Where it applies"
+msgstr ""
+
+#: src/cos_config/modules/language.py:128
+msgid ""
+"To the whole system (including the login screen) and to your user. It takes "
+"effect after you log out and back in."
+msgstr ""
+
+#: src/cos_config/modules/language.py:173
+msgid "Already installed"
+msgstr ""
+
+#: src/cos_config/modules/language.py:197
+msgid "Change the language and formats?"
+msgstr ""
+
+#: src/cos_config/modules/language.py:198
+msgid ""
+"You will be asked for the administrator password. Log out and back in "
+"afterwards to see the change everywhere."
+msgstr ""
+
+#: src/cos_config/modules/language.py:210
+msgid "Saved. Log out and back in to see it everywhere."
 msgstr ""
