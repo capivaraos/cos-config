@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.5.0
+Version:        0.6.0
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.6.0-1
+- New module: language and formats (system + GNOME/KDE user settings,
+  separate regional formats, Fedora language packs)
+
 * Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.5.0-1
 - New module: Brazilian keyboard (ABNT2 / US International layout on
   GNOME, KDE and Xfce; ' + c typing ç; layout on the login screen)

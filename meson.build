@@ -1,5 +1,5 @@
 project('cos-config',
-  version: '0.5.0',
+  version: '0.6.0',
   meson_version: '>= 0.62.0',
 )
 
@@ -64,7 +64,7 @@ if get_option('native')
   helper_conf = configuration_data()
   helper_conf.set('PYTHON_DIR', python_dir)
   helper_conf.set('HELPER_DIR', helper_dir)
-  foreach helper : ['journald', 'multimedia']
+  foreach helper : ['journald', 'langpacks', 'multimedia']
     configure_file(
       input: 'data/helpers' / helper + '.in',
       output: helper,
