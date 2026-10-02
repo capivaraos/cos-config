@@ -72,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.3.0" date="2026-10-02">
+      <description>
+        <p>New Settings tab with configuration modules grouped by category and a search. The first module caps how much disk the system logs may use.</p>
+      </description>
+    </release>
     <release version="0.2.0" date="2026-10-01">
       <description>
         <p>Capivara Fetch is now COS Config Center, with a new name and logo.</p>

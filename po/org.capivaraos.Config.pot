@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 08:04-0300\n"
+"POT-Creation-Date: 2026-10-02 08:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,10 +94,16 @@ msgid "CapivaraOS Project"
 msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
-msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
+msgid ""
+"New Settings tab with configuration modules grouped by category and a "
+"search. The first module caps how much disk the system logs may use."
 msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
