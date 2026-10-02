@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 08:53-0300\n"
+"POT-Creation-Date: 2026-10-02 09:35-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,15 +95,21 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid ""
+"New module to play any video or music: complete codecs, hardware video "
+"acceleration, RPM Fusion and all Flathub apps, in one place."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:92
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -372,6 +378,7 @@ msgid "Cancel"
 msgstr ""
 
 #: src/cos_config/modules/__init__.py:122 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/multimedia.py:104
 msgid "Apply"
 msgstr ""
 
@@ -440,4 +447,132 @@ msgstr ""
 
 #: src/cos_config/modules/journald.py:142
 msgid "Log size updated"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:24
+msgid "Codecs and extra repositories"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:28
+msgid "Play any video or music, and get every app on Flathub"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:32
+msgid "video"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:32
+msgid "music"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:46
+msgid "RPM Fusion repositories"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:47
+msgid "Community repositories with software Fedora cannot ship"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:48
+msgid "Cisco OpenH264"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:48
+msgid "H.264 video for browsers and calls"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:49
+msgid "Complete codecs"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:50
+msgid "Full FFmpeg and GStreamer plugins (MP4, H.265, AAC and more)"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:51
+msgid "Hardware video acceleration"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:52
+msgid "Smoother videos and less battery use"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:53
+msgid "All Flathub apps"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:54
+msgid "Remove Fedora's filter so every Flathub app shows up"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:60
+msgid "Full video driver for your Intel and AMD graphics"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:62
+msgid "Full video driver for your AMD graphics"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:63
+msgid "Full video driver for your Intel graphics"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:75
+msgid "Multimedia support"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:77
+msgid ""
+"Many videos and songs use formats that Fedora cannot include because of "
+"patents. Turn on what you want and apply."
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:83
+msgid "Checking…"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:88
+msgid "NVIDIA video acceleration"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:89
+msgid "Comes with the NVIDIA driver, set up on its own page."
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:96
+msgid "About these sources"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:98
+msgid ""
+"RPM Fusion and Flathub are run by their own communities, not by CapivaraOS "
+"or Fedora. Some of these formats are covered by patents in a few countries: "
+"check what applies where you live."
+msgstr ""
+
+#. done: shown on; missing: proposed on
+#: src/cos_config/modules/multimedia.py:146
+msgid "Already enabled"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:167
+msgid "Needed for the codecs and the video driver"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:177
+msgid "Enable multimedia support?"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:178
+msgid ""
+"Packages will be downloaded and installed. This can take several minutes, "
+"depending on your connection."
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:191
+msgid "Multimedia support enabled"
+msgstr ""
+
+#: src/cos_config/modules/multimedia.py:200
+msgid "Installing… this can take a few minutes"
 msgstr ""

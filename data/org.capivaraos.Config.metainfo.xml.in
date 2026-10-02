@@ -72,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.4.0" date="2026-10-02">
+      <description>
+        <p>New module to play any video or music: complete codecs, hardware video acceleration, RPM Fusion and all Flathub apps, in one place.</p>
+      </description>
+    </release>
     <release version="0.3.0" date="2026-10-02">
       <description>
         <p>New Settings tab with configuration modules grouped by category and a search. The first module caps how much disk the system logs may use.</p>

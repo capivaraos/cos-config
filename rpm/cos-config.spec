@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.3.0
+Version:        0.4.0
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.4.0-1
+- New module: codecs and extra repositories (RPM Fusion, OpenH264,
+  full FFmpeg/GStreamer, VA-API driver for Intel/AMD, unfiltered Flathub)
+
 * Fri Oct 02 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.3.0-1
 - First native package: Settings tab, module architecture, polkit helpers
 - First module: system log size
