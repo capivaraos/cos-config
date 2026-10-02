@@ -11,3 +11,4 @@ src/cos_config/privileged.py
 src/cos_config/modules/__init__.py
 src/cos_config/modules/journald.py
 src/cos_config/modules/multimedia.py
+src/cos_config/modules/keyboard.py

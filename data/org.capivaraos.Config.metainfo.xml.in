@@ -72,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.5.0" date="2026-10-02">
+      <description>
+        <p>New Brazilian keyboard module: pick ABNT2 or US International, make ' + c type ç in every app, and use the same layout on the login screen.</p>
+      </description>
+    </release>
     <release version="0.4.0" date="2026-10-02">
       <description>
         <p>New module to play any video or music: complete codecs, hardware video acceleration, RPM Fusion and all Flathub apps, in one place.</p>
