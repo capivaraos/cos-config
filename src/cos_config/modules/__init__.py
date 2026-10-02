@@ -86,10 +86,11 @@ def visible_modules(env, registry=None):
 
 
 def all_modules():
-    from . import journald, keyboard, language, multimedia
+    from . import disks, journald, keyboard, language, multimedia
 
     return [
         multimedia.MultimediaModule(),
+        disks.DisksModule(),
         journald.JournaldModule(),
         keyboard.KeyboardModule(),
         language.LanguageModule(),
@@ -111,7 +112,7 @@ class ModuleContext:
         dialog.add_response("close", _("Close"))
         dialog.present(self.window)
 
-    def confirm(self, heading, body, commands, on_confirm):
+    def confirm(self, heading, body, commands, on_confirm, on_cancel=None):
         """Ask before changing the system, listing the equivalent commands."""
         dialog = Adw.AlertDialog(heading=heading, body=body)
         if commands:
@@ -132,6 +133,8 @@ class ModuleContext:
         def on_response(_dialog, response):
             if response == "apply":
                 on_confirm()
+            elif on_cancel is not None:
+                on_cancel()
 
         dialog.connect("response", on_response)
         dialog.present(self.window)
