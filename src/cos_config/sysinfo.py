@@ -9,6 +9,7 @@ import platform
 import re
 import subprocess
 
+from . import env
 from .i18n import _
 
 
@@ -20,24 +21,8 @@ def _read(path):
         return ""
 
 
-def _os_release():
-    # Inside a Flatpak sandbox /etc/os-release is the *runtime's*; the real
-    # host distro is exposed at /run/host/os-release. Prefer the host so the
-    # app always reports the machine it actually runs on.
-    data = {}
-    for path in ("/run/host/os-release", "/run/host/etc/os-release", "/etc/os-release"):
-        text = _read(path)
-        if text:
-            for line in text.splitlines():
-                if "=" in line:
-                    key, _, val = line.partition("=")
-                    data[key.strip()] = val.strip().strip('"')
-            break
-    return data
-
-
 def distro_name():
-    rel = _os_release()
+    rel = env.read_os_release()
     return rel.get("PRETTY_NAME") or rel.get("NAME") or "Unknown Linux"
 
 

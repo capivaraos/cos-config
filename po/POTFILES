@@ -6,3 +6,7 @@ src/cos_config/window.py
 src/cos_config/live.py
 src/cos_config/widget_window.py
 src/cos_config/main.py
+src/cos_config/config_page.py
+src/cos_config/privileged.py
+src/cos_config/modules/__init__.py
+src/cos_config/modules/journald.py

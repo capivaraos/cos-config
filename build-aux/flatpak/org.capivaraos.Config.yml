@@ -41,6 +41,8 @@ modules:
 
   - name: cos-config
     buildsystem: meson
+    config-opts:
+      - -Dnative=false
     sources:
       - type: git
         url: https://github.com/capivaraos/cos-config.git

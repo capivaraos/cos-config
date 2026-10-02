@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-01 15:22-0300\n"
+"POT-Creation-Date: 2026-10-02 08:04-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,48 +101,48 @@ msgstr ""
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
-#: src/cos_config/sysinfo.py:143
+#: src/cos_config/sysinfo.py:128
 msgid "OS"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:144
+#: src/cos_config/sysinfo.py:129
 msgid "Host"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:145
+#: src/cos_config/sysinfo.py:130
 msgid "Kernel"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:146
+#: src/cos_config/sysinfo.py:131
 msgid "Architecture"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:147
+#: src/cos_config/sysinfo.py:132
 msgid "Desktop"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:148
+#: src/cos_config/sysinfo.py:133
 msgid "Shell"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:149
+#: src/cos_config/sysinfo.py:134
 msgid "CPU"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:149
+#: src/cos_config/sysinfo.py:134
 #, python-brace-format
 msgid "{model} ({cores} cores)"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:150
+#: src/cos_config/sysinfo.py:135
 msgid "GPU"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:151 src/cos_config/live.py:67
+#: src/cos_config/sysinfo.py:136 src/cos_config/live.py:67
 msgid "Memory"
 msgstr ""
 
-#: src/cos_config/sysinfo.py:152
+#: src/cos_config/sysinfo.py:137
 msgid "Uptime"
 msgstr ""
 
@@ -150,66 +150,70 @@ msgstr ""
 msgid "System snapshot"
 msgstr ""
 
-#: src/cos_config/window.py:38
+#: src/cos_config/window.py:40
 msgid "Pin to desktop"
 msgstr ""
 
-#: src/cos_config/window.py:39
+#: src/cos_config/window.py:41
 msgid "About COS Config Center"
 msgstr ""
 
-#: src/cos_config/window.py:40
+#: src/cos_config/window.py:42
 msgid "Quit"
 msgstr ""
 
-#: src/cos_config/window.py:49
+#: src/cos_config/window.py:52 src/cos_config/config_page.py:53
+msgid "Settings"
+msgstr ""
+
+#: src/cos_config/window.py:56
 msgid "System"
 msgstr ""
 
-#: src/cos_config/window.py:52
+#: src/cos_config/window.py:59
 msgid "Live"
 msgstr ""
 
-#: src/cos_config/window.py:55
+#: src/cos_config/window.py:62
 msgid "Share"
 msgstr ""
 
-#: src/cos_config/window.py:83
+#: src/cos_config/window.py:90
 msgid "System information"
 msgstr ""
 
-#: src/cos_config/window.py:84
+#: src/cos_config/window.py:91
 msgid "A snapshot of this machine"
 msgstr ""
 
-#: src/cos_config/window.py:110
+#: src/cos_config/window.py:117
 msgid "Save card…"
 msgstr ""
 
-#: src/cos_config/window.py:126
+#: src/cos_config/window.py:133
 msgid "Save specs card"
 msgstr ""
 
-#: src/cos_config/window.py:138
+#: src/cos_config/window.py:145
 msgid "Card saved"
 msgstr ""
 
-#: src/cos_config/window.py:143
+#: src/cos_config/window.py:150
 msgid "Runs everywhere. Feels like home on CapivaraOS."
 msgstr ""
 
-#: src/cos_config/window.py:145
+#: src/cos_config/window.py:152
 msgid ""
 "COS Config Center is a gift from the CapivaraOS project — a friendly Linux "
 "distribution with a capybara at its heart.\n"
 "Like it? Give the whole system a try."
 msgstr ""
 
-#: src/cos_config/window.py:163
+#: src/cos_config/window.py:170
 msgid "Try CapivaraOS"
 msgstr ""
 
-#: src/cos_config/window.py:167
+#: src/cos_config/window.py:174
 msgid "Visit capivaraos.org"
 msgstr ""
 
@@ -279,4 +283,155 @@ msgstr ""
 msgid ""
 "Opened as a floating widget — this desktop can't pin it to the background. "
 "Use the titlebar menu to keep it on top."
+msgstr ""
+
+#. (PreferencesGroup, [(ActionRow, haystack)])
+#: src/cos_config/config_page.py:31
+msgid "Search settings"
+msgstr ""
+
+#: src/cos_config/config_page.py:37
+msgid ""
+"Settings that change the system need the full version, installed from your "
+"distribution's packages."
+msgstr ""
+
+#: src/cos_config/config_page.py:48
+msgid "No settings available here yet"
+msgstr ""
+
+#: src/cos_config/config_page.py:49
+msgid "More settings for this system are on the way."
+msgstr ""
+
+#: src/cos_config/privileged.py:42
+#, python-brace-format
+msgid "Could not start the helper: {error}"
+msgstr ""
+
+#: src/cos_config/privileged.py:55
+msgid "Authorization was cancelled or denied."
+msgstr ""
+
+#: src/cos_config/privileged.py:57
+msgid "The request was refused as invalid."
+msgstr ""
+
+#: src/cos_config/privileged.py:59
+msgid "The change could not be applied."
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:30
+msgid "Software and drivers"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:31
+msgid "Disks and maintenance"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:32
+msgid "Startup and dual boot"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:33
+msgid "Hardware"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:34
+msgid "Keyboard and language"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:35
+msgid "Network and security"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:36
+msgid "Users and services"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:105
+msgid "The change was not applied"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:106
+msgid "Close"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:119
+msgid "Equivalent commands"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:121
+msgid "Cancel"
+msgstr ""
+
+#: src/cos_config/modules/__init__.py:122 src/cos_config/modules/journald.py:71
+msgid "Apply"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:31
+msgid "System log size"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:35
+msgid "Keep system logs from filling up the disk"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:39
+msgid "journal"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:39
+msgid "logs"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:39
+msgid "disk space"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:53
+msgid "System logs"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:55
+msgid ""
+"Linux keeps a log of what happens on the system. It is useful for finding "
+"problems, but it can grow to several gigabytes. Choose the most it may use."
+msgstr ""
+
+#: src/cos_config/modules/journald.py:60
+msgid "Space used now"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:63
+msgid "Distribution default"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:65
+msgid "Maximum size"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:99 src/cos_config/modules/journald.py:111
+msgid "Unknown"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:121
+msgid ""
+"The log size limit set by COS Config Center will be removed and the "
+"distribution default will apply again."
+msgstr ""
+
+#: src/cos_config/modules/journald.py:127
+#, python-brace-format
+msgid ""
+"System logs will be limited to {size}. Older entries are deleted first when "
+"the limit is reached."
+msgstr ""
+
+#: src/cos_config/modules/journald.py:132
+msgid "Change the system log size?"
+msgstr ""
+
+#: src/cos_config/modules/journald.py:142
+msgid "Log size updated"
 msgstr ""

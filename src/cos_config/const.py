@@ -15,6 +15,9 @@ WEBSITE_URL = "https://capivaraos.org"
 DOWNLOAD_URL = "https://sourceforge.net/projects/capivaraos/files/"
 ISSUE_URL = "https://github.com/capivaraos/cos-config/issues"
 
+# Privileged helpers (native package only). Overridable for development.
+HELPER_DIR = os.environ.get("COS_CONFIG_HELPER_DIR", "/usr/libexec/cos-config")
+
 # CapivaraOS brand palette (used to render the shareable card).
 BRAND_NAVY = (0.086, 0.137, 0.239)      # #16233d — deep navy background
 BRAND_NAVY_2 = (0.055, 0.090, 0.169)    # #0e172b — gradient bottom
