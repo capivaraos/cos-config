@@ -86,9 +86,9 @@ def visible_modules(env, registry=None):
 
 
 def all_modules():
-    from . import journald, multimedia
+    from . import journald, keyboard, multimedia
 
-    return [multimedia.MultimediaModule(), journald.JournaldModule()]
+    return [multimedia.MultimediaModule(), journald.JournaldModule(), keyboard.KeyboardModule()]
 
 
 class ModuleContext:

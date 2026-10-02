@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 09:35-0300\n"
+"POT-Creation-Date: 2026-10-02 11:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,21 +95,27 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid ""
+"New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
+"type ç in every app, and use the same layout on the login screen."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:92
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:92
+#: data/org.capivaraos.Config.metainfo.xml.in:97
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -379,6 +385,7 @@ msgstr ""
 
 #: src/cos_config/modules/__init__.py:122 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
+#: src/cos_config/modules/keyboard.py:107
 msgid "Apply"
 msgstr ""
 
@@ -575,4 +582,116 @@ msgstr ""
 
 #: src/cos_config/modules/multimedia.py:200
 msgid "Installing… this can take a few minutes"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:20
+msgid "Brazilian keyboard"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:24
+msgid "ABNT2 or US International, and ' + c typing ç"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:28
+msgid "cedilla"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:28
+msgid "accents"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:28
+msgid "layout"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:40
+msgid "ABNT2 (Brazilian)"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:40
+msgid "Brazilian keyboard, with its own Ç key"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:41
+msgid "US International"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:42
+msgid "US keys; accents with ' ` ~ ^ \" — ' then c types ç"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:43
+msgid "US"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:43
+msgid "No accents"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:58
+msgid "Keyboard layout"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:59
+msgid ""
+"Choose the keyboard you have. It replaces the layouts you use now; input "
+"methods (like Japanese) are kept."
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:74
+msgid ""
+"Changing the layout is not supported on this desktop yet; the ç setting "
+"below still works."
+msgstr ""
+
+#. ---- cedilla
+#: src/cos_config/modules/keyboard.py:80
+msgid "Cedilla"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:82
+msgid "' + c types ç"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:83
+msgid "For US International. Without it, many systems type ć."
+msgstr ""
+
+#. ---- login screen
+#: src/cos_config/modules/keyboard.py:90
+msgid "Login screen"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:92
+msgid "Use this layout on the login screen too"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:93
+msgid "Also the text console. Asks for the administrator password."
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:101
+msgid "Try it"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:102
+msgid "Apps that were already open may need to be restarted."
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:104
+msgid "Type ' and then c here"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:171
+msgid "Change the keyboard settings?"
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:172
+msgid ""
+"Your desktop keyboard settings will change for your user. Apps that were "
+"already open may need to be restarted."
+msgstr ""
+
+#: src/cos_config/modules/keyboard.py:200
+msgid "Keyboard settings updated"
 msgstr ""
