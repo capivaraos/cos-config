@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<!-- One action per root helper, so the prompt says what is about to change. -->
+<policyconfig>
+  <vendor>CapivaraOS Project</vendor>
+  <vendor_url>https://capivaraos.org</vendor_url>
+  <icon_name>org.capivaraos.Config</icon_name>
+
+  <action id="org.capivaraos.config.journald">
+    <description>Change the system log size</description>
+    <message>Authentication is required to change how much disk the system logs may use</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">@HELPER_DIR@/journald</annotate>
+  </action>
+</policyconfig>

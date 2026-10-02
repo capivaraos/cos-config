@@ -11,7 +11,7 @@ datadir = get_option('prefix') / get_option('datadir')
 # Python package.
 install_subdir('src/cos_config',
   install_dir: python_dir,
-  exclude_directories: ['__pycache__'],
+  exclude_directories: ['__pycache__', 'ops/__pycache__', 'modules/__pycache__'],
 )
 
 # Executable launcher.
@@ -56,6 +56,34 @@ endforeach
 install_data('data/brand-logo.png',
   install_dir: datadir / 'org.capivaraos.Config',
 )
+
+# Root helpers + polkit policy: only for native packages. In the Flatpak
+# they could never run (no way out of the sandbox), so they are left out.
+if get_option('native')
+  helper_dir = get_option('prefix') / get_option('libexecdir') / 'cos-config'
+  helper_conf = configuration_data()
+  helper_conf.set('PYTHON_DIR', python_dir)
+  helper_conf.set('HELPER_DIR', helper_dir)
+  foreach helper : ['journald']
+    configure_file(
+      input: 'data/helpers' / helper + '.in',
+      output: helper,
+      configuration: helper_conf,
+      install: true,
+      install_dir: helper_dir,
+      install_mode: 'rwxr-xr-x',
+    )
+  endforeach
+  # Policy strings are English for now; translations can be merged into it
+  # later, like the metainfo.
+  configure_file(
+    input: 'data/polkit/org.capivaraos.config.policy.in',
+    output: 'org.capivaraos.config.policy',
+    configuration: helper_conf,
+    install: true,
+    install_dir: datadir / 'polkit-1' / 'actions',
+  )
+endif
 
 # Translations (compiles po/<lang>.po -> share/locale/<lang>/.../<domain>.mo).
 subdir('po')

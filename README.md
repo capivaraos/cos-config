@@ -9,7 +9,8 @@ clean GTK4 / libadwaita window, exports a good-looking **card** you can share,
 and has a **Live** dashboard with real-time gauges and charts (CPU incl.
 per-core, memory, network and disk I/O, load average). It can also be **pinned
 to the desktop** as a compact widget where the compositor supports it (KDE,
-Xfce, wlroots). More configuration modules are on the way.
+Xfce, wlroots). The **Settings** tab lists configuration modules by category;
+the first one caps how much disk the system logs may use.
 
 > Built with GTK4 + libadwaita (Python). English source with a `pt_BR`
 > translation. Ships preinstalled on upcoming CapivaraOS releases.
@@ -33,6 +34,28 @@ meson install -C builddir
 cos-config
 ```
 
+Installed this way (`-Dnative=true`, the default) you also get the root
+helpers in `libexec/cos-config/` and their polkit policy. Settings that change
+the system run only through those helpers, via `pkexec`; the app itself never
+runs as root.
+
+## Tests
+
+```bash
+python3 -m unittest discover -s tests -t .
+```
+
+To try a privileged module from the source tree without installing, point the
+app at a configured copy of the helper (polkit then asks for the generic admin
+password, since the policy is not installed):
+
+```bash
+mkdir -p /tmp/cos-helpers
+sed "s#@PYTHON_DIR@#$PWD/src#" data/helpers/journald.in > /tmp/cos-helpers/journald
+chmod +x /tmp/cos-helpers/journald
+COS_CONFIG_HELPER_DIR=/tmp/cos-helpers python3 run.py
+```
+
 ## Build as Flatpak
 
 ```bash
@@ -40,6 +63,9 @@ flatpak-builder --user --install --force-clean \
     build-dir build-aux/flatpak/org.capivaraos.Config.yml
 flatpak run org.capivaraos.Config
 ```
+
+The Flatpak is built with `-Dnative=false`: no helpers or policy (they could
+never leave the sandbox), so only modules that work for the user are listed.
 
 ## Project layout
 
@@ -51,9 +77,16 @@ flatpak run org.capivaraos.Config
 | `src/cos_config/widgets.py` | Cairo gauge / sparkline / per-core bar widgets |
 | `src/cos_config/live.py` | The Live dashboard page (1s refresh) |
 | `src/cos_config/widget_window.py` | Compact "pin to desktop" widget (layer-shell + fallback) |
-| `src/cos_config/window.py` | libadwaita UI: System / Live / Share / CapivaraOS pages |
+| `src/cos_config/window.py` | libadwaita UI: Settings / System / Live / Share / CapivaraOS pages |
+| `src/cos_config/config_page.py` | Settings tab: modules by category, search, module pages |
+| `src/cos_config/modules/` | Module contract + registry (`__init__.py`) and one file per module |
+| `src/cos_config/ops/` | Root-side operations run by the helpers (no GTK; unit-tested) |
+| `src/cos_config/privileged.py` | Runs a helper through `pkexec` without blocking the UI |
+| `src/cos_config/env.py` | Distro family (os-release `ID`/`ID_LIKE`), Flatpak and desktop detection |
+| `src/cos_config/distro.py` | dnf / apt / pacman / zypper command builders |
 | `src/cos_config/main.py` | `Adw.Application` entry point |
-| `data/` | `.desktop`, AppStream metainfo, icons, bundled logo |
+| `data/` | `.desktop`, AppStream metainfo, icons, bundled logo, helpers, polkit policy |
+| `tests/` | Unit tests (`unittest`) |
 | `build-aux/flatpak/` | Flathub manifest (bundles gtk4-layer-shell) |
 
 ## Status / TODO

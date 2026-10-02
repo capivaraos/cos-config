@@ -4,9 +4,11 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 
-from . import card, const, sysinfo  # noqa: E402
+from . import card, const, env, sysinfo  # noqa: E402
+from .config_page import ConfigPage  # noqa: E402
 from .i18n import _  # noqa: E402
 from .live import LivePage  # noqa: E402
+from .modules import ModuleContext  # noqa: E402
 
 
 def _surface_to_texture(surface):
@@ -45,6 +47,11 @@ class CosConfigWindow(Adw.ApplicationWindow):
         self._stack = Adw.ViewStack()
         self._switcher.set_stack(self._stack)
         self._live = LivePage()
+        self._env = env.Environment.detect()
+        self._stack.add_titled_with_icon(
+            ConfigPage(ModuleContext(self._env, self)), "config", _("Settings"),
+            "preferences-system-symbolic",
+        )
         self._stack.add_titled_with_icon(
             self._build_system_page(), "system", _("System"), "computer-symbolic"
         )
@@ -140,7 +147,7 @@ class CosConfigWindow(Adw.ApplicationWindow):
     # ---- About / Try CapivaraOS page ------------------------------------
     def _build_about_page(self):
         status = Adw.StatusPage(
-            title=_("Runs everywhere. Feels like home on CapivaraOS."),
+            title=_("Runs everywhere. Feels like home on CapivaraOS"),
             description=_(
                 "COS Config Center is a gift from the CapivaraOS project — "
                 "a friendly Linux distribution with a capybara at its heart.\n"

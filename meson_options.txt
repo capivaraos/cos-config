@@ -1,0 +1,2 @@
+option('native', type: 'boolean', value: true,
+  description: 'Install the polkit helpers and policy (native packages). The Flatpak turns this off.')
