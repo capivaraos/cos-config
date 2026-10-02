@@ -1,0 +1,9 @@
+#!/usr/bin/python3 -I
+# COS Config Center root helper: multimedia support. Run via pkexec only.
+import sys
+
+sys.path.insert(1, "@PYTHON_DIR@")
+
+from cos_config.ops import common, multimedia  # noqa: E402
+
+sys.exit(common.run_helper(multimedia.helper_main, sys.argv[1:]))

@@ -11,6 +11,7 @@ entry point. Rules every helper follows:
 
 import os
 import shutil
+import subprocess
 import sys
 import syslog
 import tempfile
@@ -31,6 +32,18 @@ class ValidationError(Exception):
 def log(message):
     syslog.openlog("cos-config-helper", syslog.LOG_PID, syslog.LOG_AUTHPRIV)
     syslog.syslog(syslog.LOG_NOTICE, message)
+
+
+def run_cmd(argv, tail=15):
+    """Run *argv* (never through a shell); raise with its last output lines."""
+    log("running " + " ".join(argv))
+    proc = subprocess.run(argv, capture_output=True, text=True)
+    if proc.returncode != 0:
+        output = (proc.stderr.strip() or proc.stdout.strip()).splitlines()
+        raise RuntimeError(
+            f"{' '.join(argv)} exited with {proc.returncode}:\n" + "\n".join(output[-tail:])
+        )
+    return proc.stdout
 
 
 def rooted(root, path):
