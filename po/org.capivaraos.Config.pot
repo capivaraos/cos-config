@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 14:14-0300\n"
+"POT-Creation-Date: 2026-10-02 14:21-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,33 +95,39 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid ""
+"New module to mount extra disks automatically at startup, safely: a missing "
+"disk never stops the computer from starting."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:92
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:92
+#: data/org.capivaraos.Config.metainfo.xml.in:97
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:97
+#: data/org.capivaraos.Config.metainfo.xml.in:102
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:102
+#: data/org.capivaraos.Config.metainfo.xml.in:107
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -373,23 +379,23 @@ msgstr ""
 msgid "Users and services"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:110
+#: src/cos_config/modules/__init__.py:111
 msgid "The change was not applied"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:111
+#: src/cos_config/modules/__init__.py:112
 msgid "Close"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:124
+#: src/cos_config/modules/__init__.py:125
 msgid "Equivalent commands"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:126
+#: src/cos_config/modules/__init__.py:127
 msgid "Cancel"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:127 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:128 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:132
@@ -806,4 +812,110 @@ msgstr ""
 
 #: src/cos_config/modules/language.py:210
 msgid "Saved. Log out and back in to see it everywhere."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:22
+msgid "Disks at startup"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:26
+msgid "Mount your extra disks automatically when the computer starts"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:30
+msgid "disk"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:30
+msgid "partition"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:30
+msgid "mount"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:71
+msgid "Extra disks and partitions"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:73
+msgid ""
+"Turn a disk on to have it ready every time the computer starts. If the disk "
+"is not connected, the computer still starts normally."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:79
+msgid "No extra disks found"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:80
+msgid "Only the system's own partitions are on this computer."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:86
+msgid ""
+"Encrypted disks and swap are not listed. System partitions are always "
+"mounted already."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:91
+#, python-brace-format
+msgid "{fs} partition"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:97
+#, python-brace-format
+msgid "Mounted at {path}"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:97
+#, python-brace-format
+msgid "Goes to {path}"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:100
+#, python-brace-format
+msgid "Not connected now · goes to {path}"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:102
+msgid "Already set up by the system"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:104
+#, python-brace-format
+msgid "Would go to {path}"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:111
+msgid "Open"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:131
+msgid "Mount this disk at startup?"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:132
+#, python-brace-format
+msgid ""
+"It will be mounted now and every time the computer starts, at {path}. /etc/"
+"fstab is checked before saving, and a copy of the original is kept."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:136
+msgid "Stop mounting this disk at startup?"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:137
+msgid ""
+"It will be unmounted and removed from /etc/fstab. Files on the disk are not "
+"touched."
+msgstr ""
+
+#: src/cos_config/modules/disks.py:146
+msgid "Disk mounted"
+msgstr ""
+
+#: src/cos_config/modules/disks.py:146
+msgid "Disk removed from startup"
 msgstr ""
