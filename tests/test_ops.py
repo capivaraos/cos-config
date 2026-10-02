@@ -69,6 +69,21 @@ class JournaldTest(unittest.TestCase):
         self.assertIsNone(journald.read_limit(self.root))
         journald.reset(root=self.root, restart=False)  # idempotent
 
+    def test_failed_restart_restores_previous_state(self):
+        journald.apply("500M", root=self.root, restart=False)
+        with mock.patch.object(journald, "_restart", side_effect=RuntimeError("no systemd")):
+            with self.assertRaises(RuntimeError):
+                journald.apply("2G", root=self.root)
+            self.assertEqual(journald.read_limit(self.root), "500M")
+            with self.assertRaises(RuntimeError):
+                journald.reset(root=self.root)
+            self.assertEqual(journald.read_limit(self.root), "500M")
+        journald.reset(root=self.root, restart=False)
+        with mock.patch.object(journald, "_restart", side_effect=RuntimeError("no systemd")):
+            with self.assertRaises(RuntimeError):
+                journald.apply("1G", root=self.root)
+        self.assertFalse(os.path.exists(journald.dropin_path(self.root)))
+
     def test_rejects_sizes_outside_the_list(self):
         for bad in ("5G", "1", "500M\nStorage=none", "", "../x"):
             with self.assertRaises(common.ValidationError):

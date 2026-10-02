@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 08:04-0300\n"
+"POT-Creation-Date: 2026-10-02 08:53-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -102,10 +102,19 @@ msgid "CapivaraOS Project"
 msgstr "Projeto CapivaraOS"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
+msgid ""
+"New Settings tab with configuration modules grouped by category and a "
+"search. The first module caps how much disk the system logs may use."
+msgstr ""
+"Nova aba Configurar, com módulos de configuração agrupados por categoria e "
+"busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
+"podem ocupar."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -415,9 +424,9 @@ msgid ""
 "Linux keeps a log of what happens on the system. It is useful for finding "
 "problems, but it can grow to several gigabytes. Choose the most it may use."
 msgstr ""
-"O Linux guarda um registro do que acontece no sistema. Ele ajuda a "
-"encontrar problemas, mas pode chegar a vários gigabytes. Escolha o máximo "
-"que ele pode ocupar."
+"O Linux guarda um registro do que acontece no sistema. Ele ajuda a encontrar "
+"problemas, mas pode chegar a vários gigabytes. Escolha o máximo que ele pode "
+"ocupar."
 
 #: src/cos_config/modules/journald.py:60
 msgid "Space used now"
@@ -440,8 +449,8 @@ msgid ""
 "The log size limit set by COS Config Center will be removed and the "
 "distribution default will apply again."
 msgstr ""
-"O limite de tamanho dos logs definido pelo COS Config Center será removido "
-"e o padrão da distribuição voltará a valer."
+"O limite de tamanho dos logs definido pelo COS Config Center será removido e "
+"o padrão da distribuição voltará a valer."
 
 #: src/cos_config/modules/journald.py:127
 #, python-brace-format
