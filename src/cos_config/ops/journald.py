@@ -66,21 +66,45 @@ def _restart():
     subprocess.run(["systemctl", "restart", "systemd-journald"], check=True)
 
 
-def apply(size, root="/", restart=True):
-    content = render(size)
+def _read_dropin(root):
+    try:
+        with open(dropin_path(root), encoding="utf-8") as fh:
+            return fh.read()
+    except FileNotFoundError:
+        return None
+
+
+def _write_dropin(root, content):
+    """Write *content* to the drop-in, or remove it when content is None."""
+    if content is None:
+        try:
+            os.unlink(dropin_path(root))
+        except FileNotFoundError:
+            pass
+        return
     os.makedirs(common.rooted(root, DROPIN_DIR), mode=0o755, exist_ok=True)
     common.atomic_write(dropin_path(root), content)
+
+
+def _change(root, content, restart):
+    # If journald cannot be restarted, put the previous drop-in back so the
+    # file never disagrees with the "not applied" the user is shown.
+    previous = _read_dropin(root)
+    _write_dropin(root, content)
     if restart:
-        _restart()
+        try:
+            _restart()
+        except Exception:
+            _write_dropin(root, previous)
+            raise
+
+
+def apply(size, root="/", restart=True):
+    _change(root, render(size), restart)
 
 
 def reset(root="/", restart=True):
-    try:
-        os.unlink(dropin_path(root))
-    except FileNotFoundError:
-        pass
-    if restart:
-        _restart()
+    _change(root, None, restart)
 
 
 def helper_main(argv):
