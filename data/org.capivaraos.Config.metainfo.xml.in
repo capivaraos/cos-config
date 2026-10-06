@@ -72,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.7.0" date="2026-10-02">
+      <description>
+        <p>New module to mount extra disks automatically at startup, safely: a missing disk never stops the computer from starting.</p>
+      </description>
+    </release>
     <release version="0.6.0" date="2026-10-02">
       <description>
         <p>New language and formats module: choose the system language and, separately, how dates, numbers and money are shown, and install the language pack.</p>
