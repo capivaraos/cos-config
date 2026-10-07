@@ -12,8 +12,18 @@
     <p>
       COS Config Center is the configuration center of the CapivaraOS project:
       a friendly place to get to know your system and tune it without typing
-      commands. It shows your distribution, kernel, desktop, CPU, GPU, memory
-      and more, has a live dashboard of system activity, and lets you export a
+      commands. Every change shows what will be done, with the equivalent
+      commands, before it asks for the administrator password.
+    </p>
+    <p>
+      In the full version, installed from your distribution's packages, you
+      can turn on codecs and extra repositories, mount extra disks at startup,
+      set the Brazilian keyboard and the cedilla, choose the language and
+      regional formats, and limit the size of the system logs.
+    </p>
+    <p>
+      It also shows your distribution, kernel, desktop, CPU, GPU, memory and
+      more, has a live dashboard of system activity, and lets you export a
       good-looking card to share your specs.
     </p>
     <p>
@@ -26,6 +36,18 @@
 
   <screenshots>
     <screenshot type="default">
+      <caption>Settings grouped by category, with search</caption>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/settings.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Play any video or music: codecs and extra repositories</caption>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/codecs.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Brazilian keyboard: layout and the cedilla</caption>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/keyboard.png</image>
+    </screenshot>
+    <screenshot>
       <caption>System information at a glance</caption>
       <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/system.png</image>
     </screenshot>
@@ -72,6 +94,11 @@
   </branding>
 
   <releases>
+    <release version="0.7.3" date="2026-10-07">
+      <description>
+        <p>Password prompts in Brazilian Portuguese and updated screenshots.</p>
+      </description>
+    </release>
     <release version="0.7.2" date="2026-10-07">
       <description>
         <p>Changing the language now also takes effect on Xfce and other desktops that keep a per-user language.</p>

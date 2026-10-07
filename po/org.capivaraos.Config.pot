@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-07 13:09-0300\n"
+"POT-Creation-Date: 2026-10-07 14:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,104 +42,134 @@ msgstr ""
 msgid ""
 "COS Config Center is the configuration center of the CapivaraOS project: a "
 "friendly place to get to know your system and tune it without typing "
-"commands. It shows your distribution, kernel, desktop, CPU, GPU, memory and "
-"more, has a live dashboard of system activity, and lets you export a good-"
-"looking card to share your specs."
+"commands. Every change shows what will be done, with the equivalent "
+"commands, before it asks for the administrator password."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:19
+#: data/org.capivaraos.Config.metainfo.xml.in:18
+msgid ""
+"In the full version, installed from your distribution's packages, you can "
+"turn on codecs and extra repositories, mount extra disks at startup, set the "
+"Brazilian keyboard and the cedilla, choose the language and regional "
+"formats, and limit the size of the system logs."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:24
+msgid ""
+"It also shows your distribution, kernel, desktop, CPU, GPU, memory and more, "
+"has a live dashboard of system activity, and lets you export a good-looking "
+"card to share your specs."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:29
 msgid ""
 "It runs on any Linux desktop and is a gift from the CapivaraOS project, a "
 "friendly Linux distribution with a capybara at its heart."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:29
+#: data/org.capivaraos.Config.metainfo.xml.in:39
+msgid "Settings grouped by category, with search"
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:43
+msgid "Play any video or music: codecs and extra repositories"
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:47
+msgid "Brazilian keyboard: layout and the cedilla"
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:51
 msgid "System information at a glance"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:33
+#: data/org.capivaraos.Config.metainfo.xml.in:55
 msgid "Live dashboard with real-time gauges and charts"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:37
+#: data/org.capivaraos.Config.metainfo.xml.in:59
 msgid "Export a shareable specs card"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:41
+#: data/org.capivaraos.Config.metainfo.xml.in:63
 msgid "A gift from the CapivaraOS project"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:52
+#: data/org.capivaraos.Config.metainfo.xml.in:74
 msgid "settings"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:53
+#: data/org.capivaraos.Config.metainfo.xml.in:75
 msgid "configuration"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:54
+#: data/org.capivaraos.Config.metainfo.xml.in:76
 msgid "system"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:55
+#: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid "specs"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:56
+#: data/org.capivaraos.Config.metainfo.xml.in:78
 msgid "hardware"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:64
+#: data/org.capivaraos.Config.metainfo.xml.in:86
 msgid "CapivaraOS Project"
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:77
+#: data/org.capivaraos.Config.metainfo.xml.in:99
+msgid "Password prompts in Brazilian Portuguese and updated screenshots."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:92
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:97
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:102
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:107
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:112
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:117
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 

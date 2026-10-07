@@ -2,7 +2,8 @@
 <!DOCTYPE policyconfig PUBLIC
  "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
-<!-- One action per root helper, so the prompt says what is about to change. -->
+<!-- One action per root helper, so the prompt says what is about to change.
+     Translations go here as xml:lang variants (polkit picks by locale). -->
 <policyconfig>
   <vendor>CapivaraOS Project</vendor>
   <vendor_url>https://capivaraos.org</vendor_url>
@@ -10,7 +11,9 @@
 
   <action id="org.capivaraos.config.journald">
     <description>Change the system log size</description>
+    <description xml:lang="pt-BR">Mudar o tamanho dos logs do sistema</description>
     <message>Authentication is required to change how much disk the system logs may use</message>
+    <message xml:lang="pt-BR">É necessário autenticar para mudar quanto espaço em disco os logs do sistema podem ocupar</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
@@ -21,7 +24,9 @@
 
   <action id="org.capivaraos.config.multimedia">
     <description>Enable complete multimedia support</description>
+    <description xml:lang="pt-BR">Ativar o suporte multimídia completo</description>
     <message>Authentication is required to install codecs and enable extra software repositories</message>
+    <message xml:lang="pt-BR">É necessário autenticar para instalar codecs e ativar repositórios extras de programas</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
@@ -32,7 +37,9 @@
 
   <action id="org.capivaraos.config.langpacks">
     <description>Install language packs</description>
+    <description xml:lang="pt-BR">Instalar pacotes de idioma</description>
     <message>Authentication is required to install language packs</message>
+    <message xml:lang="pt-BR">É necessário autenticar para instalar pacotes de idioma</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
@@ -43,7 +50,9 @@
 
   <action id="org.capivaraos.config.automount">
     <description>Mount a disk at startup</description>
+    <description xml:lang="pt-BR">Montar um disco ao ligar</description>
     <message>Authentication is required to change which disks are mounted at startup</message>
+    <message xml:lang="pt-BR">É necessário autenticar para mudar quais discos são montados ao ligar</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
