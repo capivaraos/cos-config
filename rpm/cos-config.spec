@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.7.2
+Version:        0.7.3
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Wed Oct 07 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.3-1
+- Password prompts (polkit) translated to Brazilian Portuguese
+- Store description and screenshots updated for the Settings tab
+
 * Wed Oct 07 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.2-1
 - Language: also set the user's AccountsService language on every desktop
   (on Xfce + LightDM the session kept the old language), found in the VM test

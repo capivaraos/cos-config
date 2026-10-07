@@ -1,5 +1,5 @@
 project('cos-config',
-  version: '0.7.2',
+  version: '0.7.3',
   meson_version: '>= 0.62.0',
 )
 
@@ -74,8 +74,7 @@ if get_option('native')
       install_mode: 'rwxr-xr-x',
     )
   endforeach
-  # Policy strings are English for now; translations can be merged into it
-  # later, like the metainfo.
+  # Translations live in the policy file itself, as xml:lang variants.
   configure_file(
     input: 'data/polkit/org.capivaraos.config.policy.in',
     output: 'org.capivaraos.config.policy',
