@@ -8,7 +8,7 @@ import os
 
 APP_ID = "org.capivaraos.Config"
 APP_NAME = "COS Config Center"
-VERSION = "0.7.0"
+VERSION = "0.7.1"
 
 # Where the "Try CapivaraOS" funnel points.
 WEBSITE_URL = "https://capivaraos.org"

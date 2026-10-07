@@ -164,6 +164,21 @@ def read_fstab(path=None):
         return ""
 
 
+def parse_verify(returncode, output):
+    """Error count from `findmnt --verify`, or None when it cannot be trusted
+    (crashed, or the table has parse errors).
+
+    A clean table prints "Success, no errors or warnings detected" and no
+    counts; otherwise "N parse errors, N errors, N warnings".
+    """
+    if returncode < 0 or returncode > 1:
+        return None
+    match = re.search(r"(\d+) parse errors?, (\d+) errors?", output)
+    if match:
+        return None if int(match.group(1)) else int(match.group(2))
+    return 0 if returncode == 0 else None
+
+
 def verify_errors(text):
     """Error count `findmnt --verify` reports for *text* (None if it crashed)."""
     path = FSTAB + ".cos-config.check"
@@ -173,12 +188,7 @@ def verify_errors(text):
                               capture_output=True, text=True, timeout=30)
     finally:
         os.unlink(path)
-    if proc.returncode < 0 or proc.returncode > 1:
-        return None
-    match = re.search(r"(\d+) parse errors?, (\d+) errors?", proc.stdout + proc.stderr)
-    if not match or int(match.group(1)):
-        return None
-    return int(match.group(2))
+    return parse_verify(proc.returncode, proc.stdout + proc.stderr)
 
 
 def _owner():
