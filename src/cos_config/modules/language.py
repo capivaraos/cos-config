@@ -73,6 +73,7 @@ class _LanguagePage(Adw.PreferencesPage):
         self._now = (None, None)
         self._available = set()
         self._installed = set()  # language pack package names installed
+        self._has_accounts = False
         self._groups = []
         self._add(Adw.PreferencesGroup(
             title=_("Loading…"), description=_("Reading the current settings.")))
@@ -85,7 +86,9 @@ class _LanguagePage(Adw.PreferencesPage):
     # ---- state -------------------------------------------------------------
     def _load(self):
         system = lg.system_locale()
-        now = lg.current(self._desktop, os.getuid(), system)
+        accounts = lg.accounts_language(os.getuid())
+        self._has_accounts = accounts is not None
+        now = lg.current(self._desktop, os.getuid(), system, accounts)
         available = lg.available_codes()
         installed = {pkg for pkg in langpacks.PACKAGES.values() if lg.is_installed(pkg)}
         GLib.idle_add(self._build, now, available, installed)
@@ -179,12 +182,8 @@ class _LanguagePage(Adw.PreferencesPage):
 
     # ---- apply -------------------------------------------------------------
     def _user_steps(self, lang, fmt):
-        steps = [lg.system_argv(lang, fmt)]
-        if self._desktop == kb.GNOME:
-            steps += lg.gnome_argvs(lang, fmt, os.getuid())
-        elif self._desktop == kb.KDE:
-            steps += lg.kde_argvs(lang, fmt)
-        return steps
+        return [lg.system_argv(lang, fmt),
+                *lg.user_argvs(self._desktop, lang, fmt, os.getuid(), self._has_accounts)]
 
     def _on_apply(self, _btn):
         lang, fmt, packs, changed = self._plan()

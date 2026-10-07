@@ -72,6 +72,11 @@
   </branding>
 
   <releases>
+    <release version="0.7.2" date="2026-10-07">
+      <description>
+        <p>Changing the language now also takes effect on Xfce and other desktops that keep a per-user language.</p>
+      </description>
+    </release>
     <release version="0.7.1" date="2026-10-07">
       <description>
         <p>Fixes mounting disks at startup on systems whose /etc/fstab has no warnings at all.</p>

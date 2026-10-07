@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.7.1
+Version:        0.7.2
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,11 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Wed Oct 07 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.2-1
+- Language: also set the user's AccountsService language on every desktop
+  (on Xfce + LightDM the session kept the old language), found in the VM test
+- Disks: a disconnected disk is named after its folder
+
 * Wed Oct 07 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.1-1
 - Disks at startup: accept a clean /etc/fstab (findmnt --verify prints no
   counts when there is nothing to report), found in the KDE VM test

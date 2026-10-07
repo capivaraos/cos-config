@@ -1,9 +1,13 @@
 """System language and regional formats, separately.
 
-The system setting (localectl, /etc/locale.conf) is what the login screen,
-Xfce and new users follow. GNOME and KDE also keep a per-user choice that
-wins over it, so both are set: GNOME through AccountsService (language)
-and gsettings (formats), KDE through plasma-localerc.
+The system setting (localectl, /etc/locale.conf) is what the login screen
+and new users follow. An existing user also has a per-user language that
+wins over it, so both are set:
+
+* AccountsService "Language", on any desktop: display managers (GDM,
+  LightDM) start the session with it. Seen on Xfce + LightDM: with only
+  the system locale changed, the session kept the old language.
+* GNOME formats in gsettings; KDE language and formats in plasma-localerc.
 """
 
 import subprocess
@@ -71,14 +75,25 @@ def system_argv(lang, fmt):
     return ["localectl", "set-locale", *args]
 
 
-def gnome_argvs(lang, fmt, uid):
-    path = f"/org/freedesktop/Accounts/User{uid}"
+def accounts_argv(lang, uid):
+    return ["busctl", "call", "org.freedesktop.Accounts",
+            f"/org/freedesktop/Accounts/User{uid}",
+            "org.freedesktop.Accounts.User", "SetLanguage", "s", utf8(lang)]
+
+
+def gnome_region_argv(lang, fmt):
     region = utf8(fmt) if fmt and fmt != lang else ""
-    return [
-        ["busctl", "call", "org.freedesktop.Accounts", path,
-         "org.freedesktop.Accounts.User", "SetLanguage", "s", utf8(lang)],
-        ["gsettings", "set", "org.gnome.system.locale", "region", region],
-    ]
+    return ["gsettings", "set", "org.gnome.system.locale", "region", region]
+
+
+def user_argvs(desktop, lang, fmt, uid, has_accounts):
+    """Per-user commands that go with the system change."""
+    argvs = [accounts_argv(lang, uid)] if has_accounts else []
+    if desktop == "gnome":
+        argvs.append(gnome_region_argv(lang, fmt))
+    elif desktop == "kde":
+        argvs += kde_argvs(lang, fmt)
+    return argvs
 
 
 def kde_argvs(lang, fmt):
@@ -124,16 +139,27 @@ def is_installed(package):
         return False
 
 
-def current(desktop, uid, system):
+def parse_accounts_language(output):
+    """`busctl get-property ... Language` prints: s "pt_BR.utf8"."""
+    out = output.strip()
+    if not out.startswith("s "):
+        return None  # no AccountsService (or no such user object)
+    return out[2:].strip().strip('"')
+
+
+def accounts_language(uid):
+    """The user's AccountsService language ("" if unset), None if no service."""
+    return parse_accounts_language(_out(
+        ["busctl", "get-property", "org.freedesktop.Accounts",
+         f"/org/freedesktop/Accounts/User{uid}",
+         "org.freedesktop.Accounts.User", "Language"]))
+
+
+def current(desktop, uid, system, accounts=None):
     """(language code, formats code) the user sees now."""
-    lang = code_of(system.get("LANG"))
+    lang = code_of(accounts) or code_of(system.get("LANG"))
     fmt = code_of(system.get("LC_TIME")) or lang
     if desktop == "gnome":
-        out = _out(["busctl", "get-property", "org.freedesktop.Accounts",
-                    f"/org/freedesktop/Accounts/User{uid}",
-                    "org.freedesktop.Accounts.User", "Language"])
-        user_lang = code_of(out.strip().removeprefix("s ").strip('"'))
-        lang = user_lang or lang
         region = code_of(_out(["gsettings", "get", "org.gnome.system.locale", "region"]).strip().strip("'"))
         fmt = region or lang
     elif desktop == "kde":
