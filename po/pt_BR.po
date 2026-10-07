@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-02 14:21-0300\n"
+"POT-Creation-Date: 2026-10-07 13:09-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -103,13 +103,29 @@ msgstr "Projeto CapivaraOS"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid ""
+"Changing the language now also takes effect on Xfce and other desktops that "
+"keep a per-user language."
+msgstr ""
+"Mudar o idioma agora também vale no Xfce e em outros desktops que guardam "
+"um idioma por usuário."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:82
+msgid ""
+"Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
+"at all."
+msgstr ""
+"Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
+"nenhum aviso."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:87
+msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
 msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:82
+#: data/org.capivaraos.Config.metainfo.xml.in:92
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -118,7 +134,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:97
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -126,7 +142,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:92
+#: data/org.capivaraos.Config.metainfo.xml.in:102
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -135,7 +151,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:97
+#: data/org.capivaraos.Config.metainfo.xml.in:107
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -144,11 +160,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:102
+#: data/org.capivaraos.Config.metainfo.xml.in:112
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:107
+#: data/org.capivaraos.Config.metainfo.xml.in:117
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -428,7 +444,7 @@ msgstr "Cancelar"
 #: src/cos_config/modules/__init__.py:128 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
-#: src/cos_config/modules/language.py:132
+#: src/cos_config/modules/language.py:135
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -803,44 +819,44 @@ msgstr "Portugal"
 msgid "Spain"
 msgstr "Espanha"
 
-#: src/cos_config/modules/language.py:78
+#: src/cos_config/modules/language.py:79
 msgid "Loading…"
 msgstr "Carregando…"
 
-#: src/cos_config/modules/language.py:78
+#: src/cos_config/modules/language.py:79
 msgid "Reading the current settings."
 msgstr "Lendo as configurações atuais."
 
-#: src/cos_config/modules/language.py:104
+#: src/cos_config/modules/language.py:107
 msgid "Language"
 msgstr "Idioma"
 
-#: src/cos_config/modules/language.py:104
+#: src/cos_config/modules/language.py:107
 msgid "The language of menus and apps."
 msgstr "O idioma dos menus e dos apps."
 
-#: src/cos_config/modules/language.py:110
+#: src/cos_config/modules/language.py:113
 msgid "Formats"
 msgstr "Formatos"
 
-#: src/cos_config/modules/language.py:110
+#: src/cos_config/modules/language.py:113
 msgid "How dates, numbers and money are shown."
 msgstr "Como datas, números e dinheiro aparecem."
 
-#: src/cos_config/modules/language.py:118
+#: src/cos_config/modules/language.py:121
 msgid "Language pack"
 msgstr "Pacote de idioma"
 
-#: src/cos_config/modules/language.py:119
-#: src/cos_config/modules/language.py:176
+#: src/cos_config/modules/language.py:122
+#: src/cos_config/modules/language.py:179
 msgid "Spell checking, fonts and translations for the chosen language"
 msgstr "Corretor ortográfico, fontes e traduções para o idioma escolhido"
 
-#: src/cos_config/modules/language.py:127
+#: src/cos_config/modules/language.py:130
 msgid "Where it applies"
 msgstr "Onde vale"
 
-#: src/cos_config/modules/language.py:128
+#: src/cos_config/modules/language.py:131
 msgid ""
 "To the whole system (including the login screen) and to your user. It takes "
 "effect after you log out and back in."
@@ -848,15 +864,15 @@ msgstr ""
 "No sistema inteiro (inclusive na tela de login) e no seu usuário. Passa a "
 "valer depois que você sair e entrar de novo na sessão."
 
-#: src/cos_config/modules/language.py:173
+#: src/cos_config/modules/language.py:176
 msgid "Already installed"
 msgstr "Já instalado"
 
-#: src/cos_config/modules/language.py:197
+#: src/cos_config/modules/language.py:196
 msgid "Change the language and formats?"
 msgstr "Mudar o idioma e os formatos?"
 
-#: src/cos_config/modules/language.py:198
+#: src/cos_config/modules/language.py:197
 msgid ""
 "You will be asked for the administrator password. Log out and back in "
 "afterwards to see the change everywhere."
@@ -864,7 +880,7 @@ msgstr ""
 "A senha de administrador será pedida. Depois, saia e entre de novo na sessão "
 "para ver a mudança em todo lugar."
 
-#: src/cos_config/modules/language.py:210
+#: src/cos_config/modules/language.py:209
 msgid "Saved. Log out and back in to see it everywhere."
 msgstr "Salvo. Saia e entre de novo na sessão para ver em todo lugar."
 
@@ -916,57 +932,57 @@ msgstr ""
 "Discos criptografados e swap não aparecem. As partições do sistema já são "
 "sempre montadas."
 
-#: src/cos_config/modules/disks.py:91
+#: src/cos_config/modules/disks.py:95
 #, python-brace-format
 msgid "{fs} partition"
 msgstr "Partição {fs}"
 
-#: src/cos_config/modules/disks.py:97
+#: src/cos_config/modules/disks.py:101
 #, python-brace-format
 msgid "Mounted at {path}"
 msgstr "Montado em {path}"
 
-#: src/cos_config/modules/disks.py:97
+#: src/cos_config/modules/disks.py:101
 #, python-brace-format
 msgid "Goes to {path}"
 msgstr "Vai para {path}"
 
-#: src/cos_config/modules/disks.py:100
+#: src/cos_config/modules/disks.py:104
 #, python-brace-format
 msgid "Not connected now · goes to {path}"
 msgstr "Desconectado agora · vai para {path}"
 
-#: src/cos_config/modules/disks.py:102
+#: src/cos_config/modules/disks.py:106
 msgid "Already set up by the system"
 msgstr "Já configurado pelo sistema"
 
-#: src/cos_config/modules/disks.py:104
+#: src/cos_config/modules/disks.py:108
 #, python-brace-format
 msgid "Would go to {path}"
 msgstr "Iria para {path}"
 
-#: src/cos_config/modules/disks.py:111
+#: src/cos_config/modules/disks.py:115
 msgid "Open"
 msgstr "Abrir"
 
-#: src/cos_config/modules/disks.py:131
+#: src/cos_config/modules/disks.py:135
 msgid "Mount this disk at startup?"
 msgstr "Montar este disco ao ligar?"
 
-#: src/cos_config/modules/disks.py:132
+#: src/cos_config/modules/disks.py:136
 #, python-brace-format
 msgid ""
 "It will be mounted now and every time the computer starts, at {path}. /etc/"
 "fstab is checked before saving, and a copy of the original is kept."
 msgstr ""
-"Ele será montado agora e toda vez que o computador iniciar, em {path}. O "
-"/etc/fstab é verificado antes de salvar, e uma cópia do original é guardada."
+"Ele será montado agora e toda vez que o computador iniciar, em {path}. O /"
+"etc/fstab é verificado antes de salvar, e uma cópia do original é guardada."
 
-#: src/cos_config/modules/disks.py:136
+#: src/cos_config/modules/disks.py:140
 msgid "Stop mounting this disk at startup?"
 msgstr "Parar de montar este disco ao ligar?"
 
-#: src/cos_config/modules/disks.py:137
+#: src/cos_config/modules/disks.py:141
 msgid ""
 "It will be unmounted and removed from /etc/fstab. Files on the disk are not "
 "touched."
@@ -974,10 +990,10 @@ msgstr ""
 "Ele será desmontado e removido do /etc/fstab. Os arquivos do disco não são "
 "mexidos."
 
-#: src/cos_config/modules/disks.py:146
+#: src/cos_config/modules/disks.py:150
 msgid "Disk mounted"
 msgstr "Disco montado"
 
-#: src/cos_config/modules/disks.py:146
+#: src/cos_config/modules/disks.py:150
 msgid "Disk removed from startup"
 msgstr "Disco removido da inicialização"

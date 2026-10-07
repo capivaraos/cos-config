@@ -88,7 +88,11 @@ class _DisksPage(Adw.PreferencesPage):
         return GLib.SOURCE_REMOVE
 
     def _row(self, part):
-        name = part["label"] or _("{fs} partition").format(fs=part["fstype"].upper())
+        name = part["label"]
+        if not name and part["status"] == "missing":
+            # The disk is not there to read its label: use the folder name.
+            name = os.path.basename(part["target"])
+        name = name or _("{fs} partition").format(fs=part["fstype"].upper())
         details = [part["fstype"], _size(part["size"])] if part["size"] else [part["fstype"]]
         if part["path"]:
             details.append(part["path"])

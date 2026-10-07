@@ -38,15 +38,31 @@ class ArgvTest(unittest.TestCase):
         self.assertIn("LC_TIME=pt_BR.UTF-8", argv)
         self.assertNotIn("LC_MESSAGES=pt_BR.UTF-8", argv)
 
-    def test_gnome_and_kde(self):
-        gn = lg.gnome_argvs("en_US", "pt_BR", 1000)
-        self.assertEqual(gn[0][-2:], ["s", "en_US.UTF-8"])
-        self.assertIn("/org/freedesktop/Accounts/User1000", gn[0])
+    def test_user_commands_per_desktop(self):
+        acc = lg.accounts_argv("en_US", 1000)
+        self.assertEqual(acc[-2:], ["s", "en_US.UTF-8"])
+        self.assertIn("/org/freedesktop/Accounts/User1000", acc)
+        # Xfce (LightDM takes the session language from AccountsService)
+        self.assertEqual(lg.user_argvs("xfce", "en_US", "pt_BR", 1000, True), [acc])
+        self.assertEqual(lg.user_argvs("xfce", "en_US", "pt_BR", 1000, False), [])
+        gn = lg.user_argvs("gnome", "en_US", "pt_BR", 1000, True)
+        self.assertEqual(gn[0], acc)
         self.assertEqual(gn[1][-1], "pt_BR.UTF-8")
-        self.assertEqual(lg.gnome_argvs("pt_BR", "pt_BR", 1000)[1][-1], "")  # follow the language
-        kde = lg.kde_argvs("pt_BR", "en_US")
-        self.assertEqual(kde[0][-1], "pt_BR")
-        self.assertEqual(kde[1][-1], "en_US.UTF-8")
+        self.assertEqual(lg.gnome_region_argv("pt_BR", "pt_BR")[-1], "")  # follow the language
+        kde = lg.user_argvs("kde", "pt_BR", "en_US", 1000, True)
+        self.assertEqual(kde[0][-1], "pt_BR.UTF-8")          # AccountsService
+        self.assertEqual(kde[1][-1], "pt_BR")                # plasma Translations
+        self.assertEqual(kde[2][-1], "en_US.UTF-8")          # plasma Formats
+
+    def test_accounts_language_and_current(self):
+        self.assertEqual(lg.parse_accounts_language('s "pt_BR.utf8"\n'), "pt_BR.utf8")
+        self.assertEqual(lg.parse_accounts_language('s ""\n'), "")
+        self.assertIsNone(lg.parse_accounts_language(""))  # no service
+        system = {"LANG": "en_US.UTF-8", "LC_TIME": "pt_BR.UTF-8"}
+        # the case found on Xfce: system says en_US, the user's session is pt_BR
+        self.assertEqual(lg.current("xfce", 1000, system, "pt_BR.utf8"), ("pt_BR", "pt_BR"))
+        self.assertEqual(lg.current("xfce", 1000, system, ""), ("en_US", "pt_BR"))
+        self.assertEqual(lg.current("xfce", 1000, system, None), ("en_US", "pt_BR"))
 
 
 class LangpackTest(unittest.TestCase):

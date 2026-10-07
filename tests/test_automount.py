@@ -76,6 +76,22 @@ class OptionsTest(unittest.TestCase):
         self.assertEqual(am.mount_name("Data", "1", {"/mnt/Data", "/mnt/Data-2"}), "/mnt/Data-3")
 
 
+class VerifyOutputTest(unittest.TestCase):
+    def test_clean_table_has_no_counts(self):
+        self.assertEqual(am.parse_verify(0, "Success, no errors or warnings detected\n"), 0)
+
+    def test_counts(self):
+        self.assertEqual(am.parse_verify(0, "0 parse errors, 0 errors, 4 warnings\n"), 0)
+        self.assertEqual(am.parse_verify(1, "/mnt/x\n   [E] unreachable\n\n0 parse errors, 2 errors, 4 warnings\n"), 2)
+        self.assertEqual(am.parse_verify(1, "0 parse errors, 1 error, 5 warnings\n"), 1)
+
+    def test_not_trustworthy(self):
+        self.assertIsNone(am.parse_verify(139, ""))        # findmnt segfault
+        self.assertIsNone(am.parse_verify(-11, ""))
+        self.assertIsNone(am.parse_verify(1, "1 parse error, 0 errors, 0 warnings\n"))
+        self.assertIsNone(am.parse_verify(1, "something unexpected\n"))
+
+
 class PartitionsTest(unittest.TestCase):
     def test_statuses(self):
         parts = {p["path"] or p["uuid"]: p for p in am.partitions(LSBLK, SYSTEM_FSTAB)}
