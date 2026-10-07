@@ -106,6 +106,8 @@ msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
 msgstr ""
+"Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
+"nenhum aviso."
 
 #: data/org.capivaraos.Config.metainfo.xml.in:82
 msgid ""
