@@ -10,7 +10,7 @@ APP_ID = "org.capivaraos.Config"
 APP_NAME = "COS Config Center"
 VERSION = "0.7.3"
 
-# Where the "Try CapivaraOS" funnel points.
+# Where the "Try CapivaraOS" buttons point.
 WEBSITE_URL = "https://capivaraos.org"
 DOWNLOAD_URL = "https://sourceforge.net/projects/capivaraos/files/"
 ISSUE_URL = "https://github.com/capivaraos/cos-config/issues"

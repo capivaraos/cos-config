@@ -94,7 +94,7 @@ def render(rows):
         ctx.show_text(value)
         y += ROW_H
 
-    # Footer: the brand funnel line.
+    # Footer: project name and website.
     ctx.set_source_rgba(1, 1, 1, 0.08)
     ctx.rectangle(PADDING, y - 20, WIDTH - 2 * PADDING, 2)
     ctx.fill()
