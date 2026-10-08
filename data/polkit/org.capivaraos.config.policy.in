@@ -60,4 +60,17 @@
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">@HELPER_DIR@/automount</annotate>
   </action>
+
+  <action id="org.capivaraos.config.cleanup">
+    <description>Free disk space</description>
+    <description xml:lang="pt-BR">Liberar espaço em disco</description>
+    <message>Authentication is required to remove system caches and old logs</message>
+    <message xml:lang="pt-BR">É necessário autenticar para remover caches do sistema e logs antigos</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">@HELPER_DIR@/cleanup</annotate>
+  </action>
 </policyconfig>

@@ -86,10 +86,11 @@ def visible_modules(env, registry=None):
 
 
 def all_modules():
-    from . import disks, journald, keyboard, language, multimedia
+    from . import cleanup, disks, journald, keyboard, language, multimedia
 
     return [
         multimedia.MultimediaModule(),
+        cleanup.CleanupModule(),
         disks.DisksModule(),
         journald.JournaldModule(),
         keyboard.KeyboardModule(),
