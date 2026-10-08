@@ -87,7 +87,7 @@ def visible_modules(env, registry=None):
 
 def all_modules():
     from . import (cleanup, diagnostics, disks, firewall, journald, keyboard,
-                   language, multimedia)
+                   language, multimedia, network)
 
     return [
         multimedia.MultimediaModule(),
@@ -98,6 +98,7 @@ def all_modules():
         keyboard.KeyboardModule(),
         language.LanguageModule(),
         firewall.FirewallModule(),
+        network.NetworkModule(),
     ]
 
 

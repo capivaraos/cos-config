@@ -94,6 +94,11 @@
   </branding>
 
   <releases>
+    <release version="0.11.0" date="2026-10-08">
+      <description>
+        <p>New page for remote access and network: change the computer name, turn remote login (SSH) on or off, create an SSH key and choose an encrypted DNS service.</p>
+      </description>
+    </release>
     <release version="0.10.0" date="2026-10-08">
       <description>
         <p>New firewall page: see what is open to the network, allow an app or a port, and close the high ports with strict mode.</p>
