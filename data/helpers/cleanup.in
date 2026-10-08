@@ -1,0 +1,9 @@
+#!/usr/bin/python3 -I
+# COS Config Center root helper: disk clean-up. Run via pkexec only.
+import sys
+
+sys.path.insert(1, "@PYTHON_DIR@")
+
+from cos_config.ops import common, cleanup  # noqa: E402
+
+sys.exit(common.run_helper(cleanup.helper_main, sys.argv[1:]))

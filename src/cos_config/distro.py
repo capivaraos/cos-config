@@ -36,6 +36,10 @@ class PackageManager:
         """argv that exits 0 when *package* is installed (runs unprivileged)."""
         raise NotImplementedError
 
+    def clean_cache(self):
+        """argv that drops downloaded packages and metadata (re-downloadable)."""
+        raise NotImplementedError
+
 
 class Dnf(PackageManager):
     name = "dnf"
@@ -48,6 +52,9 @@ class Dnf(PackageManager):
 
     def is_installed(self, package):
         return ["rpm", "-q", *validate_packages([package])]
+
+    def clean_cache(self):
+        return ["dnf", "clean", "all"]
 
 
 class Apt(PackageManager):
@@ -62,6 +69,9 @@ class Apt(PackageManager):
     def is_installed(self, package):
         return ["dpkg-query", "-W", "-f=${Status}", *validate_packages([package])]
 
+    def clean_cache(self):
+        return ["apt-get", "clean"]
+
 
 class Pacman(PackageManager):
     name = "pacman"
@@ -75,6 +85,10 @@ class Pacman(PackageManager):
     def is_installed(self, package):
         return ["pacman", "-Q", *validate_packages([package])]
 
+    def clean_cache(self):
+        # -Sc keeps the packages that are installed now (-Scc would not).
+        return ["pacman", "-Sc", "--noconfirm"]
+
 
 class Zypper(PackageManager):
     name = "zypper"
@@ -87,6 +101,9 @@ class Zypper(PackageManager):
 
     def is_installed(self, package):
         return ["rpm", "-q", *validate_packages([package])]
+
+    def clean_cache(self):
+        return ["zypper", "--non-interactive", "clean", "--all"]
 
 
 _BY_FAMILY = {

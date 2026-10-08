@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-07 14:10-0300\n"
+"POT-Creation-Date: 2026-10-08 08:29-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -134,11 +134,19 @@ msgid "CapivaraOS Project"
 msgstr "Projeto CapivaraOS"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
+msgid ""
+"New module to free disk space: see what each cache takes and clean the ones "
+"you pick."
+msgstr ""
+"Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
+"limpe os que escolher."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -146,7 +154,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -154,7 +162,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -162,7 +170,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -171,7 +179,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -179,7 +187,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -188,7 +196,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -197,11 +205,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -272,7 +280,7 @@ msgstr "Sair"
 msgid "Settings"
 msgstr "Configurar"
 
-#: src/cos_config/window.py:56
+#: src/cos_config/window.py:56 src/cos_config/modules/cleanup.py:65
 msgid "System"
 msgstr "Sistema"
 
@@ -462,23 +470,23 @@ msgstr "Rede e segurança"
 msgid "Users and services"
 msgstr "Usuários e serviços"
 
-#: src/cos_config/modules/__init__.py:111
+#: src/cos_config/modules/__init__.py:112
 msgid "The change was not applied"
 msgstr "A mudança não foi aplicada"
 
-#: src/cos_config/modules/__init__.py:112
+#: src/cos_config/modules/__init__.py:113
 msgid "Close"
 msgstr "Fechar"
 
-#: src/cos_config/modules/__init__.py:125
+#: src/cos_config/modules/__init__.py:126
 msgid "Equivalent commands"
 msgstr "Comandos equivalentes"
 
-#: src/cos_config/modules/__init__.py:127
+#: src/cos_config/modules/__init__.py:128
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/cos_config/modules/__init__.py:128 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:129 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
@@ -1034,3 +1042,152 @@ msgstr "Disco montado"
 #: src/cos_config/modules/disks.py:150
 msgid "Disk removed from startup"
 msgstr "Disco removido da inicialização"
+
+#: src/cos_config/modules/cleanup.py:22
+msgid "Free disk space"
+msgstr "Liberar espaço em disco"
+
+#: src/cos_config/modules/cleanup.py:26
+msgid "Remove caches, old logs and other things that rebuild themselves"
+msgstr "Remova caches, logs antigos e outras coisas que se recriam sozinhas"
+
+#: src/cos_config/modules/cleanup.py:30
+msgid "clean"
+msgstr "limpar"
+
+#: src/cos_config/modules/cleanup.py:30
+msgid "disk full"
+msgstr "disco cheio"
+
+#: src/cos_config/modules/cleanup.py:30
+msgid "cache"
+msgstr "cache"
+
+#: src/cos_config/modules/cleanup.py:30
+msgid "trash"
+msgstr "lixeira"
+
+#: src/cos_config/modules/cleanup.py:30
+msgid "space"
+msgstr "espaço"
+
+#: src/cos_config/modules/cleanup.py:38
+msgid "Trash"
+msgstr "Lixeira"
+
+#: src/cos_config/modules/cleanup.py:38
+msgid "Files you already deleted"
+msgstr "Arquivos que você já apagou"
+
+#: src/cos_config/modules/cleanup.py:39
+msgid "Image thumbnails"
+msgstr "Miniaturas de imagens"
+
+#: src/cos_config/modules/cleanup.py:40
+msgid "Previews of pictures and videos, created again when needed"
+msgstr "Prévias de fotos e vídeos, recriadas quando necessário"
+
+#: src/cos_config/modules/cleanup.py:41
+msgid "Unused Flatpak runtimes (yours)"
+msgstr "Runtimes Flatpak sem uso (seus)"
+
+#: src/cos_config/modules/cleanup.py:42 src/cos_config/modules/cleanup.py:50
+msgid "Support files that no installed app uses"
+msgstr "Arquivos de suporte que nenhum app instalado usa"
+
+#: src/cos_config/modules/cleanup.py:43
+msgid "Unused container images"
+msgstr "Imagens de contêiner sem uso"
+
+#: src/cos_config/modules/cleanup.py:44
+msgid "Images no container uses; they are downloaded again when needed"
+msgstr ""
+"Imagens que nenhum contêiner usa; são baixadas de novo quando necessário"
+
+#: src/cos_config/modules/cleanup.py:45
+msgid "Downloaded packages"
+msgstr "Pacotes baixados"
+
+#: src/cos_config/modules/cleanup.py:46
+msgid "Copies of updates already installed, and package lists"
+msgstr "Cópias de atualizações já instaladas e listas de pacotes"
+
+#: src/cos_config/modules/cleanup.py:47
+msgid "Old system logs"
+msgstr "Logs antigos do sistema"
+
+#: src/cos_config/modules/cleanup.py:47
+msgid "Keeps the last two weeks"
+msgstr "Mantém as duas últimas semanas"
+
+#: src/cos_config/modules/cleanup.py:48
+msgid "Crash dumps"
+msgstr "Registros de travamento"
+
+#: src/cos_config/modules/cleanup.py:48
+msgid "Memory saved when a program crashed"
+msgstr "Memória salva quando um programa travou"
+
+#: src/cos_config/modules/cleanup.py:49
+msgid "Unused Flatpak runtimes (system)"
+msgstr "Runtimes Flatpak sem uso (sistema)"
+
+#: src/cos_config/modules/cleanup.py:64
+msgid "Your files"
+msgstr "Seus arquivos"
+
+#: src/cos_config/modules/cleanup.py:64
+msgid "No password needed."
+msgstr "Não precisa de senha."
+
+#: src/cos_config/modules/cleanup.py:65
+msgid "Asks for the administrator password."
+msgstr "Pede a senha de administrador."
+
+#: src/cos_config/modules/cleanup.py:82
+msgid "Free space on the system disk"
+msgstr "Espaço livre no disco do sistema"
+
+#: src/cos_config/modules/cleanup.py:87 src/cos_config/modules/cleanup.py:132
+msgid "Clean selected"
+msgstr "Limpar selecionados"
+
+#: src/cos_config/modules/cleanup.py:110
+#, python-brace-format
+msgid "{n} unused"
+msgstr "{n} sem uso"
+
+#: src/cos_config/modules/cleanup.py:110
+msgid "None"
+msgstr "Nenhum"
+
+#: src/cos_config/modules/cleanup.py:112
+#, python-brace-format
+msgid "{size} of logs"
+msgstr "{size} de logs"
+
+#: src/cos_config/modules/cleanup.py:114
+msgid "Empty"
+msgstr "Vazia"
+
+#: src/cos_config/modules/cleanup.py:134
+#, python-brace-format
+msgid "Clean selected ({size})"
+msgstr "Limpar selecionados ({size})"
+
+#: src/cos_config/modules/cleanup.py:145
+msgid "Clean the selected items?"
+msgstr "Limpar os itens selecionados?"
+
+#: src/cos_config/modules/cleanup.py:146
+msgid ""
+"They are removed for good. Everything listed is created or downloaded again "
+"when it is needed."
+msgstr ""
+"Eles são removidos de vez. Tudo o que está na lista é recriado ou baixado "
+"de novo quando for necessário."
+
+#: src/cos_config/modules/cleanup.py:160
+#, python-brace-format
+msgid "Done: {size} freed"
+msgstr "Pronto: {size} liberados"

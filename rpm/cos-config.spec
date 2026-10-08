@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.7.3
+Version:        0.8.0
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Thu Oct 08 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.8.0-1
+- New module: free disk space (trash, thumbnails, package cache, old
+  logs, crash dumps, unused Flatpak runtimes and container images)
+
 * Wed Oct 07 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.7.3-1
 - Password prompts (polkit) translated to Brazilian Portuguese
 - Store description and screenshots updated for the Settings tab

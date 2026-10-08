@@ -94,6 +94,11 @@
   </branding>
 
   <releases>
+    <release version="0.8.0" date="2026-10-08">
+      <description>
+        <p>New module to free disk space: see what each cache takes and clean the ones you pick.</p>
+      </description>
+    </release>
     <release version="0.7.3" date="2026-10-07">
       <description>
         <p>Password prompts in Brazilian Portuguese and updated screenshots.</p>
