@@ -4,7 +4,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 
-from . import card, const, env, sysinfo  # noqa: E402
+from . import card, const, env, icons, sysinfo  # noqa: E402
 from .config_page import ConfigPage  # noqa: E402
 from .i18n import _  # noqa: E402
 from .live import LivePage  # noqa: E402
@@ -56,10 +56,14 @@ class CosConfigWindow(Adw.ApplicationWindow):
             self._build_system_page(), "system", _("System"), "computer-symbolic"
         )
         self._stack.add_titled_with_icon(
-            self._live, "live", _("Live"), "utilities-system-monitor-symbolic"
+            self._live, "live", _("Live"),
+            icons.pick("utilities-system-monitor-symbolic",
+                       "power-profile-performance-symbolic", "computer-symbolic"),
         )
         self._stack.add_titled_with_icon(
-            self._build_export_page(), "export", _("Share"), "emblem-shared-symbolic"
+            self._build_export_page(), "export", _("Share"),
+            icons.pick("emblem-shared-symbolic", "send-to-symbolic",
+                       "document-send-symbolic", "starred-symbolic"),
         )
         self._stack.add_titled_with_icon(
             self._build_about_page(), "about", "CapivaraOS", "starred-symbolic"
