@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 10:00-0300\n"
+"POT-Creation-Date: 2026-10-08 10:13-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -135,13 +135,23 @@ msgstr "Projeto CapivaraOS"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
 msgid ""
+"New page for remote access and network: change the computer name, turn "
+"remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
+"service."
+msgstr ""
+"Nova página de acesso remoto e rede: mude o nome do computador, ligue ou "
+"desligue o acesso remoto (SSH), crie uma chave SSH e escolha um serviço de "
+"DNS criptografado."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
+msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
 msgstr ""
 "Nova página de firewall: veja o que está aberto para a rede, libere um app "
 "ou uma porta e feche as portas altas com o modo restrito."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
@@ -149,7 +159,7 @@ msgstr ""
 "Nova verificação do sistema: checagens rápidas de saúde e um relatório para "
 "compartilhar ao pedir ajuda, sem o seu nome nem endereços de rede."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
@@ -157,12 +167,12 @@ msgstr ""
 "Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
 "limpe os que escolher."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -170,7 +180,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -178,7 +188,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -186,7 +196,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -195,7 +205,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -203,7 +213,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -212,7 +222,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:154
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -221,11 +231,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:154
+#: data/org.capivaraos.Config.metainfo.xml.in:159
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:159
+#: data/org.capivaraos.Config.metainfo.xml.in:164
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -486,27 +496,27 @@ msgstr "Rede e segurança"
 msgid "Users and services"
 msgstr "Usuários e serviços"
 
-#: src/cos_config/modules/__init__.py:115
+#: src/cos_config/modules/__init__.py:116
 msgid "The change was not applied"
 msgstr "A mudança não foi aplicada"
 
-#: src/cos_config/modules/__init__.py:116
+#: src/cos_config/modules/__init__.py:117
 msgid "Close"
 msgstr "Fechar"
 
-#: src/cos_config/modules/__init__.py:129
+#: src/cos_config/modules/__init__.py:130
 msgid "Equivalent commands"
 msgstr "Comandos equivalentes"
 
-#: src/cos_config/modules/__init__.py:131
+#: src/cos_config/modules/__init__.py:132
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/cos_config/modules/__init__.py:132 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:133 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
-#: src/cos_config/modules/firewall.py:145
+#: src/cos_config/modules/firewall.py:145 src/cos_config/modules/network.py:100
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -1530,3 +1540,210 @@ msgstr "As mudanças valem agora e continuam depois de reiniciar."
 #: src/cos_config/modules/firewall.py:253
 msgid "Firewall updated"
 msgstr "Firewall atualizado"
+
+#: src/cos_config/modules/network.py:25
+msgid "Remote access and network"
+msgstr "Acesso remoto e rede"
+
+#: src/cos_config/modules/network.py:29
+msgid "Computer name, remote login (SSH) and private DNS"
+msgstr "Nome do computador, acesso remoto (SSH) e DNS privado"
+
+#: src/cos_config/modules/network.py:33
+msgid "computer name"
+msgstr "nome do computador"
+
+#: src/cos_config/modules/network.py:33
+msgid "remote"
+msgstr "remoto"
+
+#: src/cos_config/modules/network.py:45
+msgid "Automatic"
+msgstr "Automático"
+
+#: src/cos_config/modules/network.py:45
+msgid "The DNS your network gives you, usually not encrypted"
+msgstr "O DNS fornecido pela sua rede, normalmente sem criptografia"
+
+#: src/cos_config/modules/network.py:46
+msgid "1.1.1.1, encrypted, no filtering"
+msgstr "1.1.1.1, criptografado, sem filtro"
+
+#: src/cos_config/modules/network.py:47
+msgid "Encrypted, blocks known malicious sites"
+msgstr "Criptografado, bloqueia sites maliciosos conhecidos"
+
+#: src/cos_config/modules/network.py:48
+msgid "8.8.8.8, encrypted, no filtering"
+msgstr "8.8.8.8, criptografado, sem filtro"
+
+#: src/cos_config/modules/network.py:49
+msgid "Encrypted, blocks ads and trackers"
+msgstr "Criptografado, bloqueia anúncios e rastreadores"
+
+#: src/cos_config/modules/network.py:65
+msgid "Computer name"
+msgstr "Nome do computador"
+
+#: src/cos_config/modules/network.py:66
+msgid ""
+"How this computer shows up on the network. Letters, digits and hyphens only."
+msgstr "Como este computador aparece na rede. Só letras, números e hifens."
+
+#: src/cos_config/modules/network.py:68
+msgid "Name"
+msgstr "Nome"
+
+#: src/cos_config/modules/network.py:75
+msgid "Remote login (SSH)"
+msgstr "Acesso remoto (SSH)"
+
+#: src/cos_config/modules/network.py:76
+msgid ""
+"Lets you open a terminal on this computer from another one. Anyone who knows "
+"a user's password can try to log in, so leave it off if you do not use it."
+msgstr ""
+"Permite abrir um terminal neste computador a partir de outro. Quem souber a "
+"senha de um usuário pode tentar entrar, então deixe desligado se você não "
+"usa."
+
+#: src/cos_config/modules/network.py:79
+msgid "Allow remote login"
+msgstr "Permitir acesso remoto"
+
+#: src/cos_config/modules/network.py:82
+msgid "Your SSH key"
+msgstr "Sua chave SSH"
+
+#: src/cos_config/modules/network.py:91
+msgid "Private DNS"
+msgstr "DNS privado"
+
+#: src/cos_config/modules/network.py:92
+msgid ""
+"DNS turns site names into addresses. An encrypted DNS keeps others on the "
+"network from seeing which sites you look up."
+msgstr ""
+"O DNS transforma nomes de sites em endereços. Um DNS criptografado impede "
+"que outros na rede vejam quais sites você consulta."
+
+#: src/cos_config/modules/network.py:96
+msgid "DNS service"
+msgstr "Serviço de DNS"
+
+#: src/cos_config/modules/network.py:127
+#, python-brace-format
+msgid "On. From another computer: ssh {user}@{host}"
+msgstr "Ligado. De outro computador: ssh {user}@{host}"
+
+#: src/cos_config/modules/network.py:128
+msgid "Off"
+msgstr "Desligado"
+
+#: src/cos_config/modules/network.py:132
+msgid "Copy public key"
+msgstr "Copiar chave pública"
+
+#: src/cos_config/modules/network.py:134
+msgid ""
+"None yet. A key lets you log in to servers and sites like GitHub without a "
+"password."
+msgstr ""
+"Nenhuma ainda. Uma chave permite entrar em servidores e em sites como o "
+"GitHub sem senha."
+
+#: src/cos_config/modules/network.py:136
+msgid "Create key"
+msgstr "Criar chave"
+
+#: src/cos_config/modules/network.py:158
+msgid "Use only letters, digits and hyphens (no spaces)"
+msgstr "Use só letras, números e hifens (sem espaços)"
+
+#: src/cos_config/modules/network.py:165
+msgid "Change the computer name?"
+msgstr "Mudar o nome do computador?"
+
+#: src/cos_config/modules/network.py:166
+#, python-brace-format
+msgid ""
+"The computer will be called {name}. Some apps only notice after you log out "
+"and back in."
+msgstr ""
+"O computador vai se chamar {name}. Alguns aplicativos só percebem depois que "
+"você sai da sessão e entra de novo."
+
+#: src/cos_config/modules/network.py:169
+msgid "Computer name changed"
+msgstr "Nome do computador alterado"
+
+#: src/cos_config/modules/network.py:183
+msgid "Allow remote login?"
+msgstr "Permitir acesso remoto?"
+
+#: src/cos_config/modules/network.py:184
+msgid ""
+"The SSH server will start now and with the computer. People on your network "
+"will be able to try to log in with a user name and password."
+msgstr ""
+"O servidor SSH vai iniciar agora e junto com o computador. Pessoas na sua "
+"rede poderão tentar entrar com nome de usuário e senha."
+
+#: src/cos_config/modules/network.py:187
+msgid "Turn remote login off?"
+msgstr "Desligar o acesso remoto?"
+
+#: src/cos_config/modules/network.py:188
+msgid ""
+"The SSH server will stop and no longer start with the computer. Sessions "
+"that are already open continue until they end."
+msgstr ""
+"O servidor SSH vai parar e não inicia mais com o computador. Sessões que já "
+"estão abertas continuam até terminarem."
+
+#: src/cos_config/modules/network.py:192
+msgid "Remote login updated"
+msgstr "Acesso remoto atualizado"
+
+#: src/cos_config/modules/network.py:199
+msgid "Public key copied"
+msgstr "Chave pública copiada"
+
+#: src/cos_config/modules/network.py:203
+msgid "Create an SSH key?"
+msgstr "Criar uma chave SSH?"
+
+#: src/cos_config/modules/network.py:204
+msgid ""
+"A key pair is created in your .ssh folder, with no passphrase. Keep the "
+"private file to yourself; the public one is what you give to servers."
+msgstr ""
+"Um par de chaves é criado na sua pasta .ssh, sem senha. Guarde o arquivo "
+"privado só com você; o público é o que você entrega aos servidores."
+
+#: src/cos_config/modules/network.py:210
+msgid "SSH key created"
+msgstr "Chave SSH criada"
+
+#: src/cos_config/modules/network.py:226
+msgid "The DNS your network gives you will be used again."
+msgstr "O DNS fornecido pela sua rede volta a ser usado."
+
+#: src/cos_config/modules/network.py:228
+#, python-brace-format
+msgid ""
+"All name lookups will go, encrypted, to {service}. Names that only exist on "
+"your local network may stop working. If no name resolves, the previous "
+"setting is restored automatically."
+msgstr ""
+"Todas as consultas de nomes vão, criptografadas, para {service}. Nomes que "
+"só existem na sua rede local podem parar de funcionar. Se nenhum nome "
+"resolver, a configuração anterior é restaurada automaticamente."
+
+#: src/cos_config/modules/network.py:232
+msgid "Change the DNS service?"
+msgstr "Mudar o serviço de DNS?"
+
+#: src/cos_config/modules/network.py:238
+msgid "DNS updated"
+msgstr "DNS atualizado"

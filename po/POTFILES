@@ -17,3 +17,4 @@ src/cos_config/modules/disks.py
 src/cos_config/modules/cleanup.py
 src/cos_config/modules/diagnostics.py
 src/cos_config/modules/firewall.py
+src/cos_config/modules/network.py

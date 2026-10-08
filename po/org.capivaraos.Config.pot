@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 10:00-0300\n"
+"POT-Creation-Date: 2026-10-08 10:13-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,73 +121,80 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
 msgid ""
+"New page for remote access and network: change the computer name, turn "
+"remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
+"service."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
+msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:154
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:154
+#: data/org.capivaraos.Config.metainfo.xml.in:159
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:159
+#: data/org.capivaraos.Config.metainfo.xml.in:164
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -439,27 +446,27 @@ msgstr ""
 msgid "Users and services"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:115
+#: src/cos_config/modules/__init__.py:116
 msgid "The change was not applied"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:116
+#: src/cos_config/modules/__init__.py:117
 msgid "Close"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:129
+#: src/cos_config/modules/__init__.py:130
 msgid "Equivalent commands"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:131
+#: src/cos_config/modules/__init__.py:132
 msgid "Cancel"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:132 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:133 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
-#: src/cos_config/modules/firewall.py:145
+#: src/cos_config/modules/firewall.py:145 src/cos_config/modules/network.py:100
 msgid "Apply"
 msgstr ""
 
@@ -1434,4 +1441,193 @@ msgstr ""
 
 #: src/cos_config/modules/firewall.py:253
 msgid "Firewall updated"
+msgstr ""
+
+#: src/cos_config/modules/network.py:25
+msgid "Remote access and network"
+msgstr ""
+
+#: src/cos_config/modules/network.py:29
+msgid "Computer name, remote login (SSH) and private DNS"
+msgstr ""
+
+#: src/cos_config/modules/network.py:33
+msgid "computer name"
+msgstr ""
+
+#: src/cos_config/modules/network.py:33
+msgid "remote"
+msgstr ""
+
+#: src/cos_config/modules/network.py:45
+msgid "Automatic"
+msgstr ""
+
+#: src/cos_config/modules/network.py:45
+msgid "The DNS your network gives you, usually not encrypted"
+msgstr ""
+
+#: src/cos_config/modules/network.py:46
+msgid "1.1.1.1, encrypted, no filtering"
+msgstr ""
+
+#: src/cos_config/modules/network.py:47
+msgid "Encrypted, blocks known malicious sites"
+msgstr ""
+
+#: src/cos_config/modules/network.py:48
+msgid "8.8.8.8, encrypted, no filtering"
+msgstr ""
+
+#: src/cos_config/modules/network.py:49
+msgid "Encrypted, blocks ads and trackers"
+msgstr ""
+
+#: src/cos_config/modules/network.py:65
+msgid "Computer name"
+msgstr ""
+
+#: src/cos_config/modules/network.py:66
+msgid ""
+"How this computer shows up on the network. Letters, digits and hyphens only."
+msgstr ""
+
+#: src/cos_config/modules/network.py:68
+msgid "Name"
+msgstr ""
+
+#: src/cos_config/modules/network.py:75
+msgid "Remote login (SSH)"
+msgstr ""
+
+#: src/cos_config/modules/network.py:76
+msgid ""
+"Lets you open a terminal on this computer from another one. Anyone who knows "
+"a user's password can try to log in, so leave it off if you do not use it."
+msgstr ""
+
+#: src/cos_config/modules/network.py:79
+msgid "Allow remote login"
+msgstr ""
+
+#: src/cos_config/modules/network.py:82
+msgid "Your SSH key"
+msgstr ""
+
+#: src/cos_config/modules/network.py:91
+msgid "Private DNS"
+msgstr ""
+
+#: src/cos_config/modules/network.py:92
+msgid ""
+"DNS turns site names into addresses. An encrypted DNS keeps others on the "
+"network from seeing which sites you look up."
+msgstr ""
+
+#: src/cos_config/modules/network.py:96
+msgid "DNS service"
+msgstr ""
+
+#: src/cos_config/modules/network.py:127
+#, python-brace-format
+msgid "On. From another computer: ssh {user}@{host}"
+msgstr ""
+
+#: src/cos_config/modules/network.py:128
+msgid "Off"
+msgstr ""
+
+#: src/cos_config/modules/network.py:132
+msgid "Copy public key"
+msgstr ""
+
+#: src/cos_config/modules/network.py:134
+msgid ""
+"None yet. A key lets you log in to servers and sites like GitHub without a "
+"password."
+msgstr ""
+
+#: src/cos_config/modules/network.py:136
+msgid "Create key"
+msgstr ""
+
+#: src/cos_config/modules/network.py:158
+msgid "Use only letters, digits and hyphens (no spaces)"
+msgstr ""
+
+#: src/cos_config/modules/network.py:165
+msgid "Change the computer name?"
+msgstr ""
+
+#: src/cos_config/modules/network.py:166
+#, python-brace-format
+msgid ""
+"The computer will be called {name}. Some apps only notice after you log out "
+"and back in."
+msgstr ""
+
+#: src/cos_config/modules/network.py:169
+msgid "Computer name changed"
+msgstr ""
+
+#: src/cos_config/modules/network.py:183
+msgid "Allow remote login?"
+msgstr ""
+
+#: src/cos_config/modules/network.py:184
+msgid ""
+"The SSH server will start now and with the computer. People on your network "
+"will be able to try to log in with a user name and password."
+msgstr ""
+
+#: src/cos_config/modules/network.py:187
+msgid "Turn remote login off?"
+msgstr ""
+
+#: src/cos_config/modules/network.py:188
+msgid ""
+"The SSH server will stop and no longer start with the computer. Sessions "
+"that are already open continue until they end."
+msgstr ""
+
+#: src/cos_config/modules/network.py:192
+msgid "Remote login updated"
+msgstr ""
+
+#: src/cos_config/modules/network.py:199
+msgid "Public key copied"
+msgstr ""
+
+#: src/cos_config/modules/network.py:203
+msgid "Create an SSH key?"
+msgstr ""
+
+#: src/cos_config/modules/network.py:204
+msgid ""
+"A key pair is created in your .ssh folder, with no passphrase. Keep the "
+"private file to yourself; the public one is what you give to servers."
+msgstr ""
+
+#: src/cos_config/modules/network.py:210
+msgid "SSH key created"
+msgstr ""
+
+#: src/cos_config/modules/network.py:226
+msgid "The DNS your network gives you will be used again."
+msgstr ""
+
+#: src/cos_config/modules/network.py:228
+#, python-brace-format
+msgid ""
+"All name lookups will go, encrypted, to {service}. Names that only exist on "
+"your local network may stop working. If no name resolves, the previous "
+"setting is restored automatically."
+msgstr ""
+
+#: src/cos_config/modules/network.py:232
+msgid "Change the DNS service?"
+msgstr ""
+
+#: src/cos_config/modules/network.py:238
+msgid "DNS updated"
 msgstr ""

@@ -86,4 +86,17 @@
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">@HELPER_DIR@/firewall</annotate>
   </action>
+
+  <action id="org.capivaraos.config.network">
+    <description>Change remote login or DNS</description>
+    <description xml:lang="pt-BR">Alterar o acesso remoto ou o DNS</description>
+    <message>Authentication is required to change remote login (SSH) or the DNS service</message>
+    <message xml:lang="pt-BR">É necessário autenticar para mudar o acesso remoto (SSH) ou o serviço de DNS</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">@HELPER_DIR@/network</annotate>
+  </action>
 </policyconfig>
