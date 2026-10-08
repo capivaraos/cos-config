@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 08:29-0300\n"
+"POT-Creation-Date: 2026-10-08 08:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,61 +121,67 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
 msgid ""
+"New system check: quick health checks and a report to share when asking for "
+"help, without your name or network addresses."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
+msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:154
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -252,46 +258,46 @@ msgstr ""
 msgid "Live"
 msgstr ""
 
-#: src/cos_config/window.py:62
+#: src/cos_config/window.py:64
 msgid "Share"
 msgstr ""
 
-#: src/cos_config/window.py:90
+#: src/cos_config/window.py:94
 msgid "System information"
 msgstr ""
 
-#: src/cos_config/window.py:91
+#: src/cos_config/window.py:95
 msgid "A snapshot of this machine"
 msgstr ""
 
-#: src/cos_config/window.py:117
+#: src/cos_config/window.py:121
 msgid "Save card…"
 msgstr ""
 
-#: src/cos_config/window.py:133
+#: src/cos_config/window.py:137
 msgid "Save specs card"
 msgstr ""
 
-#: src/cos_config/window.py:145
+#: src/cos_config/window.py:149
 msgid "Card saved"
 msgstr ""
 
-#: src/cos_config/window.py:150
+#: src/cos_config/window.py:154
 msgid "Runs everywhere. Feels like home on CapivaraOS"
 msgstr ""
 
-#: src/cos_config/window.py:152
+#: src/cos_config/window.py:156
 msgid ""
 "COS Config Center is a gift from the CapivaraOS project — a friendly Linux "
 "distribution with a capybara at its heart.\n"
 "Like it? Give the whole system a try."
 msgstr ""
 
-#: src/cos_config/window.py:170
+#: src/cos_config/window.py:174
 msgid "Try CapivaraOS"
 msgstr ""
 
-#: src/cos_config/window.py:174
+#: src/cos_config/window.py:178
 msgid "Visit capivaraos.org"
 msgstr ""
 
@@ -427,23 +433,23 @@ msgstr ""
 msgid "Users and services"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:112
+#: src/cos_config/modules/__init__.py:113
 msgid "The change was not applied"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:113
+#: src/cos_config/modules/__init__.py:114
 msgid "Close"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:126
+#: src/cos_config/modules/__init__.py:127
 msgid "Equivalent commands"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:128
+#: src/cos_config/modules/__init__.py:129
 msgid "Cancel"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:129 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:130 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
@@ -596,6 +602,7 @@ msgid ""
 msgstr ""
 
 #: src/cos_config/modules/multimedia.py:83
+#: src/cos_config/modules/diagnostics.py:74
 msgid "Checking…"
 msgstr ""
 
@@ -1082,6 +1089,7 @@ msgid "{n} unused"
 msgstr ""
 
 #: src/cos_config/modules/cleanup.py:110
+#: src/cos_config/modules/diagnostics.py:65
 msgid "None"
 msgstr ""
 
@@ -1112,4 +1120,122 @@ msgstr ""
 #: src/cos_config/modules/cleanup.py:160
 #, python-brace-format
 msgid "Done: {size} freed"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:30
+msgid "System check"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:34
+msgid "Quick health checks and a report to share when asking for help"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:38
+msgid "diagnosis"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:38
+msgid "problem"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:38
+msgid "help"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:38
+msgid "report"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:38
+msgid "error"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:52
+#, python-brace-format
+msgid "Disk {mount}"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:53
+#, python-brace-format
+msgid "{percent}% used, {free} free"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:56
+#: src/cos_config/modules/diagnostics.py:57
+msgid "Services"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:56
+#, python-brace-format
+msgid "Failed: {names}"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:57
+msgid "All running"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:60
+#, python-brace-format
+msgid "Driver in use: {driver}"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:61
+msgid "No driver loaded"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:63
+#: src/cos_config/modules/diagnostics.py:65
+msgid "Errors since startup"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:64
+#, python-brace-format
+msgid "{n} lines. Often harmless, but useful when asking for help."
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:94
+#: src/cos_config/modules/diagnostics.py:95
+msgid "Everything looks fine"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:96
+msgid "Something needs attention"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:97
+msgid "A problem was found"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:111
+msgid "Report"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:112
+msgid ""
+"To paste in a forum or chat when you ask for help. It does not include your "
+"name, the computer's name or network addresses."
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:116
+msgid "Copy report"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:120
+msgid "Save report…"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:131
+msgid "See the report"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:139
+msgid "Report copied"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:142
+msgid "Save report"
+msgstr ""
+
+#: src/cos_config/modules/diagnostics.py:156
+msgid "Report saved"
 msgstr ""

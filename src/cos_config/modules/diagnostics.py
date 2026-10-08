@@ -4,7 +4,7 @@ import threading
 
 from gi.repository import Adw, GLib, Gtk
 
-from .. import const, icons
+from .. import cleanup, const, icons
 from .. import diagnostics as dg
 from ..i18n import _
 from . import Module
@@ -48,7 +48,7 @@ class DiagnosticsModule(Module):
 def _row_texts(check):
     kind = check["kind"]
     if kind == "disk":
-        free = f"{check['available'] / 1e9:.1f} GB"
+        free = cleanup.human(check["available"])
         return (_("Disk {mount}").format(mount=check["mount"]),
                 _("{percent}% used, {free} free").format(percent=check["percent"], free=free))
     if kind == "services":
