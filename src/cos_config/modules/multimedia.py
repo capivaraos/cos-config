@@ -48,19 +48,9 @@ def _rows_text():
         "openh264": (_("Cisco OpenH264"), _("H.264 video for browsers and calls")),
         "codecs": (_("Complete codecs"),
                    _("Full FFmpeg and GStreamer plugins (MP4, H.265, AAC and more)")),
-        "hwaccel": (_("Hardware video acceleration"),
-                    _("Smoother videos and less battery use")),
         "flathub": (_("All Flathub apps"),
                     _("Remove Fedora's filter so every Flathub app shows up")),
     }
-
-
-def _hwaccel_subtitle(vendors):
-    if ops.INTEL in vendors and ops.AMD in vendors:
-        return _("Full video driver for your Intel and AMD graphics")
-    if ops.AMD in vendors:
-        return _("Full video driver for your AMD graphics")
-    return _("Full video driver for your Intel graphics")
 
 
 class _MultimediaPage(Adw.PreferencesPage):
@@ -68,7 +58,6 @@ class _MultimediaPage(Adw.PreferencesPage):
         super().__init__()
         self._ctx = ctx
         self._state = {}
-        self._vendors = []
         self._syncing = False
 
         group = Adw.PreferencesGroup(
@@ -84,12 +73,6 @@ class _MultimediaPage(Adw.PreferencesPage):
             row.connect("notify::active", self._sync)
             self._rows[step] = (row, subtitle)
             group.add(row)
-        self._nvidia_row = Adw.ActionRow(
-            title=_("NVIDIA video acceleration"),
-            subtitle=_("Comes with the NVIDIA driver, set up on its own page."),
-            visible=False,
-        )
-        group.add(self._nvidia_row)
         self.add(group)
 
         self.add(Adw.PreferencesGroup(
@@ -123,38 +106,28 @@ class _MultimediaPage(Adw.PreferencesPage):
         self._apply_btn.set_sensitive(False)
 
         def work():
-            vendors = ops.gpu_vendors()
-            result = ops.state(vendors)
-            GLib.idle_add(self._show_state, vendors, result)
+            GLib.idle_add(self._show_state, ops.state())
 
         threading.Thread(target=work, daemon=True).start()
 
-    def _show_state(self, vendors, state):
-        self._vendors, self._state = vendors, state
+    def _show_state(self, state):
+        self._state = state
         self._syncing = True
         for step, (row, subtitle) in self._rows.items():
             done = state.get(step)
-            if step == "hwaccel" and done is None:
-                row.set_visible(False)
-                continue
-            if step == "hwaccel":
-                subtitle = _hwaccel_subtitle(vendors)
-                self._rows[step] = (row, subtitle)
-            row.set_visible(True)
             row.set_sensitive(not done)
             row.set_active(True)  # done: shown on; missing: proposed on
             row.set_subtitle(_("Already enabled") if done else subtitle)
-        self._nvidia_row.set_visible(ops.NVIDIA in vendors)
         self._syncing = False
         self._sync()
         return GLib.SOURCE_REMOVE
 
     def _selected(self):
         return [s for s, (row, _sub) in self._rows.items()
-                if row.get_visible() and row.get_active() and not self._state.get(s)]
+                if row.get_active() and not self._state.get(s)]
 
     def _sync(self, *_args):
-        """RPM Fusion is required by codecs and the video driver."""
+        """RPM Fusion is required by the codecs."""
         if self._syncing or not self._state:
             return
         self._syncing = True
@@ -164,7 +137,7 @@ class _MultimediaPage(Adw.PreferencesPage):
             if needed:
                 row.set_active(True)
             row.set_sensitive(not needed)
-            row.set_subtitle(_("Needed for the codecs and the video driver") if needed else subtitle)
+            row.set_subtitle(_("Needed for the codecs") if needed else subtitle)
         self._syncing = False
         self._apply_btn.set_sensitive(bool(self._selected()))
 
@@ -177,7 +150,7 @@ class _MultimediaPage(Adw.PreferencesPage):
             _("Enable multimedia support?"),
             _("Packages will be downloaded and installed. This can take several "
               "minutes, depending on your connection."),
-            ops.describe(steps, self._vendors),
+            ops.describe(steps),
             lambda: self._run(selected),
         )
 

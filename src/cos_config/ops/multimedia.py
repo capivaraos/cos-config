@@ -5,30 +5,19 @@ Steps, always run in this order and each skipped when already done:
   rpmfusion  RPM Fusion free + nonfree release packages
   openh264   Cisco's OpenH264 repository (shipped with Fedora, may be off)
   codecs     full FFmpeg (swap of ffmpeg-free) + GStreamer plugins
-  hwaccel    full VA-API video driver for the GPU (Intel, AMD)
   flathub    Flathub system remote, without Fedora's filter
 
 Checked against Fedora 45 + RPM Fusion: only the FFmpeg swap uses
 --allowerasing (it replaces the 8 "-free" libraries one for one). Every
-other step fails instead of removing packages; in particular AMD gets the
-freeworld VA driver *next to* mesa-dri-drivers, because swapping it would
-remove the 3D driver.
+other step fails instead of removing packages.
 """
 
-import re
 import subprocess
 
 from . import common
 
-STEPS = ("rpmfusion", "openh264", "codecs", "hwaccel", "flathub")
-NEEDS_RPMFUSION = ("codecs", "hwaccel")
-
-INTEL = "intel"
-AMD = "amd"
-NVIDIA = "nvidia"
-_VENDOR_IDS = {"8086": INTEL, "1002": AMD, "10de": NVIDIA}
-# lspci -n: "00:02.0 0300: 8086:3e9b (rev 02)"; display classes 0300/0302/0380.
-_LSPCI_RE = re.compile(r"^\S+\s+03(?:00|02|80):\s+([0-9a-f]{4}):[0-9a-f]{4}", re.M)
+STEPS = ("rpmfusion", "openh264", "codecs", "flathub")
+NEEDS_RPMFUSION = ("codecs",)
 
 RPMFUSION_URL = "https://mirrors.rpmfusion.org/{kind}/fedora/rpmfusion-{kind}-release-{rel}.noarch.rpm"
 FLATHUB_URL = "https://dl.flathub.org/repo/flathub.flatpakrepo"
@@ -44,15 +33,6 @@ CODEC_MARKERS = ("ffmpeg-libs", "gstreamer1-plugins-bad-freeworld", "gstreamer1-
 
 
 # ---- parsing (pure) --------------------------------------------------------
-def parse_gpu_vendors(lspci_n):
-    vendors = []
-    for vid in _LSPCI_RE.findall(lspci_n.lower()):
-        vendor = _VENDOR_IDS.get(vid)
-        if vendor and vendor not in vendors:
-            vendors.append(vendor)
-    return vendors
-
-
 def parse_enabled_repos(repo_list):
     """Repo ids from `dnf repo list --enabled` (first column, header skipped)."""
     ids = []
@@ -85,21 +65,7 @@ def plan(requested, done):
     return [s for s in STEPS if s in requested and s not in done]
 
 
-def hwaccel_commands(vendors, installed):
-    """dnf argv lists for the video driver, given GPU vendors and a predicate
-    telling whether a package is installed."""
-    cmds = []
-    if INTEL in vendors and not installed("intel-media-driver"):
-        if installed("libva-intel-media-driver"):
-            cmds.append(["dnf", "swap", "-y", "libva-intel-media-driver", "intel-media-driver"])
-        else:
-            cmds.append(["dnf", "install", "-y", "intel-media-driver"])
-    if AMD in vendors and not installed("mesa-va-drivers-freeworld"):
-        cmds.append(["dnf", "install", "-y", "mesa-va-drivers-freeworld.x86_64"])
-    return cmds
-
-
-def step_commands(step, release, vendors, installed):
+def step_commands(step, release, installed):
     if step == "rpmfusion":
         return [["dnf", "install", "-y",
                  RPMFUSION_URL.format(kind="free", rel=release),
@@ -117,8 +83,6 @@ def step_commands(step, release, vendors, installed):
                 cmds.append(["dnf", "install", "-y", "ffmpeg", "--allowerasing"])
         cmds.append(["dnf", "install", "-y", *GSTREAMER])
         return cmds
-    if step == "hwaccel":
-        return hwaccel_commands(vendors, installed)
     if step == "flathub":
         return [["flatpak", "remote-add", "--system", "--if-not-exists", "flathub", FLATHUB_URL],
                 ["flatpak", "remote-modify", "--system", "--no-filter", "--enable", "flathub"]]
@@ -140,10 +104,6 @@ def is_installed(package):
         return False
 
 
-def gpu_vendors():
-    return parse_gpu_vendors(_out(["lspci", "-n"]))
-
-
 def fedora_release():
     rel = _out(["rpm", "-E", "%fedora"]).strip()
     if not rel.isdigit():
@@ -151,27 +111,22 @@ def fedora_release():
     return rel
 
 
-def state(vendors=None):
-    """{step: done?} for this machine. hwaccel is None when the GPU has no
-    driver handled here (e.g. NVIDIA only, or no GPU found)."""
-    vendors = gpu_vendors() if vendors is None else vendors
-    accel = hwaccel_commands(vendors, is_installed)
-    handled = INTEL in vendors or AMD in vendors
+def state():
+    """{step: done?} for this machine."""
     return {
         "rpmfusion": is_installed("rpmfusion-free-release") and is_installed("rpmfusion-nonfree-release"),
         "openh264": OPENH264_REPO in parse_enabled_repos(_out(["dnf", "repo", "list", "--enabled"])),
         "codecs": all(is_installed(p) for p in CODEC_MARKERS),
-        "hwaccel": (not accel) if handled else None,
         "flathub": parse_flathub_filtered(
             _out(["flatpak", "remotes", "--system", "--columns=name,filter"])) is False,
     }
 
 
-def describe(steps, vendors, installed=is_installed, release="$(rpm -E %fedora)"):
+def describe(steps, installed=is_installed, release="$(rpm -E %fedora)"):
     """Equivalent shell commands for *steps*, shown before applying."""
     lines = []
     for step in steps:
-        for argv in step_commands(step, release, vendors, installed):
+        for argv in step_commands(step, release, installed):
             lines.append("sudo " + " ".join(argv))
     return lines
 
@@ -184,9 +139,8 @@ def helper_main(argv):
     current = state()
     done = {s for s, ok in current.items() if ok}
     steps = plan(argv[1:], done)
-    vendors = gpu_vendors()
     release = fedora_release() if "rpmfusion" in steps else None
     for step in steps:
-        for cmd in step_commands(step, release, vendors, is_installed):
+        for cmd in step_commands(step, release, is_installed):
             common.run_cmd(cmd)
         print(f"step {step}: done", flush=True)
