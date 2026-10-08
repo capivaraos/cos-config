@@ -44,6 +44,16 @@ def high_ports_open(ports):
     return {f"{HIGH_RANGE}/tcp", f"{HIGH_RANGE}/udp"} <= set(ports)
 
 
+def covered_by_high_range(spec, ports):
+    """Whether *spec* ("8080/tcp") is already open through the high range.
+
+    firewalld answers ALREADY_ENABLED and stores nothing in that case, so
+    adding such a port must not be presented as a change.
+    """
+    number, _, proto = spec.partition("/")
+    return number.isdigit() and int(number) >= 1025 and f"{HIGH_RANGE}/{proto}" in ports
+
+
 def custom_ports(ports):
     """Single ports the user added (the high range is shown on its own)."""
     def key(spec):

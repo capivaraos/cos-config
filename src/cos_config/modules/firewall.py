@@ -186,6 +186,10 @@ class _FirewallPage(Adw.PreferencesPage):
         if spec.startswith(fw.HIGH_RANGE) or spec in self._info["ports"] or spec in self._to_add:
             self._ctx.toast(_("That port is already in the list"))
             return
+        if self._covered(spec):
+            self._ctx.toast(_("Port {port} is already open: the ports above 1024 are open")
+                            .format(port=spec))
+            return
         self._to_add.append(spec)
         entry.set_text("")
         self._fill_ports()
@@ -201,6 +205,11 @@ class _FirewallPage(Adw.PreferencesPage):
         self._fill_ports()
         self._update()
 
+    def _covered(self, spec):
+        """Open anyway once the changes apply (high range stays open)?"""
+        return (not self._strict.get_active()
+                and fw.covered_by_high_range(spec, self._info["ports"]))
+
     def _changes(self):
         changes = []
         for row, preset, state in self._switches.values():
@@ -208,13 +217,21 @@ class _FirewallPage(Adw.PreferencesPage):
                 changes += fw.preset_changes(preset, row.get_active())
         if self._strict.get_active() == fw.high_ports_open(self._info["ports"]):
             changes += fw.strict_changes(self._strict.get_active())
-        changes += [("port", "add", spec) for spec in self._to_add]
+        # With strict mode going on, the range is closed first (above), so a
+        # high port added now is stored; otherwise firewalld would ignore it.
+        changes += [("port", "add", spec) for spec in self._to_add if not self._covered(spec)]
         changes += [("port", "remove", spec) for spec in sorted(self._to_remove)]
         return changes
 
     def _update(self, *_args):
-        if not self._loading:
-            self._apply_btn.set_sensitive(bool(self._changes()))
+        if self._loading:
+            return
+        # Strict mode turned back off: pending high ports would be no-ops.
+        stale = [spec for spec in self._to_add if self._covered(spec)]
+        if stale:
+            self._to_add = [spec for spec in self._to_add if spec not in stale]
+            self._fill_ports()
+        self._apply_btn.set_sensitive(bool(self._changes()))
 
     # ---- apply -----------------------------------------------------------------
     def _on_apply(self, _btn):

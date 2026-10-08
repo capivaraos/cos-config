@@ -33,6 +33,15 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(fw.custom_ports(info["ports"]), ["443/tcp", "5000/udp", "8080/tcp"])
         self.assertFalse(fw.high_ports_open({"1025-65535/tcp"}))  # udp half only
 
+    def test_covered_by_high_range(self):
+        ports = fw.parse_list_all(LIST_ALL)["ports"]
+        self.assertTrue(fw.covered_by_high_range("8080/tcp", ports))
+        self.assertTrue(fw.covered_by_high_range("1025/udp", ports))
+        self.assertFalse(fw.covered_by_high_range("1024/tcp", ports))   # just below
+        self.assertFalse(fw.covered_by_high_range("443/tcp", ports))
+        self.assertFalse(fw.covered_by_high_range("8080/tcp", fw.parse_list_all(STRICT)["ports"]))
+        self.assertFalse(fw.covered_by_high_range("8080/tcp", {"1025-65535/udp"}))  # other protocol
+
     def test_empty(self):
         self.assertEqual(fw.parse_list_all(""), {"zone": "", "services": set(), "ports": set()})
 

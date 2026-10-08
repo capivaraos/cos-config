@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 09:54-0300\n"
+"POT-Creation-Date: 2026-10-08 10:00-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -1354,8 +1354,7 @@ msgstr "Compartilhar pastas na rede"
 
 #: src/cos_config/modules/firewall.py:44
 msgid "Other computers can open the folders you share (Samba)"
-msgstr ""
-"Outros computadores podem abrir as pastas que você compartilha (Samba)"
+msgstr "Outros computadores podem abrir as pastas que você compartilha (Samba)"
 
 #: src/cos_config/modules/firewall.py:45
 msgid "Remote terminal access (SSH)"
@@ -1423,8 +1422,8 @@ msgid ""
 "firewalld is installed but stopped, so nothing is being filtered and there "
 "is nothing to configure here."
 msgstr ""
-"O firewalld está instalado, mas parado; então nada está sendo filtrado e "
-"não há o que configurar aqui."
+"O firewalld está instalado, mas parado; então nada está sendo filtrado e não "
+"há o que configurar aqui."
 
 #: src/cos_config/modules/firewall.py:101
 msgid "Firewall on"
@@ -1515,14 +1514,19 @@ msgstr "Digite um número de porta de 1 a 65535, opcionalmente com /udp"
 msgid "That port is already in the list"
 msgstr "Essa porta já está na lista"
 
-#: src/cos_config/modules/firewall.py:224
+#: src/cos_config/modules/firewall.py:190
+#, python-brace-format
+msgid "Port {port} is already open: the ports above 1024 are open"
+msgstr "A porta {port} já está aberta: as portas acima de 1024 estão abertas"
+
+#: src/cos_config/modules/firewall.py:241
 msgid "Change the firewall?"
 msgstr "Alterar o firewall?"
 
-#: src/cos_config/modules/firewall.py:225
+#: src/cos_config/modules/firewall.py:242
 msgid "The changes apply now and are kept after restarting."
 msgstr "As mudanças valem agora e continuam depois de reiniciar."
 
-#: src/cos_config/modules/firewall.py:236
+#: src/cos_config/modules/firewall.py:253
 msgid "Firewall updated"
 msgstr "Firewall atualizado"
