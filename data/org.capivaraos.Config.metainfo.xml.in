@@ -94,6 +94,11 @@
   </branding>
 
   <releases>
+    <release version="0.9.0" date="2026-10-08">
+      <description>
+        <p>New system check: quick health checks and a report to share when asking for help, without your name or network addresses.</p>
+      </description>
+    </release>
     <release version="0.8.0" date="2026-10-08">
       <description>
         <p>New module to free disk space: see what each cache takes and clean the ones you pick.</p>
