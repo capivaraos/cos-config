@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 10:13-0300\n"
+"POT-Creation-Date: 2026-10-08 12:46-0300\n"
 "PO-Revision-Date: 2026-07-26 20:00-0300\n"
 "Last-Translator: CapivaraOS Project <capivaraos-"
 "bot@users.noreply.github.com>\n"
@@ -135,6 +135,14 @@ msgstr "Projeto CapivaraOS"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
 msgid ""
+"The multimedia page no longer offers the hardware video acceleration step; "
+"it will return in a later version."
+msgstr ""
+"A página de multimídia não oferece mais a etapa de aceleração de vídeo por "
+"hardware; ela volta numa versão futura."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
+msgid ""
 "New page for remote access and network: change the computer name, turn "
 "remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
 "service."
@@ -143,7 +151,7 @@ msgstr ""
 "desligue o acesso remoto (SSH), crie uma chave SSH e escolha um serviço de "
 "DNS criptografado."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
@@ -151,7 +159,7 @@ msgstr ""
 "Nova página de firewall: veja o que está aberto para a rede, libere um app "
 "ou uma porta e feche as portas altas com o modo restrito."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
@@ -159,7 +167,7 @@ msgstr ""
 "Nova verificação do sistema: checagens rápidas de saúde e um relatório para "
 "compartilhar ao pedir ajuda, sem o seu nome nem endereços de rede."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
@@ -167,12 +175,12 @@ msgstr ""
 "Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
 "limpe os que escolher."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -180,7 +188,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -188,7 +196,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -196,7 +204,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -205,7 +213,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -213,7 +221,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:154
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -222,7 +230,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:154
+#: data/org.capivaraos.Config.metainfo.xml.in:159
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -231,11 +239,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:159
+#: data/org.capivaraos.Config.metainfo.xml.in:164
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:164
+#: data/org.capivaraos.Config.metainfo.xml.in:169
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -513,7 +521,7 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/cos_config/modules/__init__.py:133 src/cos_config/modules/journald.py:71
-#: src/cos_config/modules/multimedia.py:104
+#: src/cos_config/modules/multimedia.py:87
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
 #: src/cos_config/modules/firewall.py:145 src/cos_config/modules/network.py:100
@@ -635,38 +643,18 @@ msgid "Full FFmpeg and GStreamer plugins (MP4, H.265, AAC and more)"
 msgstr "FFmpeg completo e plugins do GStreamer (MP4, H.265, AAC e mais)"
 
 #: src/cos_config/modules/multimedia.py:51
-msgid "Hardware video acceleration"
-msgstr "Aceleração de vídeo por hardware"
-
-#: src/cos_config/modules/multimedia.py:52
-msgid "Smoother videos and less battery use"
-msgstr "Vídeos mais fluidos e menos gasto de bateria"
-
-#: src/cos_config/modules/multimedia.py:53
 msgid "All Flathub apps"
 msgstr "Todos os apps do Flathub"
 
-#: src/cos_config/modules/multimedia.py:54
+#: src/cos_config/modules/multimedia.py:52
 msgid "Remove Fedora's filter so every Flathub app shows up"
 msgstr "Remove o filtro do Fedora para que todos os apps do Flathub apareçam"
 
-#: src/cos_config/modules/multimedia.py:60
-msgid "Full video driver for your Intel and AMD graphics"
-msgstr "Driver de vídeo completo para seus gráficos Intel e AMD"
-
-#: src/cos_config/modules/multimedia.py:62
-msgid "Full video driver for your AMD graphics"
-msgstr "Driver de vídeo completo para seus gráficos AMD"
-
-#: src/cos_config/modules/multimedia.py:63
-msgid "Full video driver for your Intel graphics"
-msgstr "Driver de vídeo completo para seus gráficos Intel"
-
-#: src/cos_config/modules/multimedia.py:75
+#: src/cos_config/modules/multimedia.py:64
 msgid "Multimedia support"
 msgstr "Suporte multimídia"
 
-#: src/cos_config/modules/multimedia.py:77
+#: src/cos_config/modules/multimedia.py:66
 msgid ""
 "Many videos and songs use formats that Fedora cannot include because of "
 "patents. Turn on what you want and apply."
@@ -674,24 +662,16 @@ msgstr ""
 "Muitos vídeos e músicas usam formatos que o Fedora não pode incluir por "
 "causa de patentes. Ligue o que quiser e aplique."
 
-#: src/cos_config/modules/multimedia.py:83
+#: src/cos_config/modules/multimedia.py:72
 #: src/cos_config/modules/diagnostics.py:74
 msgid "Checking…"
 msgstr "Verificando…"
 
-#: src/cos_config/modules/multimedia.py:88
-msgid "NVIDIA video acceleration"
-msgstr "Aceleração de vídeo NVIDIA"
-
-#: src/cos_config/modules/multimedia.py:89
-msgid "Comes with the NVIDIA driver, set up on its own page."
-msgstr "Vem com o driver NVIDIA, configurado na página dele."
-
-#: src/cos_config/modules/multimedia.py:96
+#: src/cos_config/modules/multimedia.py:79
 msgid "About these sources"
 msgstr "Sobre essas fontes"
 
-#: src/cos_config/modules/multimedia.py:98
+#: src/cos_config/modules/multimedia.py:81
 msgid ""
 "RPM Fusion and Flathub are run by their own communities, not by CapivaraOS "
 "or Fedora. Some of these formats are covered by patents in a few countries: "
@@ -702,19 +682,19 @@ msgstr ""
 "patentes em alguns países: verifique o que vale onde você mora."
 
 #. done: shown on; missing: proposed on
-#: src/cos_config/modules/multimedia.py:146
+#: src/cos_config/modules/multimedia.py:120
 msgid "Already enabled"
 msgstr "Já ativado"
 
-#: src/cos_config/modules/multimedia.py:167
-msgid "Needed for the codecs and the video driver"
-msgstr "Necessário para os codecs e o driver de vídeo"
+#: src/cos_config/modules/multimedia.py:140
+msgid "Needed for the codecs"
+msgstr "Necessário para os codecs"
 
-#: src/cos_config/modules/multimedia.py:177
+#: src/cos_config/modules/multimedia.py:150
 msgid "Enable multimedia support?"
 msgstr "Ativar o suporte multimídia?"
 
-#: src/cos_config/modules/multimedia.py:178
+#: src/cos_config/modules/multimedia.py:151
 msgid ""
 "Packages will be downloaded and installed. This can take several minutes, "
 "depending on your connection."
@@ -722,11 +702,11 @@ msgstr ""
 "Pacotes serão baixados e instalados. Isso pode levar alguns minutos, "
 "dependendo da sua conexão."
 
-#: src/cos_config/modules/multimedia.py:191
+#: src/cos_config/modules/multimedia.py:164
 msgid "Multimedia support enabled"
 msgstr "Suporte multimídia ativado"
 
-#: src/cos_config/modules/multimedia.py:200
+#: src/cos_config/modules/multimedia.py:173
 msgid "Installing… this can take a few minutes"
 msgstr "Instalando… isso pode levar alguns minutos"
 
@@ -1631,20 +1611,20 @@ msgstr ""
 msgid "DNS service"
 msgstr "Serviço de DNS"
 
-#: src/cos_config/modules/network.py:127
+#: src/cos_config/modules/network.py:130
 #, python-brace-format
 msgid "On. From another computer: ssh {user}@{host}"
 msgstr "Ligado. De outro computador: ssh {user}@{host}"
 
-#: src/cos_config/modules/network.py:128
+#: src/cos_config/modules/network.py:131
 msgid "Off"
 msgstr "Desligado"
 
-#: src/cos_config/modules/network.py:132
+#: src/cos_config/modules/network.py:135
 msgid "Copy public key"
 msgstr "Copiar chave pública"
 
-#: src/cos_config/modules/network.py:134
+#: src/cos_config/modules/network.py:137
 msgid ""
 "None yet. A key lets you log in to servers and sites like GitHub without a "
 "password."
@@ -1652,19 +1632,19 @@ msgstr ""
 "Nenhuma ainda. Uma chave permite entrar em servidores e em sites como o "
 "GitHub sem senha."
 
-#: src/cos_config/modules/network.py:136
+#: src/cos_config/modules/network.py:139
 msgid "Create key"
 msgstr "Criar chave"
 
-#: src/cos_config/modules/network.py:158
+#: src/cos_config/modules/network.py:161
 msgid "Use only letters, digits and hyphens (no spaces)"
 msgstr "Use só letras, números e hifens (sem espaços)"
 
-#: src/cos_config/modules/network.py:165
+#: src/cos_config/modules/network.py:168
 msgid "Change the computer name?"
 msgstr "Mudar o nome do computador?"
 
-#: src/cos_config/modules/network.py:166
+#: src/cos_config/modules/network.py:169
 #, python-brace-format
 msgid ""
 "The computer will be called {name}. Some apps only notice after you log out "
@@ -1673,15 +1653,15 @@ msgstr ""
 "O computador vai se chamar {name}. Alguns aplicativos só percebem depois que "
 "você sai da sessão e entra de novo."
 
-#: src/cos_config/modules/network.py:169
+#: src/cos_config/modules/network.py:172
 msgid "Computer name changed"
 msgstr "Nome do computador alterado"
 
-#: src/cos_config/modules/network.py:183
+#: src/cos_config/modules/network.py:186
 msgid "Allow remote login?"
 msgstr "Permitir acesso remoto?"
 
-#: src/cos_config/modules/network.py:184
+#: src/cos_config/modules/network.py:187
 msgid ""
 "The SSH server will start now and with the computer. People on your network "
 "will be able to try to log in with a user name and password."
@@ -1689,11 +1669,11 @@ msgstr ""
 "O servidor SSH vai iniciar agora e junto com o computador. Pessoas na sua "
 "rede poderão tentar entrar com nome de usuário e senha."
 
-#: src/cos_config/modules/network.py:187
+#: src/cos_config/modules/network.py:190
 msgid "Turn remote login off?"
 msgstr "Desligar o acesso remoto?"
 
-#: src/cos_config/modules/network.py:188
+#: src/cos_config/modules/network.py:191
 msgid ""
 "The SSH server will stop and no longer start with the computer. Sessions "
 "that are already open continue until they end."
@@ -1701,19 +1681,19 @@ msgstr ""
 "O servidor SSH vai parar e não inicia mais com o computador. Sessões que já "
 "estão abertas continuam até terminarem."
 
-#: src/cos_config/modules/network.py:192
+#: src/cos_config/modules/network.py:195
 msgid "Remote login updated"
 msgstr "Acesso remoto atualizado"
 
-#: src/cos_config/modules/network.py:199
+#: src/cos_config/modules/network.py:202
 msgid "Public key copied"
 msgstr "Chave pública copiada"
 
-#: src/cos_config/modules/network.py:203
+#: src/cos_config/modules/network.py:206
 msgid "Create an SSH key?"
 msgstr "Criar uma chave SSH?"
 
-#: src/cos_config/modules/network.py:204
+#: src/cos_config/modules/network.py:207
 msgid ""
 "A key pair is created in your .ssh folder, with no passphrase. Keep the "
 "private file to yourself; the public one is what you give to servers."
@@ -1721,15 +1701,15 @@ msgstr ""
 "Um par de chaves é criado na sua pasta .ssh, sem senha. Guarde o arquivo "
 "privado só com você; o público é o que você entrega aos servidores."
 
-#: src/cos_config/modules/network.py:210
+#: src/cos_config/modules/network.py:213
 msgid "SSH key created"
 msgstr "Chave SSH criada"
 
-#: src/cos_config/modules/network.py:226
+#: src/cos_config/modules/network.py:229
 msgid "The DNS your network gives you will be used again."
 msgstr "O DNS fornecido pela sua rede volta a ser usado."
 
-#: src/cos_config/modules/network.py:228
+#: src/cos_config/modules/network.py:231
 #, python-brace-format
 msgid ""
 "All name lookups will go, encrypted, to {service}. Names that only exist on "
@@ -1740,10 +1720,10 @@ msgstr ""
 "só existem na sua rede local podem parar de funcionar. Se nenhum nome "
 "resolver, a configuração anterior é restaurada automaticamente."
 
-#: src/cos_config/modules/network.py:232
+#: src/cos_config/modules/network.py:235
 msgid "Change the DNS service?"
 msgstr "Mudar o serviço de DNS?"
 
-#: src/cos_config/modules/network.py:238
+#: src/cos_config/modules/network.py:241
 msgid "DNS updated"
 msgstr "DNS atualizado"
