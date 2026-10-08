@@ -1,5 +1,5 @@
 Name:           cos-config
-Version:        0.9.0
+Version:        0.10.0
 Release:        1%{?dist}
 Summary:        COS Config Center: get to know and tune your Linux system
 
@@ -68,6 +68,10 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
+* Thu Oct 08 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.10.0-1
+- New module: firewall (what is open, allow common apps, single ports,
+  strict mode that closes the ports above 1024)
+
 * Thu Oct 08 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.9.0-1
 - New module: system check (health checks and a report to ask for help,
   with personal data removed)

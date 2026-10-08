@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: COS Config Center\n"
 "Report-Msgid-Bugs-To: https://github.com/capivaraos\n"
-"POT-Creation-Date: 2026-10-08 08:38-0300\n"
+"POT-Creation-Date: 2026-10-08 09:54-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,67 +121,73 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:99
 msgid ""
+"New firewall page: see what is open to the network, allow an app or a port, "
+"and close the high ports with strict mode."
+msgstr ""
+
+#: data/org.capivaraos.Config.metainfo.xml.in:104
+msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:109
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:114
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:119
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:124
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:129
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:134
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:139
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:144
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:149
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:154
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr ""
 
-#: data/org.capivaraos.Config.metainfo.xml.in:154
+#: data/org.capivaraos.Config.metainfo.xml.in:159
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 
@@ -433,26 +439,27 @@ msgstr ""
 msgid "Users and services"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:113
+#: src/cos_config/modules/__init__.py:115
 msgid "The change was not applied"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:114
+#: src/cos_config/modules/__init__.py:116
 msgid "Close"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:127
+#: src/cos_config/modules/__init__.py:129
 msgid "Equivalent commands"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:129
+#: src/cos_config/modules/__init__.py:131
 msgid "Cancel"
 msgstr ""
 
-#: src/cos_config/modules/__init__.py:130 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/__init__.py:132 src/cos_config/modules/journald.py:71
 #: src/cos_config/modules/multimedia.py:104
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
+#: src/cos_config/modules/firewall.py:145
 msgid "Apply"
 msgstr ""
 
@@ -1238,4 +1245,188 @@ msgstr ""
 
 #: src/cos_config/modules/diagnostics.py:156
 msgid "Report saved"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:24 src/cos_config/modules/firewall.py:99
+msgid "Firewall"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:28
+msgid "See what is open to the network and allow an app or a port"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:32
+msgid "port"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:32
+msgid "network"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:43
+msgid "Share folders on the network"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:44
+msgid "Other computers can open the folders you share (Samba)"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:45
+msgid "Remote terminal access (SSH)"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:46
+msgid "Log in to this computer from another one"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:47
+msgid "Web server"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:47
+msgid "Serve a site from this computer (ports 80 and 443)"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:48
+msgid "Share this computer's printer"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:48
+msgid "Other computers can print through it"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:49
+msgid "Phone link (KDE Connect, GSConnect)"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:50
+msgid "Notifications, files and clipboard between phone and computer"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:51
+msgid "Keep folders in sync between your devices"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:52
+msgid "Stream games from this computer to another device"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:53
+msgid "Minecraft server"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:53
+msgid "Friends on your network can join your world"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:54
+msgid "Remote desktop (RDP, VNC)"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:55
+msgid "See and control this screen from another computer"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:91
+msgid "The firewall is not running"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:92
+msgid ""
+"firewalld is installed but stopped, so nothing is being filtered and there "
+"is nothing to configure here."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:101
+msgid "Firewall on"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:102
+#, python-brace-format
+msgid "Profile of this network: {zone}"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:104
+msgid "Ports above 1024"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:105
+msgid ""
+"Open: any app can receive connections there. This is the default on Fedora "
+"Workstation."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:107
+msgid "Closed: only what is allowed below can be reached."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:111
+msgid "Allow from the network"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:112
+msgid "Turn on what other devices should be able to reach on this computer."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:118
+msgid "Reachable now only because ports above 1024 are open"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:125
+msgid "Strict mode"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:127
+msgid "Close the ports above 1024"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:128
+msgid ""
+"Only what is turned on above, and the ports listed below, stay reachable."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:135
+msgid "Other ports"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:136
+msgid ""
+"For an app that is not in the list. Type the number, or number/udp (for "
+"example 8080 or 5000/udp)."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:138
+msgid "Port to open"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:165
+msgid "Will be opened"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:166
+msgid "Will be closed"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:166
+msgid "Open now"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:184
+msgid "Type a port number from 1 to 65535, optionally with /udp"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:187
+msgid "That port is already in the list"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:224
+msgid "Change the firewall?"
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:225
+msgid "The changes apply now and are kept after restarting."
+msgstr ""
+
+#: src/cos_config/modules/firewall.py:236
+msgid "Firewall updated"
 msgstr ""
