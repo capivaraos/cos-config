@@ -105,6 +105,12 @@ never leave the sandbox), so only modules that work for the user are listed.
 - [ ] Verify the pinned-widget mode visually on a KDE/Xfce (Marsh/Pup) session
 - [ ] Submit to Flathub; then package as RPM to preinstall on CapivaraOS spins
 
+## Contributing and security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and our
+[Code of Conduct](CODE_OF_CONDUCT.md). To report a vulnerability privately,
+follow [SECURITY.md](SECURITY.md); do not open a public issue.
+
 ## License
 
 App code: **GPL-3.0-or-later**. CapivaraOS brand assets (the "cos config" logo)
