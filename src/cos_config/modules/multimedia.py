@@ -37,6 +37,9 @@ class MultimediaModule(Module):
                 and not os.path.exists("/run/ostree-booted")
                 and shutil.which("dnf") is not None)
 
+    def host_relevant(self, env):
+        return env.family == envmod.FEDORA and not env.is_ostree
+
     def build(self, ctx):
         return _MultimediaPage(ctx)
 

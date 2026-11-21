@@ -4,9 +4,9 @@ Picking a module pushes its page on a navigation stack; the header there
 has the usual back button.
 """
 
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, GLib, Gtk
 
-from . import modules
+from . import full_version, modules
 from .i18n import _
 
 
@@ -32,15 +32,9 @@ class ConfigPage(Adw.Bin):
         self._search.connect("search-changed", self._on_search)
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        if ctx.env.in_flatpak:
-            box.append(Adw.Banner(
-                title=_("Settings that change the system need the full version, "
-                        "installed from your distribution's packages."),
-                revealed=True,
-            ))
-        mods = modules.visible_modules(ctx.env)
-        if mods:
-            box.append(self._build_list(mods))
+        listed = modules.listed_modules(ctx.env)
+        if listed:
+            box.append(self._build_list(listed))
             title_widget = Adw.Clamp(maximum_size=420, child=self._search)
         else:
             box.append(Adw.StatusPage(
@@ -52,21 +46,55 @@ class ConfigPage(Adw.Bin):
             title_widget = None
         self._nav.add(_page(_("Settings"), box, title_widget))
 
-    def _build_list(self, mods):
+    def _build_full_version(self):
+        text, command = full_version.install_hint(
+            self._ctx.env, full_version.read_installation())
+        group = Adw.PreferencesGroup(
+            title=_("Full version"),
+            description=GLib.markup_escape_text(
+                _("These settings need access to the system outside the Flatpak "
+                  "sandbox, so they cannot run here. They need the full version "
+                  "of COS Config Center.")
+                + " " + text),
+        )
+        if command:
+            row = Adw.ActionRow(title=command, use_markup=False)
+            row.add_css_class("monospace")
+            copy = Gtk.Button(icon_name="edit-copy-symbolic", valign=Gtk.Align.CENTER,
+                              tooltip_text=_("Copy command"))
+            copy.add_css_class("flat")
+            copy.connect("clicked", self._on_copy, command)
+            row.add_suffix(copy)
+            group.add(row)
+        return group
+
+    def _on_copy(self, _button, command):
+        self.get_clipboard().set(command)
+        self._ctx.toast(_("Command copied"))
+
+    def _build_list(self, listed):
         prefs = Adw.PreferencesPage(vexpand=True)
+        if any(locked for _mod, locked in listed):
+            prefs.add(self._build_full_version())
         for cat in modules.categories():
-            members = [m for m in mods if m.category == cat.id]
+            members = [(m, locked) for m, locked in listed if m.category == cat.id]
             if not members:
                 continue
             group = Adw.PreferencesGroup(title=cat.title)
             rows = []
-            for mod in members:
-                row = Adw.ActionRow(title=mod.title, subtitle=mod.subtitle, activatable=True)
+            for mod, locked in members:
+                subtitle = _("Available in the full version") if locked else mod.subtitle
+                if locked:
+                    row = Adw.ActionRow(title=mod.title, subtitle=subtitle)
+                    row.add_suffix(Gtk.Image(icon_name="changes-prevent-symbolic",
+                                             tooltip_text=_("Available in the full version")))
+                else:
+                    row = Adw.ActionRow(title=mod.title, subtitle=mod.subtitle, activatable=True)
+                    row.add_suffix(Gtk.Image(icon_name="go-next-symbolic"))
+                    row.connect("activated", self._on_open, mod)
                 row.add_prefix(Gtk.Image(icon_name=mod.icon_name))
-                row.add_suffix(Gtk.Image(icon_name="go-next-symbolic"))
-                row.connect("activated", self._on_open, mod)
                 group.add(row)
-                haystack = " ".join([mod.title, mod.subtitle, cat.title, *mod.keywords])
+                haystack = " ".join([mod.title, subtitle, cat.title, *mod.keywords])
                 rows.append((row, haystack.casefold()))
             prefs.add(group)
             self._groups.append((group, rows))

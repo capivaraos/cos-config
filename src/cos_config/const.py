@@ -8,7 +8,7 @@ import os
 
 APP_ID = "org.capivaraos.Config"
 APP_NAME = "COS Config Center"
-VERSION = "0.11.1"
+VERSION = "0.12.0"
 
 # Where the "Try CapivaraOS" buttons point.
 WEBSITE_URL = "https://capivaraos.org"

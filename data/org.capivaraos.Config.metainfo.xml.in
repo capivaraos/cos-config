@@ -16,10 +16,11 @@
       commands, before it asks for the administrator password.
     </p>
     <p>
-      In the full version, installed from your distribution's packages, you
-      can turn on codecs and extra repositories, mount extra disks at startup,
-      set the Brazilian keyboard and the cedilla, choose the language and
-      regional formats, and limit the size of the system logs.
+      In the full version, included in the CapivaraOS 2.0 desktop editions and
+      later, you can turn on codecs and extra repositories, mount extra disks at
+      startup, set the Brazilian keyboard and the cedilla, choose the language
+      and regional formats, limit the size of the system logs, allow apps
+      through the firewall, and set up remote access and private DNS.
     </p>
     <p>
       It also shows your distribution, kernel, desktop, CPU, GPU, memory and
@@ -94,6 +95,11 @@
   </branding>
 
   <releases>
+    <release version="0.12.0" date="2026-11-26">
+      <description>
+        <p>In the Flatpak, the settings of the full version are listed, locked. On CapivaraOS 2.0 and later, a note shows how to switch to the full version; on other systems, it says that the full version comes with CapivaraOS.</p>
+      </description>
+    </release>
     <release version="0.11.1" date="2026-10-08">
       <description>
         <p>The multimedia page no longer offers the hardware video acceleration step; it will return in a later version.</p>

@@ -44,6 +44,11 @@ class FamilyTest(unittest.TestCase):
         self.assertTrue(e.is_capivaraos)
         self.assertFalse(env.Environment(os_release=env.parse_os_release(FEDORA)).is_capivaraos)
 
+    def test_is_ostree(self):
+        silverblue = FEDORA + "VARIANT_ID=silverblue\nOSTREE_VERSION='45.20261118.0'\n"
+        self.assertTrue(env.Environment(os_release=env.parse_os_release(silverblue)).is_ostree)
+        self.assertFalse(env.Environment(os_release=env.parse_os_release(FEDORA)).is_ostree)
+
 
 class ReadTest(unittest.TestCase):
     def test_first_existing_path_wins(self):
@@ -58,6 +63,20 @@ class ReadTest(unittest.TestCase):
                 fh.write(FEDORA)
             self.assertEqual(env.read_os_release((host, local))["ID"], "fedora")
 
+
+class FullVersionTest(unittest.TestCase):
+    def check(self, text, expected):
+        e = env.Environment(os_release=env.parse_os_release(text))
+        self.assertIs(e.ships_full_version, expected)
+
+    def test_series_2_and_later(self):
+        self.check(CAPIVARAOS + "VERSION_ID=45\n", True)
+        self.check(CAPIVARAOS + "VERSION_ID=46\n", True)
+
+    def test_series_1_missing_version_and_other_systems(self):
+        self.check(CAPIVARAOS + "VERSION_ID=44\n", False)
+        self.check(CAPIVARAOS, False)
+        self.check(FEDORA, False)
 
 if __name__ == "__main__":
     unittest.main()
