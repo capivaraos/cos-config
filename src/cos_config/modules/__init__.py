@@ -13,7 +13,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gtk, Pango  # noqa: E402
 
-from .. import privileged  # noqa: E402
+from .. import full_version, privileged  # noqa: E402
 from ..i18n import _  # noqa: E402
 
 
@@ -63,26 +63,22 @@ class Module:
         """Whether this module applies to *env* (distro, desktop, hardware)."""
         return True
 
+    def host_relevant(self, env):
+        """Whether the full version would offer this module on the host.
+
+        Used in the Flatpak, where supported() cannot look at the host.
+        """
+        return True
+
     def build(self, ctx):
         """Return the page content widget."""
         raise NotImplementedError
 
 
-def visible_modules(env, registry=None):
-    """Modules to list on this machine.
-
-    Unsupported modules are simply not shown. Modules that need root are
-    left out of the Flatpak and when their helper is not installed.
-    """
+def listed_modules(env, registry=None):
+    """(module, locked) pairs for the Settings tab (see full_version)."""
     mods = registry if registry is not None else all_modules()
-    out = []
-    for mod in mods:
-        if not mod.supported(env):
-            continue
-        if mod.helper and (env.in_flatpak or not privileged.available(mod.helper)):
-            continue
-        out.append(mod)
-    return out
+    return full_version.listing(env, mods, privileged.available)
 
 
 def all_modules():

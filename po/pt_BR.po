@@ -53,17 +53,19 @@ msgstr ""
 
 #: data/org.capivaraos.Config.metainfo.xml.in:18
 msgid ""
-"In the full version, installed from your distribution's packages, you can "
-"turn on codecs and extra repositories, mount extra disks at startup, set the "
-"Brazilian keyboard and the cedilla, choose the language and regional "
-"formats, and limit the size of the system logs."
+"In the full version, included in the CapivaraOS 2.0 desktop editions and "
+"later, you can turn on codecs and extra repositories, mount extra disks at "
+"startup, set the Brazilian keyboard and the cedilla, choose the language and "
+"regional formats, limit the size of the system logs, allow apps through the "
+"firewall, and set up remote access and private DNS."
 msgstr ""
-"Na versão completa, instalada pelos pacotes da sua distribuição, você pode "
-"ativar codecs e repositórios extras, montar discos extras ao ligar, "
-"configurar o teclado brasileiro e a cedilha, escolher o idioma e os formatos "
-"regionais e limitar o tamanho dos logs do sistema."
+"Na versão completa, incluída nas edições desktop do CapivaraOS 2.0 e "
+"posteriores, você pode ativar codecs e repositórios extras, montar discos "
+"extras ao ligar, configurar o teclado brasileiro e a cedilha, escolher o "
+"idioma e os formatos regionais, limitar o tamanho dos logs do sistema, "
+"liberar apps no firewall e configurar o acesso remoto e o DNS privado."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:24
+#: data/org.capivaraos.Config.metainfo.xml.in:25
 msgid ""
 "It also shows your distribution, kernel, desktop, CPU, GPU, memory and more, "
 "has a live dashboard of system activity, and lets you export a good-looking "
@@ -73,7 +75,7 @@ msgstr ""
 "memória e mais, tem um painel ao vivo da atividade do sistema e permite "
 "exportar um cartão bonito para compartilhar suas especificações."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:29
+#: data/org.capivaraos.Config.metainfo.xml.in:30
 msgid ""
 "It runs on any Linux desktop and is a gift from the CapivaraOS project, a "
 "friendly Linux distribution with a capybara at its heart."
@@ -81,59 +83,70 @@ msgstr ""
 "Ele roda em qualquer desktop Linux e é um presente do projeto CapivaraOS, "
 "uma distribuição Linux amigável com uma capivara no coração."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:39
+#: data/org.capivaraos.Config.metainfo.xml.in:40
 msgid "Settings grouped by category, with search"
 msgstr "Configurações agrupadas por categoria, com busca"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:43
+#: data/org.capivaraos.Config.metainfo.xml.in:44
 msgid "Play any video or music: codecs and extra repositories"
 msgstr "Reproduza qualquer vídeo ou música: codecs e repositórios extras"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:47
+#: data/org.capivaraos.Config.metainfo.xml.in:48
 msgid "Brazilian keyboard: layout and the cedilla"
 msgstr "Teclado brasileiro: layout e a cedilha"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:51
+#: data/org.capivaraos.Config.metainfo.xml.in:52
 msgid "System information at a glance"
 msgstr "Informações do sistema num relance"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:55
+#: data/org.capivaraos.Config.metainfo.xml.in:56
 msgid "Live dashboard with real-time gauges and charts"
 msgstr "Painel ao vivo com medidores e gráficos em tempo real"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:59
+#: data/org.capivaraos.Config.metainfo.xml.in:60
 msgid "Export a shareable specs card"
 msgstr "Exporte um cartão de especificações para compartilhar"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:63
+#: data/org.capivaraos.Config.metainfo.xml.in:64
 msgid "A gift from the CapivaraOS project"
 msgstr "Um presente do projeto CapivaraOS"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:74
+#: data/org.capivaraos.Config.metainfo.xml.in:75
 msgid "settings"
 msgstr "configurações"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:75
+#: data/org.capivaraos.Config.metainfo.xml.in:76
 msgid "configuration"
 msgstr "configuração"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:76
+#: data/org.capivaraos.Config.metainfo.xml.in:77
 msgid "system"
 msgstr "sistema"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:77
+#: data/org.capivaraos.Config.metainfo.xml.in:78
 msgid "specs"
 msgstr "especificações"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:78
+#: data/org.capivaraos.Config.metainfo.xml.in:79
 msgid "hardware"
 msgstr "hardware"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:86
+#: data/org.capivaraos.Config.metainfo.xml.in:87
 msgid "CapivaraOS Project"
 msgstr "Projeto CapivaraOS"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:99
+#: data/org.capivaraos.Config.metainfo.xml.in:100
+msgid ""
+"In the Flatpak, the settings of the full version are listed, locked. On "
+"CapivaraOS 2.0 and later, a note shows how to switch to the full version; on "
+"other systems, it says that the full version comes with CapivaraOS."
+msgstr ""
+"No Flatpak, as configurações da versão completa aparecem listadas, "
+"bloqueadas. No CapivaraOS 2.0 e posteriores, uma nota mostra como passar "
+"para a versão completa; nos outros sistemas, ela diz que a versão completa "
+"vem com o CapivaraOS."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:105
 msgid ""
 "The multimedia page no longer offers the hardware video acceleration step; "
 "it will return in a later version."
@@ -141,7 +154,7 @@ msgstr ""
 "A página de multimídia não oferece mais a etapa de aceleração de vídeo por "
 "hardware; ela volta numa versão futura."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:104
+#: data/org.capivaraos.Config.metainfo.xml.in:110
 msgid ""
 "New page for remote access and network: change the computer name, turn "
 "remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
@@ -151,7 +164,7 @@ msgstr ""
 "desligue o acesso remoto (SSH), crie uma chave SSH e escolha um serviço de "
 "DNS criptografado."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:109
+#: data/org.capivaraos.Config.metainfo.xml.in:115
 msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
@@ -159,7 +172,7 @@ msgstr ""
 "Nova página de firewall: veja o que está aberto para a rede, libere um app "
 "ou uma porta e feche as portas altas com o modo restrito."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:114
+#: data/org.capivaraos.Config.metainfo.xml.in:120
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
@@ -167,7 +180,7 @@ msgstr ""
 "Nova verificação do sistema: checagens rápidas de saúde e um relatório para "
 "compartilhar ao pedir ajuda, sem o seu nome nem endereços de rede."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:119
+#: data/org.capivaraos.Config.metainfo.xml.in:125
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
@@ -175,12 +188,12 @@ msgstr ""
 "Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
 "limpe os que escolher."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:124
+#: data/org.capivaraos.Config.metainfo.xml.in:130
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:129
+#: data/org.capivaraos.Config.metainfo.xml.in:135
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -188,7 +201,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:134
+#: data/org.capivaraos.Config.metainfo.xml.in:140
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -196,7 +209,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:139
+#: data/org.capivaraos.Config.metainfo.xml.in:145
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -204,7 +217,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:144
+#: data/org.capivaraos.Config.metainfo.xml.in:150
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -213,7 +226,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:149
+#: data/org.capivaraos.Config.metainfo.xml.in:155
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -221,7 +234,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:154
+#: data/org.capivaraos.Config.metainfo.xml.in:160
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -230,7 +243,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:159
+#: data/org.capivaraos.Config.metainfo.xml.in:165
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -239,11 +252,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:164
+#: data/org.capivaraos.Config.metainfo.xml.in:170
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:169
+#: data/org.capivaraos.Config.metainfo.xml.in:175
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -310,7 +323,7 @@ msgstr "Sobre o COS Config Center"
 msgid "Quit"
 msgstr "Sair"
 
-#: src/cos_config/window.py:52 src/cos_config/config_page.py:53
+#: src/cos_config/window.py:52 src/cos_config/config_page.py:47
 msgid "Settings"
 msgstr "Configurar"
 
@@ -443,21 +456,68 @@ msgstr ""
 msgid "Search settings"
 msgstr "Buscar configurações"
 
-#: src/cos_config/config_page.py:37
-msgid ""
-"Settings that change the system need the full version, installed from your "
-"distribution's packages."
-msgstr ""
-"As configurações que alteram o sistema precisam da versão completa, "
-"instalada pelos pacotes da sua distribuição."
-
-#: src/cos_config/config_page.py:48
+#: src/cos_config/config_page.py:42
 msgid "No settings available here yet"
 msgstr "Ainda não há configurações disponíveis aqui"
 
-#: src/cos_config/config_page.py:49
+#: src/cos_config/config_page.py:43
 msgid "More settings for this system are on the way."
 msgstr "Mais configurações para este sistema estão a caminho."
+
+#: src/cos_config/config_page.py:53
+msgid "Full version"
+msgstr "Versão completa"
+
+#: src/cos_config/config_page.py:55
+msgid ""
+"These settings need access to the system outside the Flatpak sandbox, so "
+"they cannot run here. They need the full version of COS Config Center."
+msgstr ""
+"Estas configurações precisam de acesso ao sistema fora do sandbox do "
+"Flatpak, por isso não funcionam aqui. Elas precisam da versão completa do "
+"COS Config Center."
+
+#: src/cos_config/config_page.py:64
+msgid "Copy command"
+msgstr "Copiar comando"
+
+#: src/cos_config/config_page.py:73
+msgid "Command copied"
+msgstr "Comando copiado"
+
+#: src/cos_config/config_page.py:86 src/cos_config/config_page.py:90
+msgid "Available in the full version"
+msgstr "Disponível na versão completa"
+
+#: src/cos_config/full_version.py:70
+msgid ""
+"The CapivaraOS desktop editions include the full version. Remove this "
+"Flatpak to use it:"
+msgstr ""
+"As edições desktop do CapivaraOS incluem a versão completa. Remova este "
+"Flatpak para usá-la:"
+
+#. Series 1: removing the Flatpak would leave no copy of the app.
+#: src/cos_config/full_version.py:75
+msgid "The full version comes with CapivaraOS 2.0 and later."
+msgstr "A versão completa vem com o CapivaraOS 2.0 e posteriores."
+
+#: src/cos_config/full_version.py:79
+#, python-brace-format
+msgid ""
+"The full version is not available for {name} yet. It already comes with "
+"CapivaraOS 2.0 and later."
+msgstr ""
+"A versão completa ainda não está disponível para {name}. Ela já vem com o "
+"CapivaraOS 2.0 e posteriores."
+
+#: src/cos_config/full_version.py:82
+msgid ""
+"The full version is not available for this system yet. It already comes with "
+"CapivaraOS 2.0 and later."
+msgstr ""
+"A versão completa ainda não está disponível para este sistema. Ela já vem "
+"com o CapivaraOS 2.0 e posteriores."
 
 #: src/cos_config/privileged.py:42
 #, python-brace-format
@@ -504,27 +564,27 @@ msgstr "Rede e segurança"
 msgid "Users and services"
 msgstr "Usuários e serviços"
 
-#: src/cos_config/modules/__init__.py:116
+#: src/cos_config/modules/__init__.py:112
 msgid "The change was not applied"
 msgstr "A mudança não foi aplicada"
 
-#: src/cos_config/modules/__init__.py:117
+#: src/cos_config/modules/__init__.py:113
 msgid "Close"
 msgstr "Fechar"
 
-#: src/cos_config/modules/__init__.py:130
+#: src/cos_config/modules/__init__.py:126
 msgid "Equivalent commands"
 msgstr "Comandos equivalentes"
 
-#: src/cos_config/modules/__init__.py:132
+#: src/cos_config/modules/__init__.py:128
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/cos_config/modules/__init__.py:133 src/cos_config/modules/journald.py:71
-#: src/cos_config/modules/multimedia.py:87
+#: src/cos_config/modules/__init__.py:129 src/cos_config/modules/journald.py:71
+#: src/cos_config/modules/multimedia.py:90
 #: src/cos_config/modules/keyboard.py:107
 #: src/cos_config/modules/language.py:135
-#: src/cos_config/modules/firewall.py:145 src/cos_config/modules/network.py:100
+#: src/cos_config/modules/firewall.py:150 src/cos_config/modules/network.py:100
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -618,43 +678,43 @@ msgstr "vídeo"
 msgid "music"
 msgstr "música"
 
-#: src/cos_config/modules/multimedia.py:46
+#: src/cos_config/modules/multimedia.py:49
 msgid "RPM Fusion repositories"
 msgstr "Repositórios RPM Fusion"
 
-#: src/cos_config/modules/multimedia.py:47
+#: src/cos_config/modules/multimedia.py:50
 msgid "Community repositories with software Fedora cannot ship"
 msgstr "Repositórios da comunidade com programas que o Fedora não pode incluir"
 
-#: src/cos_config/modules/multimedia.py:48
+#: src/cos_config/modules/multimedia.py:51
 msgid "Cisco OpenH264"
 msgstr "Cisco OpenH264"
 
-#: src/cos_config/modules/multimedia.py:48
+#: src/cos_config/modules/multimedia.py:51
 msgid "H.264 video for browsers and calls"
 msgstr "Vídeo H.264 para navegadores e chamadas"
 
-#: src/cos_config/modules/multimedia.py:49
+#: src/cos_config/modules/multimedia.py:52
 msgid "Complete codecs"
 msgstr "Codecs completos"
 
-#: src/cos_config/modules/multimedia.py:50
+#: src/cos_config/modules/multimedia.py:53
 msgid "Full FFmpeg and GStreamer plugins (MP4, H.265, AAC and more)"
 msgstr "FFmpeg completo e plugins do GStreamer (MP4, H.265, AAC e mais)"
 
-#: src/cos_config/modules/multimedia.py:51
+#: src/cos_config/modules/multimedia.py:54
 msgid "All Flathub apps"
 msgstr "Todos os apps do Flathub"
 
-#: src/cos_config/modules/multimedia.py:52
+#: src/cos_config/modules/multimedia.py:55
 msgid "Remove Fedora's filter so every Flathub app shows up"
 msgstr "Remove o filtro do Fedora para que todos os apps do Flathub apareçam"
 
-#: src/cos_config/modules/multimedia.py:64
+#: src/cos_config/modules/multimedia.py:67
 msgid "Multimedia support"
 msgstr "Suporte multimídia"
 
-#: src/cos_config/modules/multimedia.py:66
+#: src/cos_config/modules/multimedia.py:69
 msgid ""
 "Many videos and songs use formats that Fedora cannot include because of "
 "patents. Turn on what you want and apply."
@@ -662,16 +722,16 @@ msgstr ""
 "Muitos vídeos e músicas usam formatos que o Fedora não pode incluir por "
 "causa de patentes. Ligue o que quiser e aplique."
 
-#: src/cos_config/modules/multimedia.py:72
+#: src/cos_config/modules/multimedia.py:75
 #: src/cos_config/modules/diagnostics.py:74
 msgid "Checking…"
 msgstr "Verificando…"
 
-#: src/cos_config/modules/multimedia.py:79
+#: src/cos_config/modules/multimedia.py:82
 msgid "About these sources"
 msgstr "Sobre essas fontes"
 
-#: src/cos_config/modules/multimedia.py:81
+#: src/cos_config/modules/multimedia.py:84
 msgid ""
 "RPM Fusion and Flathub are run by their own communities, not by CapivaraOS "
 "or Fedora. Some of these formats are covered by patents in a few countries: "
@@ -682,19 +742,19 @@ msgstr ""
 "patentes em alguns países: verifique o que vale onde você mora."
 
 #. done: shown on; missing: proposed on
-#: src/cos_config/modules/multimedia.py:120
+#: src/cos_config/modules/multimedia.py:123
 msgid "Already enabled"
 msgstr "Já ativado"
 
-#: src/cos_config/modules/multimedia.py:140
+#: src/cos_config/modules/multimedia.py:143
 msgid "Needed for the codecs"
 msgstr "Necessário para os codecs"
 
-#: src/cos_config/modules/multimedia.py:150
+#: src/cos_config/modules/multimedia.py:153
 msgid "Enable multimedia support?"
 msgstr "Ativar o suporte multimídia?"
 
-#: src/cos_config/modules/multimedia.py:151
+#: src/cos_config/modules/multimedia.py:154
 msgid ""
 "Packages will be downloaded and installed. This can take several minutes, "
 "depending on your connection."
@@ -702,11 +762,11 @@ msgstr ""
 "Pacotes serão baixados e instalados. Isso pode levar alguns minutos, "
 "dependendo da sua conexão."
 
-#: src/cos_config/modules/multimedia.py:164
+#: src/cos_config/modules/multimedia.py:167
 msgid "Multimedia support enabled"
 msgstr "Suporte multimídia ativado"
 
-#: src/cos_config/modules/multimedia.py:173
+#: src/cos_config/modules/multimedia.py:176
 msgid "Installing… this can take a few minutes"
 msgstr "Instalando… isso pode levar alguns minutos"
 
@@ -1322,92 +1382,92 @@ msgstr "Salvar relatório"
 msgid "Report saved"
 msgstr "Relatório salvo"
 
-#: src/cos_config/modules/firewall.py:24 src/cos_config/modules/firewall.py:99
+#: src/cos_config/modules/firewall.py:25 src/cos_config/modules/firewall.py:104
 msgid "Firewall"
 msgstr "Firewall"
 
-#: src/cos_config/modules/firewall.py:28
+#: src/cos_config/modules/firewall.py:29
 msgid "See what is open to the network and allow an app or a port"
 msgstr "Veja o que está aberto para a rede e libere um app ou uma porta"
 
-#: src/cos_config/modules/firewall.py:32
+#: src/cos_config/modules/firewall.py:33
 msgid "port"
 msgstr "porta"
 
-#: src/cos_config/modules/firewall.py:32
+#: src/cos_config/modules/firewall.py:33
 msgid "network"
 msgstr "rede"
 
-#: src/cos_config/modules/firewall.py:43
+#: src/cos_config/modules/firewall.py:48
 msgid "Share folders on the network"
 msgstr "Compartilhar pastas na rede"
 
-#: src/cos_config/modules/firewall.py:44
+#: src/cos_config/modules/firewall.py:49
 msgid "Other computers can open the folders you share (Samba)"
 msgstr "Outros computadores podem abrir as pastas que você compartilha (Samba)"
 
-#: src/cos_config/modules/firewall.py:45
+#: src/cos_config/modules/firewall.py:50
 msgid "Remote terminal access (SSH)"
 msgstr "Acesso remoto pelo terminal (SSH)"
 
-#: src/cos_config/modules/firewall.py:46
+#: src/cos_config/modules/firewall.py:51
 msgid "Log in to this computer from another one"
 msgstr "Entrar neste computador a partir de outro"
 
-#: src/cos_config/modules/firewall.py:47
+#: src/cos_config/modules/firewall.py:52
 msgid "Web server"
 msgstr "Servidor web"
 
-#: src/cos_config/modules/firewall.py:47
+#: src/cos_config/modules/firewall.py:52
 msgid "Serve a site from this computer (ports 80 and 443)"
 msgstr "Servir um site a partir deste computador (portas 80 e 443)"
 
-#: src/cos_config/modules/firewall.py:48
+#: src/cos_config/modules/firewall.py:53
 msgid "Share this computer's printer"
 msgstr "Compartilhar a impressora deste computador"
 
-#: src/cos_config/modules/firewall.py:48
+#: src/cos_config/modules/firewall.py:53
 msgid "Other computers can print through it"
 msgstr "Outros computadores podem imprimir por ela"
 
-#: src/cos_config/modules/firewall.py:49
+#: src/cos_config/modules/firewall.py:54
 msgid "Phone link (KDE Connect, GSConnect)"
 msgstr "Conexão com o celular (KDE Connect, GSConnect)"
 
-#: src/cos_config/modules/firewall.py:50
+#: src/cos_config/modules/firewall.py:55
 msgid "Notifications, files and clipboard between phone and computer"
 msgstr ""
 "Notificações, arquivos e área de transferência entre celular e computador"
 
-#: src/cos_config/modules/firewall.py:51
+#: src/cos_config/modules/firewall.py:56
 msgid "Keep folders in sync between your devices"
 msgstr "Mantenha pastas sincronizadas entre seus dispositivos"
 
-#: src/cos_config/modules/firewall.py:52
+#: src/cos_config/modules/firewall.py:57
 msgid "Stream games from this computer to another device"
 msgstr "Transmita jogos deste computador para outro dispositivo"
 
-#: src/cos_config/modules/firewall.py:53
+#: src/cos_config/modules/firewall.py:58
 msgid "Minecraft server"
 msgstr "Servidor de Minecraft"
 
-#: src/cos_config/modules/firewall.py:53
+#: src/cos_config/modules/firewall.py:58
 msgid "Friends on your network can join your world"
 msgstr "Amigos na sua rede podem entrar no seu mundo"
 
-#: src/cos_config/modules/firewall.py:54
+#: src/cos_config/modules/firewall.py:59
 msgid "Remote desktop (RDP, VNC)"
 msgstr "Área de trabalho remota (RDP, VNC)"
 
-#: src/cos_config/modules/firewall.py:55
+#: src/cos_config/modules/firewall.py:60
 msgid "See and control this screen from another computer"
 msgstr "Ver e controlar esta tela a partir de outro computador"
 
-#: src/cos_config/modules/firewall.py:91
+#: src/cos_config/modules/firewall.py:96
 msgid "The firewall is not running"
 msgstr "O firewall não está em execução"
 
-#: src/cos_config/modules/firewall.py:92
+#: src/cos_config/modules/firewall.py:97
 msgid ""
 "firewalld is installed but stopped, so nothing is being filtered and there "
 "is nothing to configure here."
@@ -1415,20 +1475,20 @@ msgstr ""
 "O firewalld está instalado, mas parado; então nada está sendo filtrado e não "
 "há o que configurar aqui."
 
-#: src/cos_config/modules/firewall.py:101
+#: src/cos_config/modules/firewall.py:106
 msgid "Firewall on"
 msgstr "Firewall ligado"
 
-#: src/cos_config/modules/firewall.py:102
+#: src/cos_config/modules/firewall.py:107
 #, python-brace-format
 msgid "Profile of this network: {zone}"
 msgstr "Perfil desta rede: {zone}"
 
-#: src/cos_config/modules/firewall.py:104
+#: src/cos_config/modules/firewall.py:109
 msgid "Ports above 1024"
 msgstr "Portas acima de 1024"
 
-#: src/cos_config/modules/firewall.py:105
+#: src/cos_config/modules/firewall.py:110
 msgid ""
 "Open: any app can receive connections there. This is the default on Fedora "
 "Workstation."
@@ -1436,43 +1496,43 @@ msgstr ""
 "Abertas: qualquer app pode receber conexões nelas. É o padrão do Fedora "
 "Workstation."
 
-#: src/cos_config/modules/firewall.py:107
+#: src/cos_config/modules/firewall.py:112
 msgid "Closed: only what is allowed below can be reached."
 msgstr "Fechadas: só o que estiver liberado abaixo pode ser alcançado."
 
-#: src/cos_config/modules/firewall.py:111
+#: src/cos_config/modules/firewall.py:116
 msgid "Allow from the network"
 msgstr "Permitir pela rede"
 
-#: src/cos_config/modules/firewall.py:112
+#: src/cos_config/modules/firewall.py:117
 msgid "Turn on what other devices should be able to reach on this computer."
 msgstr ""
 "Ligue o que outros dispositivos devem conseguir alcançar neste computador."
 
-#: src/cos_config/modules/firewall.py:118
+#: src/cos_config/modules/firewall.py:123
 msgid "Reachable now only because ports above 1024 are open"
 msgstr "Alcançável agora só porque as portas acima de 1024 estão abertas"
 
-#: src/cos_config/modules/firewall.py:125
+#: src/cos_config/modules/firewall.py:130
 msgid "Strict mode"
 msgstr "Modo restrito"
 
-#: src/cos_config/modules/firewall.py:127
+#: src/cos_config/modules/firewall.py:132
 msgid "Close the ports above 1024"
 msgstr "Fechar as portas acima de 1024"
 
-#: src/cos_config/modules/firewall.py:128
+#: src/cos_config/modules/firewall.py:133
 msgid ""
 "Only what is turned on above, and the ports listed below, stay reachable."
 msgstr ""
 "Só o que estiver ligado acima, e as portas listadas abaixo, continuam "
 "alcançáveis."
 
-#: src/cos_config/modules/firewall.py:135
+#: src/cos_config/modules/firewall.py:140
 msgid "Other ports"
 msgstr "Outras portas"
 
-#: src/cos_config/modules/firewall.py:136
+#: src/cos_config/modules/firewall.py:141
 msgid ""
 "For an app that is not in the list. Type the number, or number/udp (for "
 "example 8080 or 5000/udp)."
@@ -1480,44 +1540,44 @@ msgstr ""
 "Para um app que não está na lista. Digite o número, ou número/udp (por "
 "exemplo 8080 ou 5000/udp)."
 
-#: src/cos_config/modules/firewall.py:138
+#: src/cos_config/modules/firewall.py:143
 msgid "Port to open"
 msgstr "Porta para abrir"
 
-#: src/cos_config/modules/firewall.py:165
+#: src/cos_config/modules/firewall.py:170
 msgid "Will be opened"
 msgstr "Será aberta"
 
-#: src/cos_config/modules/firewall.py:166
+#: src/cos_config/modules/firewall.py:171
 msgid "Will be closed"
 msgstr "Será fechada"
 
-#: src/cos_config/modules/firewall.py:166
+#: src/cos_config/modules/firewall.py:171
 msgid "Open now"
 msgstr "Aberta agora"
 
-#: src/cos_config/modules/firewall.py:184
+#: src/cos_config/modules/firewall.py:189
 msgid "Type a port number from 1 to 65535, optionally with /udp"
 msgstr "Digite um número de porta de 1 a 65535, opcionalmente com /udp"
 
-#: src/cos_config/modules/firewall.py:187
+#: src/cos_config/modules/firewall.py:192
 msgid "That port is already in the list"
 msgstr "Essa porta já está na lista"
 
-#: src/cos_config/modules/firewall.py:190
+#: src/cos_config/modules/firewall.py:195
 #, python-brace-format
 msgid "Port {port} is already open: the ports above 1024 are open"
 msgstr "A porta {port} já está aberta: as portas acima de 1024 estão abertas"
 
-#: src/cos_config/modules/firewall.py:241
+#: src/cos_config/modules/firewall.py:246
 msgid "Change the firewall?"
 msgstr "Alterar o firewall?"
 
-#: src/cos_config/modules/firewall.py:242
+#: src/cos_config/modules/firewall.py:247
 msgid "The changes apply now and are kept after restarting."
 msgstr "As mudanças valem agora e continuam depois de reiniciar."
 
-#: src/cos_config/modules/firewall.py:253
+#: src/cos_config/modules/firewall.py:258
 msgid "Firewall updated"
 msgstr "Firewall atualizado"
 

@@ -5,6 +5,7 @@ import threading
 
 from gi.repository import Adw, GLib, Gtk
 
+from .. import env as envmod
 from .. import firewall as fw
 from .. import privileged
 from ..i18n import _
@@ -33,6 +34,10 @@ class FirewallModule(Module):
 
     def supported(self, env):
         return shutil.which("firewall-cmd") is not None
+
+    def host_relevant(self, env):
+        # The full version manages firewalld on the Fedora family only.
+        return env.family == envmod.FEDORA
 
     def build(self, ctx):
         return _FirewallPage(ctx)

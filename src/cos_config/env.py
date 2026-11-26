@@ -69,8 +69,22 @@ class Environment:
     session_type: str = ""
 
     @property
+    def is_ostree(self):
+        """Image-based host (Fedora Atomic and similar), from its os-release."""
+        return "OSTREE_VERSION" in self.os_release
+
+    @property
     def is_capivaraos(self):
         return self.os_release.get("ID", "").lower() == "capivaraos"
+
+    @property
+    def ships_full_version(self):
+        """CapivaraOS Series 2 (Fedora 45 base) or later, whose desktop
+        editions include the native package. Series 1 (Fedora 44) does not."""
+        if not self.is_capivaraos:
+            return False
+        major = self.os_release.get("VERSION_ID", "").split(".")[0]
+        return major.isdigit() and int(major) >= 45
 
     @classmethod
     def detect(cls):
