@@ -20,9 +20,8 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
-  # Let the user save the shared card into Downloads.
-  - --filesystem=xdg-download
-  # No host filesystem access needed: distro is read from /run/host/os-release
+  # No host filesystem access needed: the share card is saved through the
+  # file chooser portal, the distro is read from /run/host/os-release
   # (exposed by Flatpak), CPU/memory/uptime from /proc, and the GPU via lspci
   # over /sys/bus/pci — all available in the default sandbox.
 
