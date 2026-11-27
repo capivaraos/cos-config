@@ -105,6 +105,15 @@ never leave the sandbox), so only modules that work for the user are listed.
 - [ ] Verify the pinned-widget mode visually on a KDE/Xfce (Marsh/Pup) session
 - [ ] Submit to Flathub; then package as RPM to preinstall on CapivaraOS spins
 
+## Development
+
+COS Config Center is developed by the CapivaraOS Project with AI assistance.
+Most of the application code, the Portuguese translation, the packaging (RPM
+spec and Flatpak manifest) and this documentation were written with an AI
+coding assistant, then reviewed, tested and maintained by the project, which is
+responsible for them. New commits made this way carry an
+`Assisted-by: AI coding assistant` trailer; earlier commits are not marked.
+
 ## License
 
 App code: **GPL-3.0-or-later**. CapivaraOS brand assets (the "cos config" logo)
