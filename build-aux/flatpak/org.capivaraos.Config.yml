@@ -46,5 +46,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/capivaraos/cos-config.git
-        tag: v0.11.1
-        commit: 5a85c145fe80dce35161edfed032db5a1bb5c30b
+        tag: v0.12.0
+        commit: 591351c94d010e6db7a83fea65dc8624c9be8912
