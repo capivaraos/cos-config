@@ -41,12 +41,8 @@
       <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/settings.png</image>
     </screenshot>
     <screenshot>
-      <caption>Play any video or music: codecs and extra repositories</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/codecs.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Brazilian keyboard: layout and the cedilla</caption>
-      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/keyboard.png</image>
+      <caption>Full version settings, included in the CapivaraOS 2.0 desktop editions</caption>
+      <image>https://raw.githubusercontent.com/capivaraos/cos-config/main/data/screenshots/full-version.png</image>
     </screenshot>
     <screenshot>
       <caption>System information at a glance</caption>
@@ -79,7 +75,7 @@
     <keyword>hardware</keyword>
   </keywords>
 
-  <url type="homepage">https://capivaraos.org</url>
+  <url type="homepage">https://www.capivaraos.org/en/cos-config.html</url>
   <url type="bugtracker">https://github.com/capivaraos/cos-config/issues</url>
   <url type="vcs-browser">https://github.com/capivaraos/cos-config</url>
 
