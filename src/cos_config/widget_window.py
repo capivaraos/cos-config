@@ -5,6 +5,9 @@ wlroots — including the CapivaraOS Marsh/Pup spins) the window is anchored to
 the desktop as a background widget via gtk4-layer-shell. Everywhere else
 (notably GNOME/Mutter, which does not implement layer-shell) it degrades to a
 small frameless floating window the user can place and keep on top manually.
+
+gtk4-layer-shell must be loaded before Wayland; the launcher takes care of
+that (see preload.py).
 """
 
 import gi

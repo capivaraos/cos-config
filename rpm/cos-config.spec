@@ -68,9 +68,11 @@ appstreamcli validate --no-net %{buildroot}%{_metainfodir}/org.capivaraos.Config
 %{_datadir}/org.capivaraos.Config/
 
 %changelog
-* Thu Nov 26 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.12.0-1
+* Fri Nov 27 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.12.0-1
 - Flatpak: the Settings tab lists the settings of the full version, locked.
   On CapivaraOS, a note shows how to switch to the full version.
+- The widget pinned to the desktop now stays on the desktop on Wayland
+  desktops that support it, such as KDE Plasma.
 
 * Thu Oct 08 2026 CapivaraOS Project <capivaraos-bot@users.noreply.github.com> - 0.11.1-1
 - Multimedia: the hardware video acceleration step was removed for now.
