@@ -88,54 +88,50 @@ msgid "Settings grouped by category, with search"
 msgstr "Configurações agrupadas por categoria, com busca"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:44
-msgid "Play any video or music: codecs and extra repositories"
-msgstr "Reproduza qualquer vídeo ou música: codecs e repositórios extras"
+msgid "Full version settings, included in the CapivaraOS 2.0 desktop editions"
+msgstr "Configurações da versão completa, incluída nas edições desktop do CapivaraOS 2.0"
 
 #: data/org.capivaraos.Config.metainfo.xml.in:48
-msgid "Brazilian keyboard: layout and the cedilla"
-msgstr "Teclado brasileiro: layout e a cedilha"
-
-#: data/org.capivaraos.Config.metainfo.xml.in:52
 msgid "System information at a glance"
 msgstr "Informações do sistema num relance"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:56
+#: data/org.capivaraos.Config.metainfo.xml.in:52
 msgid "Live dashboard with real-time gauges and charts"
 msgstr "Painel ao vivo com medidores e gráficos em tempo real"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:60
+#: data/org.capivaraos.Config.metainfo.xml.in:56
 msgid "Export a shareable specs card"
 msgstr "Exporte um cartão de especificações para compartilhar"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:64
+#: data/org.capivaraos.Config.metainfo.xml.in:60
 msgid "A gift from the CapivaraOS project"
 msgstr "Um presente do projeto CapivaraOS"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:75
+#: data/org.capivaraos.Config.metainfo.xml.in:71
 msgid "settings"
 msgstr "configurações"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:76
+#: data/org.capivaraos.Config.metainfo.xml.in:72
 msgid "configuration"
 msgstr "configuração"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:77
+#: data/org.capivaraos.Config.metainfo.xml.in:73
 msgid "system"
 msgstr "sistema"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:78
+#: data/org.capivaraos.Config.metainfo.xml.in:74
 msgid "specs"
 msgstr "especificações"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:79
+#: data/org.capivaraos.Config.metainfo.xml.in:75
 msgid "hardware"
 msgstr "hardware"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:87
+#: data/org.capivaraos.Config.metainfo.xml.in:83
 msgid "CapivaraOS Project"
 msgstr "Projeto CapivaraOS"
 
-#: data/org.capivaraos.Config.metainfo.xml.in:100
+#: data/org.capivaraos.Config.metainfo.xml.in:96
 msgid ""
 "In the Flatpak, the settings of the full version are listed, locked. On "
 "CapivaraOS 2.0 and later, a note shows how to switch to the full version; on "
@@ -146,7 +142,7 @@ msgstr ""
 "para a versão completa; nos outros sistemas, ela diz que a versão completa "
 "vem com o CapivaraOS."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:101
+#: data/org.capivaraos.Config.metainfo.xml.in:97
 msgid ""
 "The widget pinned to the desktop now stays on the desktop on Wayland "
 "desktops that support it, such as KDE Plasma."
@@ -154,7 +150,7 @@ msgstr ""
 "O widget preso à área de trabalho agora fica na área de trabalho nos "
 "desktops Wayland que oferecem esse recurso, como o KDE Plasma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:106
+#: data/org.capivaraos.Config.metainfo.xml.in:102
 msgid ""
 "The multimedia page no longer offers the hardware video acceleration step; "
 "it will return in a later version."
@@ -162,7 +158,7 @@ msgstr ""
 "A página de multimídia não oferece mais a etapa de aceleração de vídeo por "
 "hardware; ela volta numa versão futura."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:111
+#: data/org.capivaraos.Config.metainfo.xml.in:107
 msgid ""
 "New page for remote access and network: change the computer name, turn "
 "remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
@@ -172,7 +168,7 @@ msgstr ""
 "desligue o acesso remoto (SSH), crie uma chave SSH e escolha um serviço de "
 "DNS criptografado."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:116
+#: data/org.capivaraos.Config.metainfo.xml.in:112
 msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
@@ -180,7 +176,7 @@ msgstr ""
 "Nova página de firewall: veja o que está aberto para a rede, libere um app "
 "ou uma porta e feche as portas altas com o modo restrito."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:121
+#: data/org.capivaraos.Config.metainfo.xml.in:117
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
@@ -188,7 +184,7 @@ msgstr ""
 "Nova verificação do sistema: checagens rápidas de saúde e um relatório para "
 "compartilhar ao pedir ajuda, sem o seu nome nem endereços de rede."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:126
+#: data/org.capivaraos.Config.metainfo.xml.in:122
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
@@ -196,12 +192,12 @@ msgstr ""
 "Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
 "limpe os que escolher."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:131
+#: data/org.capivaraos.Config.metainfo.xml.in:127
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:136
+#: data/org.capivaraos.Config.metainfo.xml.in:132
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -209,7 +205,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:141
+#: data/org.capivaraos.Config.metainfo.xml.in:137
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -217,7 +213,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:146
+#: data/org.capivaraos.Config.metainfo.xml.in:142
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -225,7 +221,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:151
+#: data/org.capivaraos.Config.metainfo.xml.in:147
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -234,7 +230,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:156
+#: data/org.capivaraos.Config.metainfo.xml.in:152
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -242,7 +238,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:161
+#: data/org.capivaraos.Config.metainfo.xml.in:157
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -251,7 +247,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:166
+#: data/org.capivaraos.Config.metainfo.xml.in:162
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -260,11 +256,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:171
+#: data/org.capivaraos.Config.metainfo.xml.in:167
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:176
+#: data/org.capivaraos.Config.metainfo.xml.in:172
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
