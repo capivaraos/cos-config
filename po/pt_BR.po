@@ -146,7 +146,15 @@ msgstr ""
 "para a versão completa; nos outros sistemas, ela diz que a versão completa "
 "vem com o CapivaraOS."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:105
+#: data/org.capivaraos.Config.metainfo.xml.in:101
+msgid ""
+"The widget pinned to the desktop now stays on the desktop on Wayland "
+"desktops that support it, such as KDE Plasma."
+msgstr ""
+"O widget preso à área de trabalho agora fica na área de trabalho nos "
+"desktops Wayland que oferecem esse recurso, como o KDE Plasma."
+
+#: data/org.capivaraos.Config.metainfo.xml.in:106
 msgid ""
 "The multimedia page no longer offers the hardware video acceleration step; "
 "it will return in a later version."
@@ -154,7 +162,7 @@ msgstr ""
 "A página de multimídia não oferece mais a etapa de aceleração de vídeo por "
 "hardware; ela volta numa versão futura."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:110
+#: data/org.capivaraos.Config.metainfo.xml.in:111
 msgid ""
 "New page for remote access and network: change the computer name, turn "
 "remote login (SSH) on or off, create an SSH key and choose an encrypted DNS "
@@ -164,7 +172,7 @@ msgstr ""
 "desligue o acesso remoto (SSH), crie uma chave SSH e escolha um serviço de "
 "DNS criptografado."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:115
+#: data/org.capivaraos.Config.metainfo.xml.in:116
 msgid ""
 "New firewall page: see what is open to the network, allow an app or a port, "
 "and close the high ports with strict mode."
@@ -172,7 +180,7 @@ msgstr ""
 "Nova página de firewall: veja o que está aberto para a rede, libere um app "
 "ou uma porta e feche as portas altas com o modo restrito."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:120
+#: data/org.capivaraos.Config.metainfo.xml.in:121
 msgid ""
 "New system check: quick health checks and a report to share when asking for "
 "help, without your name or network addresses."
@@ -180,7 +188,7 @@ msgstr ""
 "Nova verificação do sistema: checagens rápidas de saúde e um relatório para "
 "compartilhar ao pedir ajuda, sem o seu nome nem endereços de rede."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:125
+#: data/org.capivaraos.Config.metainfo.xml.in:126
 msgid ""
 "New module to free disk space: see what each cache takes and clean the ones "
 "you pick."
@@ -188,12 +196,12 @@ msgstr ""
 "Novo módulo para liberar espaço em disco: veja quanto cada cache ocupa e "
 "limpe os que escolher."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:130
+#: data/org.capivaraos.Config.metainfo.xml.in:131
 msgid "Password prompts in Brazilian Portuguese and updated screenshots."
 msgstr ""
 "Pedidos de senha em português do Brasil e capturas de tela atualizadas."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:135
+#: data/org.capivaraos.Config.metainfo.xml.in:136
 msgid ""
 "Changing the language now also takes effect on Xfce and other desktops that "
 "keep a per-user language."
@@ -201,7 +209,7 @@ msgstr ""
 "Mudar o idioma agora também vale no Xfce e em outros desktops que guardam um "
 "idioma por usuário."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:140
+#: data/org.capivaraos.Config.metainfo.xml.in:141
 msgid ""
 "Fixes mounting disks at startup on systems whose /etc/fstab has no warnings "
 "at all."
@@ -209,7 +217,7 @@ msgstr ""
 "Corrige a montagem de discos ao ligar em sistemas cujo /etc/fstab não tem "
 "nenhum aviso."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:145
+#: data/org.capivaraos.Config.metainfo.xml.in:146
 msgid ""
 "New module to mount extra disks automatically at startup, safely: a missing "
 "disk never stops the computer from starting."
@@ -217,7 +225,7 @@ msgstr ""
 "Novo módulo para montar discos extras automaticamente ao ligar, com "
 "segurança: um disco ausente nunca impede o computador de iniciar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:150
+#: data/org.capivaraos.Config.metainfo.xml.in:151
 msgid ""
 "New language and formats module: choose the system language and, separately, "
 "how dates, numbers and money are shown, and install the language pack."
@@ -226,7 +234,7 @@ msgstr ""
 "separadamente, como datas, números e dinheiro aparecem, e instale o pacote "
 "de idioma."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:155
+#: data/org.capivaraos.Config.metainfo.xml.in:156
 msgid ""
 "New Brazilian keyboard module: pick ABNT2 or US International, make ' + c "
 "type ç in every app, and use the same layout on the login screen."
@@ -234,7 +242,7 @@ msgstr ""
 "Novo módulo de teclado brasileiro: escolha ABNT2 ou US Internacional, faça ' "
 "+ c digitar ç em todos os apps e use o mesmo layout na tela de login."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:160
+#: data/org.capivaraos.Config.metainfo.xml.in:161
 msgid ""
 "New module to play any video or music: complete codecs, hardware video "
 "acceleration, RPM Fusion and all Flathub apps, in one place."
@@ -243,7 +251,7 @@ msgstr ""
 "aceleração de vídeo por hardware, RPM Fusion e todos os apps do Flathub, num "
 "só lugar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:165
+#: data/org.capivaraos.Config.metainfo.xml.in:166
 msgid ""
 "New Settings tab with configuration modules grouped by category and a "
 "search. The first module caps how much disk the system logs may use."
@@ -252,11 +260,11 @@ msgstr ""
 "busca. O primeiro módulo limita quanto espaço em disco os logs do sistema "
 "podem ocupar."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:170
+#: data/org.capivaraos.Config.metainfo.xml.in:171
 msgid "Capivara Fetch is now COS Config Center, with a new name and logo."
 msgstr "O Capivara Fetch agora é o COS Config Center, com nome e logo novos."
 
-#: data/org.capivaraos.Config.metainfo.xml.in:175
+#: data/org.capivaraos.Config.metainfo.xml.in:176
 msgid "First public preview: system info view and shareable specs card."
 msgstr ""
 "Primeira prévia pública: visão de informações do sistema e cartão de "
@@ -418,12 +426,12 @@ msgstr "swap {pct:.0f}%"
 msgid "{used:.1f} / {total:.1f} GiB"
 msgstr "{used:.1f} / {total:.1f} GiB"
 
-#: src/cos_config/live.py:145 src/cos_config/widget_window.py:140
+#: src/cos_config/live.py:145 src/cos_config/widget_window.py:143
 #, python-brace-format
 msgid "Download {rate}"
 msgstr "Recebido {rate}"
 
-#: src/cos_config/live.py:147 src/cos_config/widget_window.py:142
+#: src/cos_config/live.py:147 src/cos_config/widget_window.py:145
 #, python-brace-format
 msgid "Upload {rate}"
 msgstr "Enviado {rate}"

@@ -8,6 +8,10 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
+from cos_config import preload  # noqa: E402
+
+preload.ensure()  # before anything imports gi
+
 from cos_config.main import main  # noqa: E402
 
 if __name__ == "__main__":
